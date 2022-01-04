@@ -60,3 +60,5 @@ remote add origin git@github.com:daxnee/-.git
 
 
 제어판 - 사용자계정 -  windows 자격증명관리 - github@다른사람꺼 - 제거 (다른 사람 주소가 있으면 push가 안됨)
+
+아메리카노 추가
