@@ -280,10 +280,6 @@ on e.DEPTNO = d.DEPTNO
 where e.hiredate like '1983%'
 
 
-
-
-
-
 ##선생님 기본 예시 
 select 
  e.ename,
