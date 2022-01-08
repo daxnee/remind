@@ -287,3 +287,9 @@ select
 from emp as e
 join dept as d
 on e.DEPTNO = d.DEPTNO
+
+*** 연산자
+1.산술 연산자 : +,-,*,/
+2.관계 연산자 : >,<,>=,<=,=,!=
+3.문자열 연산자 : like
+4.논리 연산자 :  and > or
