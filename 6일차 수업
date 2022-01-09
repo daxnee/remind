@@ -303,3 +303,26 @@ on e.DEPTNO = d.DEPTNO
   SAL : 월급
   COMM : 보너스
   DEPTNO : 부서번호
+
+
+  -------------------선생님 정리본 참고
+  **************************** 다중행 함수
+-- sum, avg, count, max, min
+-- group by 컬럼명
+
+**************************** 문법 정리
+select 
+ <컬럼 이름>
+from <테이블 이름>
+where <조건 식>
+group by <컬럼 이름>
+having <sum, avg, min, max>
+order by <정렬할 컬럼> desc | asc
+
+**************************** SQL 실행 순서
+1. from (항상 처음) 
+2. where
+3. group by
+4. having
+5. select 
+6. order by (항상 마지막)
