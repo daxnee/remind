@@ -296,7 +296,7 @@ on boss.DEPTNO = d2.DEPTNO
 
 11) 부서 위치가 CHICAGO이고 사수 급여가 5000 미만인 
  사원 번호,사원 이름,사수 번호, 사수 이름, 사수 급여, 부서명을 출력
- 단, 사원의 입사날짜로 오름차순. (참고)
+ 단, 사원의 입사날짜로 오름차순. (아래 답 참고) ★
 
 select sawon.EMPNO as "사원 번호" ,
 sawon.ENAME as "사원 이름" , sasu.EMPNO as "사수 번호" ,
