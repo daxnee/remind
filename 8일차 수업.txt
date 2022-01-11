@@ -158,32 +158,29 @@ int 변수 = () ? :
 System.out.println("a와 b는 같은가요?" + "(메시 == 호날두)");
 =>a와 b는 같은가요?true 이렇게 나옴
 
+
+---------------문제 풀어보기---------
 <변수값 지정>
         int money = 57000;
 		int man = 0; // 만원
 		int ocheon = 0; // 오천원
 		int temp = 0; //최종
 
-        money = 
-        temp = money / 10000;
 
+거스름 이전 돈 : 57000
+만원 수 : 5
+오천원 수 : 1
+남은 돈 : 2000
 
-		int money = 57000;
-		int man = 0; // 만원
-		int ocheon = 0; // 오천원
-		int temp = 0; //최종
-		man = money / 10000;
-		//5
-		temp = money % 10000;
+		man = money / 10000; (나누기의 몫)
+		// 57000원 / 10000 => 5
+		temp = money % 10000; (나누기의 나머지)
 		//7000
-		ocheon = temp / 5000;
+		ocheon = temp / 5000; (나누기의 몫)
 		//1
-		temp = temp % 5000;
+		temp = temp % 5000; (나누기의 나머지)
 		//2000
-		int 콩나물국밥 = 5000;
-		int 돼지국밥 = 7000;
-	//돼지국밥 = 콩나물국밥 + 돼지국밥;
-	
+
 	//거스름 이전돈 57000
 	//만원수 5
 	//오천원수 1
@@ -194,3 +191,37 @@ System.out.println("a와 b는 같은가요?" + "(메시 == 호날두)");
 		System.out.println("오천원 수 : "  +ocheon);
 		System.out.println("남은 돈 : " +temp);
         
+
+
+문제 2
+	
+		int 국어 = 100;
+		int 수학 = 50;
+		int 영어 = 88;
+		int 과학 = 38;
+		final int 과목수 = 4; //final = 상수(변하지 않는 값)
+		int sum = 0; //총합
+		double avg = 0; //평균
+		
+
+-------------1.여기까지 변수를 줬으면 
+
+
+		sum = 국어 + 수학 + 영어 + 과학;
+		avg = sum / 과목수;
+
+
+----------- 2. 변수를 이용해서 계산을 해주고 
+
+        System.out.println("총합 : " +sum+ "입니다");
+		System.out.println("평균 : " +avg+ "입니다");
+		
+------------3. 실행하기 위해서 명령어를 (Ststem~~) 적어주면 결과값이 출력된다.
+
+
+
+
+
+
+
+
