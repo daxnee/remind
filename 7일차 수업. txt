@@ -419,3 +419,24 @@ from emp as sawon
 inner join emp as boss
 on sawon.mgr = boss.empno
 where sawon.dePtNO = 20
+
+
+--------------------
+select 
+e.empno,
+e.ENAME,
+e.sal,
+e.job,
+d.dname,
+e.HIREDATE 
+from emp as e
+inner join dept as d
+on e.DEPTNO = d.DEPTNO 
+where 
+(
+e.job = 'manager'
+or 
+e.job = 'clerk'
+)
+and date_format(HIREDATE,'%Y') = '1982' => 대문자는 #### 소문자는 ##
+구분잘하기
