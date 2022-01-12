@@ -128,5 +128,68 @@ int myscore = 90;
 	
 
 
-    ##반복문 사용
+
+   ##  Scanner scan = new Scanner(System.in);
+		
+		System.out.println("이름을 입력하세요 ==>");
+		String name = scan.next(); //문자를 입력할 때
+		System.out.println("좋아하는 숫자를 입력하세요 ==>");
+		int num = scan.nextInt(); //숫자를 입력할 
+		
+		System.out.println("안녕하세요 제이름은 "+name+"입니다.");
+		System.out.println("제가 좋아하는 숫자는" +num+" 입니다.");
+	
+
+
+	##반복문 사용
     코드의 중복을 제거하고자 반복문 등장!
+
+
+    (int i=0; i<=10; i++ )
+  - int i=0 (초기문 or 선언문)
+  - i는 부터 시작
+  -i<=10
+
+
+  i를 1씩 증가시켜 10 미만까지 반복하겠다.
+  for (int i=0; ) 
+
+
+
+##for문 사용해보기
+	
+		for(int i=0; i<=10; i++ ) {
+			if(i % 2 == 0){
+				System.out.println("짝수는 ==> " + i );
+			}	
+		}
+
+  짝수는 ==> 0
+짝수는 ==> 2
+짝수는 ==> 4
+짝수는 ==> 6
+짝수는 ==> 8
+짝수는 ==> 10
+
+
+
+문제2.
+for (int i = 1; i <= 10; i++) 
+			if (i % 2 == 0) {
+				System.out.println("짝수는 => " + i);
+			}else if (i % 2 == 1) {
+				System.out.println("홀수는 => " + i);
+			}
+
+            홀수는 => 1
+짝수는 => 2
+홀수는 => 3
+짝수는 => 4
+홀수는 => 5
+짝수는 => 6
+홀수는 => 7
+짝수는 => 8
+홀수는 => 9
+짝수는 => 10
+
+
