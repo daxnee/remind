@@ -117,8 +117,25 @@ int num = 10;
 		배열[2] = num; // num은 10이었으니까 배열 두번째 5-> 10으로 바뀜
 	
 
-<버블 정렬> 고난이도 - 구글링해보기
+4. 아래 배열을 선언하고, 배열 인덱스 중 가장 큰 수를 찾아내시오. *다시 풀어보기
+int array[] = {5,11,2,0,7}; 
+ex) 결과값 : 11
 
+선생님 답:
+int array[] = {5,11,2,0,7};
+		int size = array.length;
+		int max = 0;
+		for(int i=0; i<size; i++) {
+			if(max < array[i]) {
+				max = array[i];
+			}
+		}
+		System.out.println("MAX ==> "+max);
+
+
+
+<버블 정렬> 고난이도 - (구글링해보기)
+*다시 풀어보기
 
 int array[] = {14,11}; 
 	int size = array.length;
@@ -131,19 +148,9 @@ int array[] = {14,11};
 				array[j] = temp;
             }
         }
-        
 
 
-
-
-
-
-
-
-
-
-
-
+=> Arrays.sort(array); => 사실 이 한줄로 위 코드 해결 가능
 
 
  <for문 종류>
@@ -155,3 +162,23 @@ int array[] = {14,11};
 2. for(int i=0; i<array.length; i++) {
 			int x= array[i];
 			System.out.println(x);
+
+
+
+배열은 왜 쓸까?
+int x = 100;
+
+
+<배열은 두가지 종류> -알아만두기
+int 배열[] = {100,100,100}; // 선언식 -> 지금까지 했던거
+int 홍길동[] =  new int[100];
+		
+
+
+ 	
+		int x= 100; // 변수를 100번 만들어라
+		int x1[] = {100,100,100}; // 선언식
+		int 배열[] =  new int[100];
+		int size = 배열.length; //결과는 4
+		int y = 배열[0]; // 0번째 인덱스에 있는 데이터 y에 대입!
+		int z = 배열[1];       
