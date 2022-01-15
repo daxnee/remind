@@ -19,39 +19,31 @@ JAVA
 
 
 ex)
-		String 캐릭터 = "아무무";
-		int 레벨 = 1;
+	String 캐릭터 = "아무무";
+	int 레벨 = 1;
 	//레벨 = 레벨 + 라벨;	
 	레벨 += 레벨;
 	
-		System.out.println("내가 선택한 챔프는 " + 레벨);
-		++레벨; //3렙 => 증감연산자라고 함 =>1씩 더한다
-		++레벨; //4렙
+	System.out.println("내가 선택한 챔프는 " + 레벨);
+	++레벨; //3렙 => 증감연산자라고 함 =>1씩 더한다
+	++레벨; //4렙
 	
-		System.out.println("내가 선택한 챔프는 " + 레벨);
+	System.out.println("내가 선택한 챔프는 " + 레벨);
 
 
+	if, else문 ex)
+	int x=0; int y=0;
+	if (x == y) {  // => x와 y가 참이라면/같다면(==)
+	System.out.println("x랑 y는 같아요!"); //=> if의 조건문을 출력
+	} else { if문이 거짓이라면 else의 조건문을 출력됨
+ 	System.out.println("x랑 y는 달라요!");
+	}
 
+	결과:
+	x랑 y는 같아요! 
 
-        
-		if(x == y) // 맞다면
-		{
-			System.out.println("x랑 y는 같아요!");
-		} // => 영토를 나누는 것처럼 중가로를 사용해줘야 함
-		else	{ if (x != y) 
-				System.out.println("x랑 y는 달라요!");
-			}
+* but, else 사용은 지양함(읽기 복잡해짐)
 
-            but, else 사용은 지양함(읽기 복잡해짐)
-
-if(x == y) // 맞다면
-		{
-			System.out.println("x랑 y는 같아요!");
-		} 
-		 { 
-			if (x != y) 
-				System.out.println("x랑 y는 달라요!");
-			}
 
 
 
@@ -59,11 +51,10 @@ if(x == y) // 맞다면
 드래그 - ctrl + shift + f 
 
 ##중괄호 위치 참고
-int myscore = 90;
-		{
-			System.out.println("A학점입니다.");
-		}
-		if (myscore < 90 && myscore >= 80) {
+	int myscore = 90;{
+	System.out.println("A학점입니다.");
+	}
+	if (myscore < 90 && myscore >= 80) {
 			System.out.println("B학점입니다.");
 		}
 		if (myscore <= 75 && myscore >= 70) {
