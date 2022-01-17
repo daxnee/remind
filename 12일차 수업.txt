@@ -1,0 +1,169 @@
+<메소드>
+
+src(패키지) = 소스파일
+
+*main 을 못만들었다?! => main +  ctrl + space bar 누르면 추천해줌
+
+1. 메소드? (함수, 기능) 
+  : 각 기능을 분리해서 개발해야 소프트웨어의 품질이 향상됨
+   ex) 로봇 팔, 다리, 몸통
+  (응집도 높고 결합도는 낮아야 좋은 소프트웨어) 
+
+2. main : 자바에서 먼저 실행되는 기능(함수)
+   static이 붙은 함수에는 static 함수만 올 수 있다.
+
+3. 접근지정자(객체지향 언어는 대부분 평균 4개의 접근지정자가 있음) 
+   : *public, private, protected, 디폴트 접근지정자
+    public 다른 클래스에 호출
+    private 내부 클래스에서만 호출 
+
+4. 문법 ★                            
+<접근지정자> <리턴타입> <메소드 이름> <인자값> 
+    public     int     getSum(int x, int y){
+    
+    ★함수이름은 동사
+    ★인자값은 찜 목록, 최대 3개까지만 오자.
+     인자값은 명칭이 많음 
+     : 1) 인자값 2)파라미터값 
+
+         public int getSum(int x, int y){
+         int sum = 10;
+         return sum;
+         //리턴타입이 int형이면
+         //int형 데이터를 반환(return)해야 함.
+         
+
+
+
+ex)
+public static String 어벤져스호출() {
+		String 영웅이름 = "토르";
+		return 영웅이름;
+	}
+		//java는 main함수부터 실행함
+		public static void main(String[] args) {
+			String 호출한영웅이름 = 어벤져스호출();
+			System.out.println(호출한영웅이름);
+
+결과:
+토르
+
+
+public static int getSum(int max) {
+			int sum = 0;
+			for (int i = 1; i <= max; i++) {
+				sum += i;
+			}
+			return sum;
+		}
+
+		public static void main(String[] args) {
+			int result = getSum(10);
+			System.out.println(result);
+
+		}
+	}
+
+    결과  : 
+    55
+
+
+
+
+<메소드 다시 정리>
+
+<접근지정자> <리턴타입> <메소드이름> <인자값> - 인자값을 받아서 함수를 작동
+1. 리턴타입
+메소드의 최종 결과값을 반환.
+리턴 타입에는 데이터타입(int, double, float, long) 8개와 클래스타입(String) 1개 = 총 9개
+리턴 타입이 없을때는 void로 표현.(리턴할게 없다는 뜻)
+
+2. 인자값 (=파라미터값)
+데이터타입 8개(int, doublem float, long)와
+클래스타입 1개(String) 총 9개가 위치.
+인자값이 없을 때는 () 빈괄호
+** 인자값(파라미터값)은 3개 이하로 작성.
+
+<문제풀이>
+	// x,y에 데이터를 넣고, 더한값을 리턴하는 메소드를 작성
+//	main메소드에 호출하시오
+//	x는 10미만이면 x에 5를 대입하시오
+		public static int getsum(int x, int y) {
+				
+					if(x<10) x = 5;
+						int sum = x + y;
+						return sum;	
+				{
+
+
+
+System.out.println("순대 :" + 순대 + , "내장 : " + 내장 + "손님이름 : " + 손님이름);
+		}
+		public static void main(String[] args) {
+			순대국밥(30,50, "길동");
+			순대국밥(10,50, "철수");
+
+        => 재사용성과 코드 간결 증가! 
+
+
+**if else 쓸때 주의할점
+if를 쓸때 return =0;을 중괄호 밖에 써주거나
+아예 else문에 return=0;을 써줘야 에러가 안난다.
+
+선생님 해설:
+if로만 return을 하면
+무조건 return을 마지막 줄에 한번 더 입력해아함
+(컴퓨터는 그 조건이 틀렸을지 모른다고 가정함)
+if else로 하면
+둘 중 하나는 무조건 실행하기 때문에
+return을 마지막에 줄에 입력안함		
+
+
+
+
+
+예제 2) 조건1) startNum이 endNum보다 크거나 같으면 return 0
+        조건2) endNumdl 100을 초과하면 return 0
+
+	public static int getCount(int startNum, int endNum) {
+		int count = 0; // 변수
+		if (startNum >= endNum && endNum > 100) {
+			return 0;
+		}
+
+		for (int i = startNum; i <= endNum; i++) {
+
+			if (i % 2 == 0) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public static void main(String[] args) {
+		int daeun = getCount(1, 100);
+		System.out.println("짝수개수 : " + daeun);
+
+
+        ★★★조건(if)은 함수가 실행하기 전에 있어야 
+        원하는 데이터가 출력될 수 있음
+
+
+
+
+<보충수업>
+리턴에 데이터타입 올게 없으면 void를 씀
+ex) println -> void만 하자!
+데이터 타입이 없으면 println하기
+
+
+메소드 이름 : 동사로 작성 (명사로 작성 x) ★★★★★
+eX) 달리다, 호출하다, 먹다, 쉬다
+
+
+인자값(파라미터값) : 
+특징) 데이터 타입이 온다.
+콤마로 구별함
+
+
+<접근지정자> <리턴타입> <메소드이름> <인자값>
