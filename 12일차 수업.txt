@@ -204,3 +204,10 @@ public static void numbering(int init, int limit) {
 3
 4
 
+
+##세미콜론 구분법?
+세미콜론 : ~를 실행할거다.
+실행문, for문, 변수값 줄때 등등
+단,
+ if(abcd) result = 0; 
+ if문을 한줄로 주고 끝낼땐 세미콜론을 준다
