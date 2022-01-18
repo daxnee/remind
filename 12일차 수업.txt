@@ -169,6 +169,7 @@ eX) 달리다, 호출하다, 먹다, 쉬다
 <접근지정자> <리턴타입> <메소드이름> <인자값>
 
 
+<<<<<<< HEAD
 void(DB랑 연동할 수 없어서)
 
 
@@ -329,3 +330,40 @@ public static void main(String[] args) {
 	
 	
 }
+=======
+<메소드 다시 정립>
+ex1)
+public static void numbering() {  =>  ┐
+		int i = 0;					  │  => 여기 부분의 함수를 넘버링으로 
+		while (i < 10) {			  │		함축한것
+			System.out.println(i);	  │
+			i++;					  ┚
+		}
+	}
+
+	public static void main(String[] args) {
+		numbering();  =>  넘버링 안에 함수데이터를 넣어놨으니
+	}						기다란 식을 사용하지 않고 손쉽게 메인으로 
+							끌어당겨서 사용할 수 있음 = 이게 '메소드'
+로직을 재활용하는 것... 
+
+
+ex2)
+public static void numbering(int init, int limit) {
+		int i = init;
+		while (i < limit) {
+			System.out.println(i);
+			i++;
+		}
+	}
+
+	public static void main(String[] args) {
+		numbering(3,5);  => init에 3, limit에 5의 값을 준거임
+							그리고 저 위 식에 대입됨.
+	}
+
+답:
+3
+4
+
+>>>>>>> 76080718f5cab9bb0083ae4c883dc3f20b2da84b
