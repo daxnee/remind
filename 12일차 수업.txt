@@ -367,7 +367,6 @@ public static void numbering(int init, int limit) {
 3
 4
 
-<<<<<<< HEAD
 
 ##세미콜론 구분법?
 세미콜론 : ~를 실행할거다.
@@ -376,5 +375,3 @@ public static void numbering(int init, int limit) {
  if(abcd) result = 0; 
  if문을 한줄로 주고 끝낼땐 세미콜론을 준다
 =======
->>>>>>> 76080718f5cab9bb0083ae4c883dc3f20b2da84b
->>>>>>> c4f4f51d863b4a2e43137e099c2dc6a925010b84
