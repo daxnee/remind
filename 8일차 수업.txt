@@ -165,7 +165,9 @@ System.out.println("a와 b는 같은가요?" + "(메시 == 호날두)");
 <변수값 지정>
         int money = 57000;
 		int man = 0; // 만원
-		int ocheon = 0; // 오천원
+		int ocheon = 0;	public static void main(String[] args) {
+		int result = getSum(10);
+		System.out.println(result); // 오천원
 		int temp = 0; //최종
 
 
