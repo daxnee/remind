@@ -51,33 +51,35 @@ ex)
 드래그 - ctrl + shift + f 
 
 ##중괄호 위치 참고
-	int myscore = 90;{
-	System.out.println("A학점입니다.");
-	}
-	if (myscore < 90 && myscore >= 80) {
+	public static void main(String[] args) {
+		int myscore = 90;
+		{
+			System.out.println("A학점입니다.");
+		}
+		if (myscore < 90 && myscore >= 80) {
 			System.out.println("B학점입니다.");
 		}
 		if (myscore <= 75 && myscore >= 70) {
 			System.out.println("C학점입니다.");
 		}
-	        
+	}
 
 
-
-
+		public static void main(String[] args) {
+		int x = 10;
+		int y = 10;
+		int num = 0;
 		if (x == y) {
-			num = x * y; //num 100
-			if (x != y) {
+			num = x * y; // num 100
+			if (x != y) { // => if조건 안 맞음(넘어감)
 				num = 0;
 			} else {
-				num = num * 2; //num 200
+				num += num;
 			}
-		} else {
-			num += num;
+			num = num + 100; // 300
+			System.out.println(num);
 		}
-		num = num + 100; //300
-		System.out.println(num);
-	
+	}
 
 
     <스캐너 입력 방법>
