@@ -1,4 +1,3 @@
 ## 공지 
-안녕하세요 양다은입니다. :pencil:
-- 깃허브 해도 모르겠네요
-- 집가면 리셋됩니다,,
+수업 내용 저장소 :pencil:
+I can do whatever I want
