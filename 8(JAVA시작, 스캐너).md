@@ -157,8 +157,8 @@ int 돼지국밥 = 7000;
 
 
 
-문제 1
-	
+
+<문제1>	
 public static void main(String[] args) {
 		int 국어 = 100;
 		int 수학 = 50;
