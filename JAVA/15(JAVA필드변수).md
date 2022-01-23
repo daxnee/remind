@@ -1,5 +1,7 @@
-클래스는 객체(== Object)다.
-        Public class Pizza{ 
+## Class 정리
+	클래스는 객체(== Object)다.
+
+		Public class Pizza{ 
 		//피자 클래스에는
 		//피자에 관련된 변수와 함수만 위치한다.
 		//클래스는 피자에 관련된 '필드(전역)변수'와 '메소드'로만 구성
@@ -8,7 +10,7 @@
 
 		public void 도우를 만들다(){
 		      //  코드...
-    }
+    	}
 
 
 		}
@@ -25,8 +27,9 @@
 
 
 
-<중급 문제풀이>
-1. public static int getSum(int start, int end){
+## 중급 문제풀이
+```java
+	1. public static int getSum(int start, int end){
         int array[] = {3,8,9};
         int max = 0;
         if(start < 0) {
