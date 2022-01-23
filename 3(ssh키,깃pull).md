@@ -26,7 +26,6 @@
 ## IT용어
     디폴트 : 기본 값을 의미  
 
---------------------------------------------------------------
 
 ## git 업로드
     git과 연결이 안된 기러기 파일
@@ -46,19 +45,17 @@
     5.git config --global user.name "사용자 이름 입력"
     6.git config --global user.email "내 이메일"
 
-<<<<<<< HEAD
-### Repsitory(프로젝트) 만들기
-=======
+
+
+
 ## Repsitory(프로젝트) 만들기
->>>>>>> 52815ea2ee043f6449c92bc43be6e1909f0de407
+
     repsitory 들어가서 - new - public  - new - 체크박스x 
     remote add origin git@github.com:daxnee/-.git
 
 
 
 ## github 사용시 주의점
-<<<<<<< HEAD
+
     제어판 - 사용자계정 -  windows 자격증명관리 - github@다른사람꺼 - 제거 (다른 사람 주소가 있으면 push가 안됨)
-=======
-    제어판 - 사용자계정 -  windows 자격증명관리 - github@다른사람꺼 - 제거 (다른 사람 주소가 있으면 push가 안됨)
->>>>>>> 52815ea2ee043f6449c92bc43be6e1909f0de407
+
