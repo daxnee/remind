@@ -1,7 +1,12 @@
 ## MYSQL 
 	MYSQL > 데이터베이스 > table > 데이터
 	1. 데이터를 저장하는 프로그램을 배우는 것! => 데이터베이스
+<<<<<<< HEAD
 	2. 데이터베이스에 쌓인 것을 직접 가져올 수 없으니까 SQL이라는 문법을 통해 데이터들을 가져오는 것임
+=======
+	2. 데이터베이스에 쌓인 것을 직접 가져올 수 없으니까 SQL이라는 문법을 통해 
+	데이터들을 가져오는 것임
+>>>>>>> 52815ea2ee043f6449c92bc43be6e1909f0de407
 
 ## SQL 문법
 	SELECT
@@ -118,7 +123,11 @@
 
 ## null = 데이터를 입력하지 않은 상태
 
+<<<<<<< HEAD
 ## 문제1
+=======
+	문제1
+>>>>>>> 52815ea2ee043f6449c92bc43be6e1909f0de407
 	comm이 null인 사람을 조회하시오
 
 	select 
@@ -132,7 +141,11 @@
 	having count(*) <= '3'
 	order by count(*)
 
+<<<<<<< HEAD
 ## 문제2
+=======
+	문제2
+>>>>>>> 52815ea2ee043f6449c92bc43be6e1909f0de407
 	comm이 null이 아닌 사람을 조회하시오
 	select 
 	ename,
@@ -154,6 +167,7 @@
 	
 	**like 단어의 특정 글자를 찾을 때 사용함
 	**like는 구글 검색할때 연관검색어에 적용됨
+<<<<<<< HEAD
 
 
 ## 알파벳으로 이름찾기 
@@ -404,6 +418,261 @@
 	--3) job이 manager는 제외
 	--4) 평균 sal이 1000이상
 
+=======
+
+
+
+
+## 문제풀이
+
+	문제1 (알파벳으로 이름 찾기)
+	만약 이름이 allen이나 admas인 사람을 조회하고 싶다면? (동명이인)
+
+	문제1. JOB 
+	from emp
+	where ENAME = 'allen'
+	or ename = 'adams'
+
+	그러나, 중복된 코드는 좋지 않다.
+
+	문제2
+	이름이 A로 시작하는 사람 조회
+	select 
+	ename,
+	JOB 
+	from emp
+	where ENAME like 'a%'
+
+	문제3
+	L이 두번 들어간 사람의 이름을 조회
+	select 
+	ename,
+	JOB 
+	from emp
+	where ENAME like '%l%l%'
+
+## insert into : 어디 테이블에 저장할거야?
+	*순서대로 나열하기 ex) empno는 8000, ename은 양다은
+	위쪽 컬럼과 아래쪽 데이터가 잘 매치가 됐는지 확인해야함
+
+	문제1 
+	양다은 입사자를 컬럼에 맞게 명단에 추가하기
+	insert into emp
+	(empno, ename, job, mgr, HIREDATE, sal, comm, deptno)
+	values
+	(8000, '양다은', 'salesman', 7369, '2022-01-06', 5000, 1000, 20)
+
+	새로고침 f5 누르기 - 오른쪽 데이터에 내 명단 추가되었음
+
+	문제2
+	길동이가 입사했는데 보너스가 없음(null) 얘를 명단에 추가시키기 
+	insert into emp
+	(empno,ename,job,mgr,HIREDATE,sal,deptno)
+	values
+	(8001, '홍길동', 'salesman', 7369, '2022-01-06', 5000, 20)
+
+	** 명단에 추가했는데 쿼리문 한번 더 실행하면 오류남
+
+## update
+	*update는 사실 데이터를 delete하고 update하는 것임
+	
+	문제1.
+	명단 안 이름의 홍길동 -> 정우성으로 바꿔라 
+	update emp
+	set ename = '정우성'
+	where empno = 8001;
+
+	※★★★★★where절 꼭 써줘야 함. 
+	안쓰면 모든 데이터가 다 하나로 바껴서 큰일남!!
+	(삭제하고 update하니까)
+
+
+	문제2.
+	우성이가 직업하고 월급 변경요청 (두 개의 데이터를 바꾸는)
+	update emp
+	set 
+	job = 'manager',
+	sal = 8000
+	where empno = 8001;
+
+## 함수 연산하기
+	문제1. 
+	select 
+	sum(comm) as '보너스 총 합'
+	from emp
+
+	문제2. 
+	select 
+	avg(comm) as '보너스 총 평균'
+	from emp
+
+
+	문제3. 제일 높은 급여가 얼마인지
+	select 
+	max(sal)
+	from emp
+
+	문제4. 
+	select 
+	min(sal)
+	from emp
+
+	문제5. 직업이 manager 사람들의 급여 평균을 조회하시오.
+	select 
+	avg(sal) as'급여 평균'
+	from emp
+	where job = 'manager'
+
+	문제6. 입사날짜가 1987-06-28 이상인 사람들의 수와 급여 평균을 조회하시오.
+	select 
+	avg(sal) as'급여 평균',
+	count(*) as'인원수'
+	from emp
+	where HIREDATE >= '1987-06-28' 
+
+	문제7. 직업이 CLERK인 사원 중 최소급여를 받고있는 사원의 이름과 입사날짜를 조회하시오
+	select
+	ename as'이름',
+	HIREDATE as'입사날짜',
+	min(sal)
+	from emp
+	where job = 'clerk'  
+
+	문제8. -COMM이 NULL이 아니고, 
+	-직업이 SALESMAN 그리고 입사날짜가 1981-02-22 이후에 들어온 사원의 COMM 총합을 조회하시오
+	select 
+	sum(comm) as '총합'
+	from emp
+	where JOB = 'salesman' and 
+	hiredate >= '1981-02-22'
+	and comm is not null
+
+
+## 문자열 연산자
+	like 
+
+
+## group by :  중복된 데이터를 제거해서 하나씩 보여주기 
+	문제1. 
+	select
+	job
+	from emp 
+	group by job
+
+
+	문제2. 
+	select
+	job,
+	sum(sal) as '월급 총합'
+	from emp 
+	group by job
+
+
+
+	문제3. 
+	select
+	job,
+	sum(sal) as '월급 총합'
+	from emp 
+	group by job
+	having sum(sal) > 6000
+
+	having : 그룹핑한 애들을 필터링 할때 (where와 좀 다름)
+
+	*where는 그룹핑된 쿼리문에는 사용할 수 없다. having 사용
+
+
+	문제4. 
+	각 부서별 그룹화 하여 최고로 급여가 높은 사람의 
+	이름과 직업을 나타내시오.
+
+	select
+	max(sal),
+	ename,
+	JOB 
+	from emp 
+	group by DEPTNO
+
+	문제5. 
+	직업이 매니저이면서 그룹에서 가장 연봉을 많이 받는 
+	사람의 이름, 직업, 금액을 쓰시오
+
+	select
+	max(sal),
+	ename,
+	JOB 
+	from emp 
+	where job = 'manager'
+	group by DEPTNO
+	having max(sal) >= 5000
+
+
+	문제6. 
+	각 부서번호별 평균급여, 총 인원, 최고 급여, 최소 급여를 구하시오
+
+	select
+	DEPTNO, 
+	avg(SAL),
+	count(*),
+	max(sal),
+	min(sal)
+	from emp 
+	group by DEPTNO
+
+
+## ★★★DB가 읽는 순서
+	from -> where-> group by -> having -> select ->order by
+	※order by는 무조건 마지막
+	입력 순서 틀리면 답 안나옴
+	그룹핑할때 그룹핑 가능한 컬럼끼리 해줘야 데이터가 출력됨
+
+
+
+## 고난이도 문제
+	문제1. 
+	부서별 직책별 최대급여와 인원수, 최소급여를 추출
+	단, 10번 부서는 제외하고, 
+	인원수는 3명 이하인 것으로 
+	인원수가 적은 순서대로 추출 
+
+	select 
+	DEPTNO,
+	job,
+	max(sal),
+	count(*),
+	min(sal)
+	from emp
+	where deptno != 10
+	group by DEPTNO, job -> 부서별, 직책별 두개면 콤마로 이어주기
+	having count(*) <= 3
+	order by count(*);
+
+
+
+	문제2. 
+	부서별로 급여 합계 (hint 한 사람의 부서는 한개다)
+	단, 10,30번 부서와 급여합계가 5000이상인 부서만 추출
+
+	select 
+	DEPTNO, 
+	sum(sal)
+	from emp 
+	where DEPTNO = 10 or
+	DEPTNO = 30
+	group by DEPTNO 
+	having sum(sal) >= 5000;
+
+
+	문제3. 
+	직책별로 급여합계와 평균급여를 추출 
+	단, mananger는 제외하고 
+	평균 sal가 1000이상인 것만 추출
+	--1) 직책별 
+	--2) 급여합계, 평균급여 조회
+	--3) job이 manager는 제외
+	--4) 평균 sal이 1000이상
+
+>>>>>>> 52815ea2ee043f6449c92bc43be6e1909f0de407
 	select
 	job,
 	avg(sal),

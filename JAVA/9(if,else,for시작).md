@@ -197,4 +197,8 @@
 	6. ctrl + shift + l : 단축키 보기 Hint
 	7. ctrl + h : find 및 replace
 	8. ctrl + shift + y : 대문자 -> 소문자 변환
+<<<<<<< HEAD
 	9. ctrl + shift + x : 소문자 -> 대문자 변환
+=======
+	9. ctrl + shift + x : 소문자 -> 대문자 변환
+>>>>>>> 52815ea2ee043f6449c92bc43be6e1909f0de407
