@@ -30,7 +30,7 @@
 		System.out.println("홀수는 : " + count2);
 		
 
-
+```
 3. 배열을 선언하고 100이 넘는 개수가 몇개인지 찾으시오.
 
 ```java
@@ -46,9 +46,9 @@
 		   System.out.println(count);
 	}
 
-
+```
 4. 1부터 10까지 더한값 구하기 
-
+```java
 		int sum = 0;
 		for(int i=0; i<=10; i++) {
 			sum += i;
