@@ -32,13 +32,13 @@
 ## java로 개발할 프로그램 설치
     이클립스 검색 -> 왼쪽 Get Eclipse IDE 2021‑12 설치 
     eclipse ide for enterprise java and web developers어쩌고 클릭 (두번째 메뉴)
-<<<<<<< HEAD
+
     install -> 이클립스 실행 (***launch누르지말고!!) -> 내 pc -> 새폴더(workspaces)만들고 -> 주소 복사 -> 프로그램 켜서 파일 복붙 -> 체크박스 설정 (캡처 사진 참고)
 =======
     install -> 이클립스 실행 (***launch누르지말고!!) -> 내 pc -> 
     새폴더(workspaces)만들고 -> 주소 복사 -> 프로그램 켜서 파일 복붙 
     -> 체크박스 설정 (캡처 사진 참고)
->>>>>>> 52815ea2ee043f6449c92bc43be6e1909f0de407
+
 
     DB 
     데이터베이스 -> 테이블 -> 데이터
