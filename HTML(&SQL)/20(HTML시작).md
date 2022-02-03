@@ -1,3 +1,4 @@
+### 220203
 ## HTML 시작
     HTML + SQL 같이 병행
 
@@ -14,9 +15,12 @@
     (Hyper Text Markup Language)
     https://www.naver.com
 
+## html 만들기 
+    바탕화면에 폴더 만들고
+    vscode로 열기
+    vscode에 파일 만들고, 파일 확장명을 .html로 설정
+    ! 입력 후 tab => html 서식 생성
     
-    파일 확장자를 . html 
-    ! 입력 후 tab
     태그는 쌍으로 이루어짐
     / = > 태그가 끝났다
 
@@ -35,10 +39,12 @@
             ex) 세미콜론 안찍으면 자동으로 찍어줌
 
 ## 코드 정렬
-    파일 두개 내 워크스페이스로 복붙하기 (vscode 프리티어
+    파일 두개 내 워크스페이스 안 day_01 파일 안에 복붙하기 (vscode, 프리티어)
 
 
 ## HTML 이론**
+    주석 : ctrl + / 
+
     기본세팅
     <html>
 
@@ -69,4 +75,52 @@
 
 
     body tag : 여기서 웹페이지 제작을 함.
+
+## 코드 수정시
+    우측 하단 Go live 클릭 = > 내가 수정한 코드가 실시간으로 변경됨 
+
+## 자주 사용하는 태그**** (암기 필수)
+### h 태그 
+    대,중,소제목 쓸 때
+    h1~6 까지 있음 (보통 4까지 사용)
+    h 뒤에 있는 숫자가 커질 수록 폰트 크기가 작아짐
+
     
+### a 태그 : 링크 태그 (다른 주소 이동할 때 사용)
+    
+    *** input 태그 : 뭔가를 작성할 때 주로 사용
+        input안에 설정하는 것들이 많음  = > '속성' 이라고 부름
+        <input type="text" /> 
+         보통 태그는 쌍으로 이루어지지만 input은 역슬래쉬 하나만 끝에 
+         입력하면 됨. (보통 실무에서 이렇게 사용)
+        
+        ex) 회원가입 창 만들기
+        아이디 : <input type="text"/> 
+        비밀번호 : <input type="password"/> 
+        
+        입력창에 글자를 넣고 싶으면? p입력 후 pleaceholder 사용
+        <input type="text" placeholder="아이디 입력"/> 
+
+    
+##  웹 서버와 디비 서버
+    서버(server) : 서비스를 제공하는 주체
+    
+    입력된 데이터가 DB로 가는 과정?
+    HTML -> 웹 서버 - > DB 서버(My SQL)
+    *왜? HTML에서 바로 데이터베이스로 저장 불가능하니까 웹서버를 거침
+
+
+## input 특징 더 알아보기
+     
+    <input type="text" id="userId" name="userId" value=""/>
+        id : 변수 이름(중복 불가능)
+        name : 변수 이름(중복 가능)
+
+        value와 placeholder 차이점?
+        value : value에 넣은 글자가 같이 입력
+        placeholder : 타이핑 즉시 글자가 없어짐
+
+        readonly : 타이핑(입력) 불가능
+
+    input type은 한가지 종류만 올 수 있고,
+    속성(id, name, readonly...)은 중복이 가능하다.

@@ -1,15 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h2>안녕하세요 양다은입니다!</h2>    
+  </head>
+  <body>
+    <h2>안녕하세요 양다은입니다!</h2>
+    <!--자주 사용하는 태그 -->
+    <!--  -->
+    <h1>안녕하세요오오옹</h1>
+    <h2>한라보오오오옹</h2>
+    <h3>안녕하세요</h3>
+    <h4>안녕하세요</h4>
+    <h5>안녕하세요</h5>
+    <h6>안녕하세요</h6>
+    <a href="https://www.naver.com/">네이버 이동</a>
+    <a href="https://github.com/daxnee">다니 깃허브 이동</a>
 
+    <!-- input -->
 
-    
-</body>
+    아이디 : <input type="text" placeholder="아이디 입력" /> 비밀번호 :
+    <input type="password" placeholder="비밀번호 입력" maxlength="10" />
+    <!-- 숫자 -->
+    <input type="number" />
+
+    <!-- 사진,파일 업로드 -->
+    <input type="file" />
+
+    <!-- 날짜 -->
+    <input type="date" />
+
+    <!-- 체크박스 -->
+    <input type="checkbox" checked />
+    <!-- 박스체크 디폴트값 : checked -->
+
+    <!-- 아이디 입력 -->
+    <h3>checkbox</h3>
+    <input type="checkbox" id="바나나"/checked>
+    <label for="바나나">바나나</label>
+
+    <input type="checkbox" id="사과" />
+    <label for="사과">사과</label>
+
+    <input type="checkbox" id="키위" />
+    <label for="키위">키위</label>
+
+    <h3>날짜 관련 input</h3>
+    <!-- 날짜 -->
+    <input type="date" />
+    <input type="month" />
+    <input type="week" />
+    <input type="time" />
+
+    <h3>버튼 만들기</h3>
+    <input type="button" value="로그인 확인" />
+    <button>로그인 확인</button>
+
+    <!-- 콤보박스(쇼핑몰 사이즈 선택칸)-->
+    <h3>선택박스 만들기</h3>
+    <select name="" id="">
+      <option value="">--사이즈를 선택하시오--</option>
+      <option value="s">S size</option>
+      <option value="m">M size</option>
+      <option value="l">L size</option>
+    </select>
+    <!--최종적으로 value 안의 값이 DB에 저장되는 것임! -->
+
+    <!-- 이미지 등록 -->
+    <h3>이미지 태그</h3>
+    이미지를 day_01안에 복붙
+    <img src="img.jpg" alt="파이리" />
+
+    <!-- paragraph의 첫글자 p 태그 -->
+    <h3>문단 태그</h3>
+    <p>사람이 지닌 고유한 향기는 사람의 말에서 뿜어져 나온다.</p>
+    <p>오늘 점심은 <span>삼겹살</span> 먹을까요?</p>
+    <!-- └ 지금 당장은 효과 안보임. css시간에 이어서... -->
+
+    <h3>input특징 조금 더 알아보기</h3>
+    <!-- id, name은 변수 이름임 -->
+    <input type="text" id="userId" name="userId" placeholder="안녕하세요" />
+    <!--  id : 변수 이름(중복 불가능)
+        name : 변수 이름(중복 가능) 
+    value : 서버에 전송할 실제 데이터 or 디폴트 값 -->
+
+    <!-- value와 placeholder의 차이점 -->
+
+    <!-- input type은 한가지 종류만 올 수 있고,
+    속성(id, name, readonly...)은 중복이 가능하다. -->
+  </body>
 </html>
