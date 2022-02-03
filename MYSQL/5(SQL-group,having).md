@@ -365,7 +365,7 @@
 
 
 ## ★★★DB가 읽는 순서
-	from -> where-> group by -> having -> select ->order by
+	from -> where-> group by -> having -> select ->order by ->limit
 	※order by는 무조건 마지막
 	입력 순서 틀리면 답 안나옴
 	그룹핑할때 그룹핑 가능한 컬럼끼리 해줘야 데이터가 출력됨
