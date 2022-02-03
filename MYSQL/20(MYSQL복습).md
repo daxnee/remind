@@ -71,10 +71,8 @@
     ORDER BY datetime ASC
     LIMIT 1
 ```
-    => LIMIT 1 : datetime을 오름차순으로 정렬해서 1번째만 보이게 한다
+    => LIMIT 1 : datetime을 오름차순으로 정렬해서 1번째 데이터만 보이게 한다
         
-
-
 
 ### 역순 정렬하기
 ```sql
@@ -82,7 +80,7 @@
         NAME,
         DATETIME
     FROM ANIMAL_INS
-    ORDER BY ANIMAL_ID desc
+    ORDER BY ANIMAL_ID DESC
 ```
 
 ### 이름이 있는 동물의 아이디
