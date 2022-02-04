@@ -9,27 +9,8 @@
     ORDER BY ANIMAL_TYPE 
 ```
 
-
-
 ## 루시와 엘라 찾기
-    SELECT 
-        ANIMAL_ID, 
-        NAME, 
-        SEX_UPON_INTAKE 
-    FROM 
-    ANIMAL_INS 
-    WHERE 
-    (
-        NAME like 'l%' 
-        or NAME like '%r%' 
-        or NAME = "Mitty"
-    ) 
-    order by 
-    ANIMAL_ID  => 혹시 이 답은 안되나...?
-
-
-
-
+```sql    
     SELECT 
         ANIMAL_ID, 
         NAME, 
@@ -44,18 +25,19 @@
     ) 
     order by 
     1
-
+```
 
 
 ## 중복 제거하기
 동물의 이름은 몇 개인지 조회하는 SQL 문을 작성해주세요. 이때 이름이 NULL인 경우는 집계하지 않으며 중복되는 이름은 하나로 칩니다.
+ ```sql 
     SELECT
         COUNT(distinct(NAME))
     FROM ANIMAL_INS
     WHERE NAME IS NOT NULL
-
-    GROUP BY는 집계함수와 함께 조회할때,
-
+```
+    *GROUP BY는 집계함수와 함께 조회할때,
+    DISTINCT는 중복된 데이터를 조회할때
 
 ## 중성화 여부 확인하기
     IF(조건식, 'O', 'X') 
