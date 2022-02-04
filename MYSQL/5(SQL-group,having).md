@@ -427,19 +427,20 @@
 	만약 이름이 allen이나 admas인 사람을 조회하고 싶다면? (동명이인)
 
 	문제1. JOB 
-	from emp
-	where ENAME = 'allen'
-	or ename = 'adams'
+	FROM 
+	emp
+	WHERE ENAME = 'allen'
+	OR ename = 'adams'
 
 	그러나, 중복된 코드는 좋지 않다.
 
 	문제2
 	이름이 A로 시작하는 사람 조회
-	select 
+	SELECT 
 	ename,
 	JOB 
-	from emp
-	where ENAME like 'a%'
+	FROM emp
+	WHERE ENAME like 'a%'
 
 	문제3
 	L이 두번 들어간 사람의 이름을 조회
@@ -448,6 +449,19 @@
 	JOB 
 	from emp
 	where ENAME like '%l%l%'
+
+	문제4
+	이름에 'el'가 (나란히) 들어간 사람을 조회
+		SELECT
+		ANIMAL_ID,
+		NAME
+	FROM 
+	ANIMAL_INS
+	WHERE 
+		ANIMAL_TYPE = 'Dog'
+		AND NAME LIKE '%el%'
+	ORDER BY NAME
+
 
 ## insert into : 어디 테이블에 저장할거야?
 	*순서대로 나열하기 ex) empno는 8000, ename은 양다은
