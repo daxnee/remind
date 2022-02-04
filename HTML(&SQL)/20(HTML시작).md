@@ -3,7 +3,11 @@
     HTML + SQL 같이 병행
 
 ## HTML 직종
-
+    1. 웹디자이너
+    2. 프로그래머(프론트 or 백엔드)
+    3. 블로거
+    4. 웹기획자
+    5. 쇼핑몰 운영자
 
 ## ***HTML 특징
     1. 논리적이고 연산적인 요소가 필요 없다.
@@ -22,9 +26,9 @@
     ! 입력 후 tab => html 서식 생성
     
     태그는 쌍으로 이루어짐
-    / = > 태그가 끝났다
+    / = > '태그가 끝났다' 라는 의미
 
-## 설치 
+## vscode 설치 목록
     테트리스 모양 클릭 
     1. live server 
     2. material icon theme (확장명마다 아이콘을 바꿔줌)
@@ -41,7 +45,7 @@
 ## 코드 정렬
     파일 두개 내 워크스페이스 안 day_01 파일 안에 복붙하기 (vscode, prettier)
     *prettier 설치시 주의점
-        day_01 파일 밖으로 빼줘야함 (tab키 작동 안됨)
+        day_01 파일 밖으로 빼줘야 함 (tab키 작동 안됨)
 
 
 ## HTML 이론**
@@ -56,7 +60,7 @@
         <body>  모
         </body> ㅁ   
 
-    </html>     ex) /는 java 중괄호 닫혔다고 생각
+    </html>  ex) /는 java 중괄호 닫혔다고 생각
     
    기본 문법 
    <html> 태그 안에 head와 body가 존재
@@ -119,7 +123,7 @@
         name : 변수 이름(중복 가능)
 
         value와 placeholder 차이점?
-        value : value에 넣은 글자가 같이 입력
+        value : value에 넣은 글자가 지워지지 않고 같이 입력
         placeholder : 타이핑 즉시 글자가 없어짐
 
         readonly : 타이핑(입력) 불가능
