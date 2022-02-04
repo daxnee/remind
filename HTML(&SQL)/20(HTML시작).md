@@ -128,3 +128,5 @@
     속성(id, name, readonly...)은 중복이 가능하다.
 
 
+## SQL 포맷 교정 사이트
+https://codebeautify.org/sqlformatter
