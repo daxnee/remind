@@ -33,6 +33,9 @@
         COUNT(distinct(NAME))
     FROM ANIMAL_INS
     WHERE NAME IS NOT NULL
+
+
+
 ```
     *GROUP BY는 집계함수와 함께 조회할때,
     DISTINCT는 중복된 데이터를 조회할때
@@ -52,6 +55,8 @@
     DB : MySQL, 오라클
     JS, JAVA, PYTHON
     
+
+
 
 
 
