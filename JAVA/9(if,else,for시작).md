@@ -86,8 +86,6 @@
     입력 후 - ctrl + shift + o
 
 
-	
-
 
 
 ## 다시 풀어보기	
@@ -121,8 +119,6 @@
 	System.out.println("F학점입니다.");
 	}
 	
-
-
 
    	## Scanner scan = new Scanner(System.in);
 		
