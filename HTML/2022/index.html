@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>덕담 하나 주면 안 잡아 먹지!</title>
+    <style>
+        .background{
+            
+            width: 100vw;
+            height: 100vh;
+            
+            max-width: 450px;
+            /* 늘릴때 크기를 제한함 */
+
+            background-image: url('https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/bg_default.png');
+            background-position: center;
+            background-size: cover;
+
+            margin: auto;
+
+        }
+        
+        body, h1, p {
+            margin: 0; 
+            /* 이미지의 상하 여백을 없애줌 */
+            /* 자동으로 여백을 갖고 있는 애들이 있으니까 
+            0으로 맞춰주고 꾸미는게 편함(body, h1, p) */
+        }
+
+        .title {
+            background-color: green;
+            
+            /*div는 기본적으로 안보이니까 배경색 깔아주면 좋음 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding-top: 5vh;
+            /* 보는 사람의 크기에 맞춰서 5% 간격을 넓히겠다 */
+        }
+
+            .title > h1 {
+                font-size: 22px;
+
+                background-color: white;
+                padding: 8px;
+            }
+    </style>
+</head>
+<body>
+    <div class="background"> 
+        <div class="title">
+            <h1>덕담 하나 주면 안 잡아먹지!</h1>
+            <p>다은 님이 받은 덕담 : <span>2개</span> </p>
+            <!-- 2개는 한번 더 꾸며줘야 해서 span으로 따로 묶어줘야함 -->
+        
+        
+        </div>
+    </div>
+</body>
+</html>
