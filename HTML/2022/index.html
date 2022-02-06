@@ -5,7 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>덕담 하나 주면 안 잡아 먹지!</title>
+    <meta property="og:title" content="다은 님의 덕담 페이지"/>
+<meta property="og:description" content="덕담 한마디 남겨줬음 좋겠당ㅎ"/>
+<meta property="og:image" content="https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/ogimage.png"/>
+    
     <style>
+
+        @font-face {
+            font-family: 'Cafe24Ssurround';
+            src: url('https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/Cafe24Ssurround.woff') format('woff');
+        }
+
+        * {
+            font-family: 'Cafe24Ssurround';
+        }
+
+        /* 10-16 복사한 폰트임 
+        srx: url => 구글링한 폰트 주소*/ 
         .background{
             
             width: 100vw;
@@ -22,7 +38,7 @@
 
         }
         
-        body, h1, p {
+        body, h1, p { 
             margin: 0; 
             /* 이미지의 상하 여백을 없애줌 */
             /* 자동으로 여백을 갖고 있는 애들이 있으니까 
@@ -30,25 +46,77 @@
         }
 
         .title {
-            background-color: green;
-            
-            /*div는 기본적으로 안보이니까 배경색 깔아주면 좋음 */
+            color: #3f3732;
+            /* background-color: green; */
+            /*div는 기본적으로 안보이니까 배경색 깔아주면 좋음
+            다 만들고 배경색 지워주기 (주석처리) */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            /* 가운데로 모으기 : 위 4줄 */
 
             padding-top: 5vh;
             /* 보는 사람의 크기에 맞춰서 5% 간격을 넓히겠다 */
         }
 
             .title > h1 {
+                /* 타이틀 안에 있는 h1을 꾸며주겠다 */
                 font-size: 22px;
 
                 background-color: white;
-                padding: 8px;
+                padding: 8px 16px;
+                /* 백그라운드 안쪽 여백 사이즈 조절
+                첫번째 : 위,아래 두번째:좌,우 */
+
+                border-radius: 16px;
+                /* 모서리 둥글게 */
+
+                margin-bottom: 16px;
+
+            }
+
+            .title > p {
+                font-size: 18px;
+            }
+
+            .title > p > span{
+                font-size: 22px;
+            }
+
+            .btn{
+                background-color: #3f3732;
+                color: white;
+                
+                width: 300px;
+                height: 50px;
+                border-radius: 10px;
+            
+                font-size: 18px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                cursor: pointer;
+                /* 바구니에 덕담 남기기 상자에 커서를 대면 손모양 */
+                    
+                position: fixed;
+                bottom: 16px;
+                left: calc(50% - 150px);
+                /* 박스 크기가 300이니까 50%에서 150%을 뺀것 */
+            }
+
+            .box > img{
+                width: 70px;
+                position: absolute;
+                bottom: 50%;
+                left: 50%;
+                /* 쪽지 아이콘 위치 조절하기 */
             }
     </style>
+    <script src="https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/free_newyear_2022.js"></script> <script> let mycode = '58f60fa661a2ce190ca7d68134b03cd6'; </script>
 </head>
 <body>
     <div class="background"> 
@@ -56,9 +124,14 @@
             <h1>덕담 하나 주면 안 잡아먹지!</h1>
             <p>다은 님이 받은 덕담 : <span>2개</span> </p>
             <!-- 2개는 한번 더 꾸며줘야 해서 span으로 따로 묶어줘야함 -->
-        
-        
         </div>
+        <div class="box">
+            <!-- <img onclick="alert('새해복!')" src="https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/object3.png"> -->
+            <!-- 윗줄 작성할때 따옴표 주의하기!
+             alert('새해복!') : 동작하기 (JS)-->
+             <!-- 115칸 JS 작성 후 이미지 없애주기 (주석처리) -->
+        </div>
+        <div class="btn"> 바구니에 덕담 남기기</div>
     </div>
 </body>
 </html>
