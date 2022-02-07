@@ -23,13 +23,14 @@
 
     40번 부서인 사람까지 나왔음
 
-    여기서, 40번만 추출하고 싶다면?   ***다시 정리
+    !!여기서, 40번만 추출하고 싶다면?  
        select 
     *
     from emp as e
     right join dept as d
     on e.DEPTNO = d.deptno
     where e.EMPNO is null
+    왜 empno? => 기본키라 겹칠일이 없어서 조회하기 쉬움
 
 ### 서브쿼리 
     서브쿼리란? 쿼리에 또 쿼리가 옴
@@ -125,7 +126,7 @@
                 sal > 2000
             );
 
-            
+
     *** in 사용 비추 이유 : 실제로 존재하는 데이터의 값을 비교한다 => 즉, 속도가 느려지고 비용은 많이 듦
         그래서 실무에선 in 대신 from에 서브쿼리를 사용하는 것!!
 
@@ -138,3 +139,31 @@
             emp WHERE KT > 3000   // where의 조건이 true면 밖의 select문 실행 false면 실행 안 함
         )
 
+
+#### COUNT 
+    Q. count(*) or count(host_ID) ?
+    A. 둘 다 정답이 될 수 있음
+    더 정확하게 출력하려면 괄호 안 컬럼명을 넣어주는 것이 좋다!
+    실무에선 기존 사용법 파악하고 사용하기
+
+
+#### from 서브쿼리 
+    ex) 
+        select 
+    e.ename
+    from (
+    	select 
+    	ename,
+    	job,
+    	sal
+    	from emp
+    	where sal > 2500
+    )as e 
+    where e.job = 'CLERK'
+
+    Q. 밖의 select 컬럼과 from 안 select 컬럼이 일치해야 하나?
+    A. 아님. 쉽게 말해 from 안 select 절은 밖 select문에서 
+    출력할 때 필요한 것들을 써준 것임
+    만약, 데이터 조회시 ename, job이 필요하면
+    from 안 select에 ename, job를 써준다.
+   
