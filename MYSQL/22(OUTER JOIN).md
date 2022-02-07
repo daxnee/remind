@@ -166,4 +166,6 @@
     출력할 때 필요한 것들을 써준 것임
     만약, 데이터 조회시 ename, job이 필요하면
     from 안 select에 ename, job를 써준다.
+
+    * orderby는 서브쿼리 밖에 써줌
    
