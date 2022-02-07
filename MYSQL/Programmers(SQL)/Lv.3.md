@@ -42,7 +42,7 @@
 ```
 
 ### 있었는데요 없었습니다
-
+```sql
     SELECT
         i.ANIMAL_ID,
         i.NAME
@@ -53,4 +53,4 @@
         i.DATETIME > o.DATETIME
     ORDER BY 
         i.DATETIME
-
+```
