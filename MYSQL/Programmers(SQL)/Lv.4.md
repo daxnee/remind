@@ -16,10 +16,10 @@
     ORDER BY 
         1
 
-        - 논리 연산자 :  and , or
-         *and가 먼저 실행되니까 
-         or 실행을 먼저 하려면 괄호를 써줘야 됨!!
-         실행순서 and -> or
+        -   논리 연산자 :  and , or
+            * 'and가 먼저 실행'되니까 
+            or 실행을 먼저 하려면 '괄호'를 써줘야 됨!!
+            실행순서 and -> or
 
 
 ### 헤비 유저가 소유한 장소
@@ -29,7 +29,7 @@
     - ID는 기본키입니다.
     ***키포인트 : 서비스에서 공간을 둘 이상 등록한 사람
     
-    *ID는 겹칠수가 없고 HOST_ID는 겹칠 수 있음 = > 기본키 
+    *ID는 겹칠수가 없고 HOST_ID는 겹칠 수 있음 = > 문제 중 'ID는 기본키' 라는 말에서 알 수 있음
     1. HOST_ID가 2개 이상인 사람 조회 쿼리
     
 
@@ -46,7 +46,6 @@
         id,
         name,
         host_id
- 
     FROM PLACES
         group by host_id 
         having count(HOST_ID) >=2
