@@ -1,16 +1,16 @@
 ### 없어진 기록 찾기
 
--- 코드를 입력하세요
--- 입양을 간 기록o 보호소엔 기록이 x
--- 동물의 id와 이름을 조회
--- id순으로 조회하기
+   
+- 입양을 간 기록o 보호소엔 기록이 x
+- 동물의 id와 이름을 조회
+- id순으로 조회하기
 
-    **JOIN문제다?
-    1.  교집합 컬럼 확인
-    2. ANIMAL_OUTS에는 있음
-    3. ANIMAL_ID에는 없음
-    4. 아하 outer join을 사용해야 하는 구나
-    
+      JOIN문제 풀때
+       1.  교집합 컬럼 확인
+       2. ANIMAL_OUTS에는 있음
+       3. ANIMAL_ID에는 없음
+       4. 아하 outer join을 사용해야 하는 구나
+
 ```sql
     SELECT 
         d.ANIMAL_ID, 
