@@ -15,3 +15,34 @@
     ORDER BY 
         1
 ```
+
+
+### 오랜 기간 보호한 동물(1)
+```sql
+    SELECT 
+        i.NAME, 
+        i.DATETIME 
+    FROM 
+        ANIMAL_INS AS i 
+    LEFT JOIN ANIMAL_OUTS AS o ON i.ANIMAL_ID = o.ANIMAL_ID 
+    WHERE 
+        o.DATETIME IS NULL 
+    ORDER BY 
+        i.datetime 
+    LIMIT 
+    3
+```
+
+### 있었는데요 없었습니다
+
+    SELECT
+        i.ANIMAL_ID,
+        i.NAME
+    FROM 
+        ANIMAL_INS AS i 
+        LEFT JOIN ANIMAL_OUTS AS o ON i.ANIMAL_ID = o.ANIMAL_ID
+    WHERE 
+        i.DATETIME > o.DATETIME
+    ORDER BY 
+        i.DATETIME
+
