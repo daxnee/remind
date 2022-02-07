@@ -1,5 +1,5 @@
 ### 보호소에서 중성화한 동물
-
+```sql
     SELECT 
         i.ANIMAL_ID, 
         i.ANIMAL_TYPE, 
@@ -16,11 +16,11 @@
     ORDER BY 
         1
 
-        -   논리 연산자 :  and , or
-            * 'and가 먼저 실행'되니까 
-            or 실행을 먼저 하려면 '괄호'를 써줘야 됨!!
-            실행순서 and -> or
-
+        -- 논리 연산자 :  and , or
+        --  * 'and가 먼저 실행'되니까 
+        --  or 실행을 먼저 하려면 '괄호'를 써줘야 됨!!
+        --  실행순서 and -> or
+```
 
 ### 헤비 유저가 소유한 장소
     - 둘 이상 등록한 사람을 헤비유저
@@ -33,8 +33,8 @@
     1. HOST_ID가 2개 이상인 사람 조회 쿼리
     
 
-    내가 푼거
-    -- 코드를 입력하세요
+    내가 푼거(확인 후 삭제)
+ ```sql
     SELECT 
       p.id,
       p.NAME,
@@ -51,25 +51,32 @@
         having count(HOST_ID) >=2
           )as p
         order by 1
+```
 
-
+```sql 
     선생님 답안
-    select
-    p.id,
-    p.name,
-    r.host_id
-    from(
-    SELECT 
-    host_id,
-    count(*) as cnt
-        from PLACES
-    group by HOST_ID
-    having count(*) >=2
-    ) as r   
-    inner join PLACES as p
+-- 데이터를 필터링할 때 사용
+-- 헤비 유저가 소유한 장소
+-- from 서브쿼리로 2개이상 host_id를 소유한 데이터 확보
+-- 확보 후, 외부 쿼리로 name과 id를 조회 후 정렬
+    
+  
+   SELECT
+        p.id,
+        p.name,
+        r.host_id
+    FROM (
+          SELECT 
+            host_id,
+            count(*) AS cnt
+        FROM PLACES
+        GROUP BY host_id
+        HAVING COUNT(*) >= 2
+    ) AS r
+    INNER JOIN PLACES as p
     ON r.HOST_ID = p.HOST_ID
     ORDER BY 1
-
+```
 
 
        
