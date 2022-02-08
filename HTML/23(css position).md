@@ -73,3 +73,8 @@
     1. position
     2. margin, padding, border-box
     3. flex (암기필수)
+
+
+### 컬러 코드 사이트
+
+    https://htmlcolorcodes.com/
