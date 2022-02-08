@@ -44,14 +44,14 @@
     (조직생활 하지 못해서, 개인주의 성향)
          
     absolute는 범위 침범이 가능함 
-    반면, relative 범위를 침범하지 않음 
+    반면, relative는 범위를 침범하지 않음 
 
     ex)
     <div class="mom"> 부모
     <div class="sun">자식</div>
 
     만약 부모태그가 있다면 부모 태그 기준으로 움직임
-    조건: 부모가 relative일때만
+    조건: 부모가 relative일때만 적용 가능
 
     ex)
      .mom {
@@ -68,6 +68,8 @@
             height:100px ;
         }
 
+        => sun은 mom태그에 붙어서 이동함
+
 
 ### CSS 
     1. position
@@ -76,5 +78,4 @@
 
 
 ### 컬러 코드 사이트
-
     https://htmlcolorcodes.com/
