@@ -53,6 +53,21 @@
     만약 부모태그가 있다면 부모 태그 기준으로 움직임
     조건: 부모가 relative일때만
 
+    ex)
+     .mom {
+            position: relative;
+            background-color: darkred;
+            width: 100px;
+            height:100px ;
+        }
+
+    .sun{
+            position: absolute;
+            background-color: black;
+            width: 100px;
+            height:100px ;
+        }
+
 
 ### CSS 
     1. position
