@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            
+            margin: 0px;
+            padding: 0px;
+        }
+        /* 배경화면 css */
+        .background{
+            width: 100%;
+            height: 100vh;
+            opacity: 0.5;
+            /* 투명도 0~1까지만 올 수 있음*/
+            background-image: linear-gradient(
+                #06cccc98,
+                #06cccc98
+            ),
+             url(background.jpg);
+            /* 이미지 넣기 : url(파일이름.서식) */
+            
+            background-position: center;
+
+        }
+        .background p{
+            text-align: center;
+            /* 글자 가운데로 */
+            color: rgba(80, 14, 187, 0.973);
+            font-size: 30px;
+            font-weight: 800;
+         /* 폰트 굵기 : 단위 없이 */
+            border: dotted rgb(143, 255, 51); 
+            /* 테두리의 경계선 */
+            /* solid :두꺼운 선 */
+            /* dotted : 점선 */
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="background">
+        <p>안녕하세요 저는 오늘 불고기를 먹고 왔어요 :)</p>
+        </div>
+    </div>
+  </body>
+</html>
