@@ -54,3 +54,5 @@
     ORDER BY 
         i.DATETIME
 ```
+
+### 헤비 유저가 소유한 장소

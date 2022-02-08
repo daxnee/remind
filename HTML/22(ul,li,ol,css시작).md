@@ -53,11 +53,11 @@
     </ol>
     
 ### 
-## css
+## css position
     태그마다 position을 가지고 있음
     position 디폴트값이 static/
-    1. static (디폴트) :  위치를 지정하지 않을 때 
+    1. static (디폴트) : 위치를 지정하지 않을 때 
     2. relative : 원래 
 
-    static은 돌이라 움직이지 않음 그래서 relative로 설정하고 움직여야함
+    static은 돌이라 움직이지 않음   그래서 relative로 설정하고 움직여야함
     

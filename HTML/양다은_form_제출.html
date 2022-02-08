@@ -43,9 +43,7 @@
         width: 150px;
         margin-left: 18px;
 
-        .button {
-          width: 90%;
-        margin: 5px
+       
           
         }
     </style>
@@ -60,8 +58,9 @@
             <option value="라떼">라떼</option>
           </select>
 
-          <input type="number" 수량 placeholder="수량..." max= "100">
-          <input type="id" 회원이름 placeholder="회원이름 입력란..." maxlength="6">
+          <input type="number" 수량 placeholder="수량..." max= "10" required/>
+          <input type="id" 회원이름 placeholder="회원이름 입력란..." disabled>
+           <!-- disabled 회원이름 데이터는 서버에 전송이 안됨! -->
           <input type="password" 회원비밀번호 placeholder= "회원비밀번호 입력란..." maxlength="10">
           <input type="checkbox" checked id="광고수신" />
           <label for="광고수신">광고수신 여부</label>
@@ -69,10 +68,18 @@
           <input type="text" 이메일 placeholder="이메일 입력란...">
       
       <form action="서버 주소" method="post">
+        <!-- action에 서버주소가 옴 회원이 작성한 input이 넘어감 -->
         <textarea name="message" placeholder="주문시 메모 입력란..."></textarea>
-        <input type="button" value="주문" />
+        <input class="submit-btn" type="submit" value="주문" >
+         <!-- form 태그 아에 button을 만들면 서버에 전송 불가능 
+          => 그래서 input 타입을 submit으로 해줘야 한다.-->
         
       </form>
     </div>
   </body>
 </html>
+
+
+
+<!-- HTML(안드로이드)하고 데이터베이스 연동 불가능
+그래서 웹서버에 전송을 해야 함 -->
