@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .book-form {
+        padding: 10px;
+        width: 350px;
+        height: auto;
+        /* 박스크기 조절 */
+        border: 1px solid #b4d402;
+        margin: 10% auto 0;
+      }
+
+      .book-form input {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        padding: 5px;
+        /* 버튼 안 글씨 크기조절 */
+      }
+
+      .book-form .true {
+        /* book-form 아래에 있는 true를 의미
+        클래스 이름 간격 주의 */
+        cursor: pointer;
+        border-color: #b4d402;
+        /* 테두리 선 색상 변경 */
+        background-color: violet;
+        color: wheat;
+        font-size: 20px;
+      }
+
+      .book-form .false {
+        cursor: pointer;
+        /* 버튼 위 손가락 아이콘 */
+        border-color: #b4d402;
+        background-color: #13f1a7;
+        color: rgba(22, 42, 223, 0.781);
+        font-size: 20px;
+      }
+    </style>
+    <script>
+        function doSuccess(){
+            alert("예약완료!");
+        }
+
+        function doFail(){
+            alert("예약취소!");
+        }
+    </script>
+<!-- 자바스크립트는 ; 없어도 됨 -->
+
+
+
+
+
+  </head>
+  <body>
+    
+    
+    <div class="container">
+      <div class="book-form">
+        <select name="" 메뉴="">
+          <option value="">--Please choose an menu--</option>
+          <option value="아메리카노">아메리카노</option>
+          <option value="라떼">라떼</option>
+        </select>
+        
+        <input type="text" placeholder="이름을 입력하세요" />
+        <input class="true" type="button" value="예약 완료" onclick="doSuccess();" />
+        <input class="false" type="button" value="예약 취소" onclick="doFail();" />
+        <input type="">
+        <!-- 위에 작성한 js의 함수를 온클릭에 복사 (매개변수까지) 
+        자바스크립트 메소드-->
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,9 +1,3 @@
 {
-    "powermode.enabled": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.formatOnType": true,
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    "powermode.enabled": true
 }

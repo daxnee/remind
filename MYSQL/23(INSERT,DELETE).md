@@ -2,6 +2,10 @@
 
 
 ### DML
+    INSERT
+    DELETE
+    UPDATE
+    SELECT
 ### INSERT
 - insert : 데이터를 저장
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+         function order(){
+            alert("주문완료! 닉네임으로 불러드릴게요~.~");
+        }
+    </script>
+
+
+
+</head>
+<body>
+    <div class="container">
+  <div class="contact-form">
+      
+        <h2>1리터 커피 키오스크</h2>
+        <div>
+        <select name="" 메뉴="">
+          <option class="option" value="">--메뉴를 선택해주세요--</option>
+          <option value="아메리카노">아메리카노</option>
+          <option value="라떼">라떼</option>
+        </select>
+        
+        <input type="number"  placeholder="수량" max="10">
+        <input type="number" 샷추가 placeholder= "샷추가" max="9">
+        
+        <input type="text" 닉네임 placeholder="닉네임 입력해주세요">
+        <select name="" 매장여부="">
+            <option value="">--For here or To go--</option>
+            <option value="ForHere">For here</option>
+            <option value="ToGo">To go</option>
+            <input class="order" type="button" value="주문 완료" onclick="order();" />
+
+
+        <input type="checkbox" checked id="정보 저장" />
+        <label for="정보 저장">고객 주문 정보 저장</label>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

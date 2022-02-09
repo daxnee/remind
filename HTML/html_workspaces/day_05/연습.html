@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+         function order(){
+            alert("주문완료! 닉네임으로 불러드릴게요~.~");
+        }
+    </script>
+    <style>
+            * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .order-form {
+    padding: 30px;
+    box-shadow: 0 0 4px 0 rgba(23, 21, 165, 0.5);
+    margin: 100px auto 0;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    border-color: #a9a6da;
+    
+  }
+  .order-form h2 {
+    background-color: #b7c3db;         
+    margin-top: 0;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border-color: #a9a6da;
+    
+    
+
+  }
+  .order-form input {
+  
+      width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #bba1e4;
+    text-align: center;
+    background-color: rgba(147, 163, 184, 0.637);
+  }
+  .order-form input[type=checkbox]  {
+    width: 10%;
+    margin: 10px auto;
+    padding: 10px;
+
+  
+  }
+  .border-form textarea {
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+    height: 80px;
+  }
+
+  .order-form .order {
+      cursor: pointer;
+      border-color: #2561bb;
+      background-color: #729fc4;
+      color: rgba(4, 31, 71, 0.781);
+      font-size: 20px;
+      font-weight: 800;
+      border: dotted  #2561bb;
+  }
+
+  body{           
+   width: 100%;
+   height: 100vh;
+   background-image: linear-gradient(
+          #bddfb73a,
+          #bddfb73a
+   ),url(pexels-photo.jpeg);
+   background-position: center;
+   background-size: cover;
+  }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+  <div class="order-form">
+      
+        <h2>1리터 커피 키오스크</h2>
+        <div>
+        <select name="" 메뉴="">
+          <option class="option" value="">--메뉴를 선택해주세요--</option>
+          <option value="아메리카노">아메리카노</option>
+          <option value="라떼">라떼</option>
+        </select>
+        
+        <input type="number"  placeholder="수량" max="10">
+        <input type="number" 샷추가 placeholder= "샷추가" max="9">
+        
+        <input type="text" 닉네임 placeholder="닉네임 입력해주세요">
+        <select name="" 매장여부="">
+            <option value="">--For here or To go--</option>
+            <option value="ForHere">For here</option>
+            <option value="ToGo">To go</option>
+            <input class="order" type="button" value="주문 완료" onclick="order();" />
+
+
+        <input type="checkbox" checked id="정보 저장" />
+        <label for="정보 저장">고객 주문 정보 저장</label>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
