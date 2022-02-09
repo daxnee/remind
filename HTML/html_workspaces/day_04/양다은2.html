@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        .container{
+            width: 100%;
+            height: 100vh;
+            opacity: 0.;
+            background-image: linear-gradient(#06cccc11, #06cccc11)
+            ,url(blue.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .container .p1{
+            padding: 20px;
+            color: #181D27;
+            font-size: 30px;
+            top: auto;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .container p{ 
+           
+            color: #181D27;
+            font-size: 50px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .book-form {
+            width: 400px;
+            height: auto;
+            background-color: #e4e8ee7a;
+            margin: 3% auto 0;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            /* 테두리 둥글게 */
+        }
+        .book-form input{
+            width: 100%;
+            border: 2px solid rgba(250, 248, 248, 0.938);
+            background-color: #cee0ebd2;
+            
+            height: 50px;
+            /* 버튼 박스 높이 */
+            margin: 10px auto;
+            /* 버튼간 간격 */
+            border-radius: 5px;
+            /* 모서리 둥글게 */
+            cursor: pointer;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 100;
+            font-color: black;
+        }
+
+      
+
+        .book-form .depart{
+            width: 50%;
+            height: 40px;
+            margin: 10px 0;
+        }
+
+          .book-form .arrival{
+            width: 20%;
+            margin: 10px 0;
+            
+            
+            cursor: pointer;
+        }
+
+    </style>
+
+    <script>
+        function search(){
+        alert("국내 최저가 사이트 아구다가 조건에 맞는 여행지를 검색 중입니다!");
+        
+    }
+    </script>
+
+</head>
+<body>
+   
+    <div class="container">
+        <p class="p1">호텔, 리조트, 호스텔 등 
+            전 세계의 다양한 숙소를 최저가로 예약하세요! </p>
+        
+             <p>aguda</p>
+
+        <div class="book-form">
+            <h2>어디로 떠나시나요?</h2>
+         <label for="destination" placeholder="여행지" > </label>
+         <input id="destination" type="text" list="destination-list"/>
+                <datalist id = "destination-list">
+                <option value="타이베이(대만)                   2,500개의 숙소"></option>
+                <option value="푸켓(태국)                         1,800개의 숙소"></option>
+                <option value="보라카이(필리핀)                 6,501개의 숙소"></option>
+                <option value="홋카이도(일본)                    1,764개의 숙소"></option>
+                <option value="제주(대한민국)                   7,784개의 숙소"></option>
+                <option value="싱가포르(싱가포르)               1,230개의 숙소"></option>
+                </datalist>
+                
+                <input class="depart" type="date">
+             <input class="arrival" type="date"> 
+
+              <input class="d" type="text" placeholder="출발지를 입력하세요" required="">
+             <input class="count" type="number"  placeholder="인원수" max="10">
+             <input class="search" type="button" value="검색하기" onclick="search();" />
+             
+             
+             </div>
+
+
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>
