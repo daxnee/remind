@@ -1,90 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .a{
-            background-color: rgb(217, 255, 0);
-            width: 100px;
-            height:100px ;
+      .a {
+        background-color: rgb(217, 255, 0);
+        width: 100px;
+        height: 100px;
+      }
 
-        }
-            
-        .b{
-            position: relative;
-            top: 0px;
-            left: 100px;
-            background-color: rgb(0, 255, 85);
-            width: 100px;
-            height:100px ;
+      .b {
+        position: relative;
+        top: 0px;
+        left: 100px;
+        background-color: rgb(0, 255, 85);
+        width: 100px;
+        height: 100px;
+      }
 
-        }
+      .c {
+        position: absolute;
+        top: 0px;
+        left: 100px;
+        background-color: rgb(0, 204, 255);
+        width: 100px;
+        height: 100px;
+        /* absolute는 범위 침범이 가능함 */
+        /* 반면, relative 범위를 침범하지 않음 */
+        /* absolute 언제? 팝업광고창 만들때 사용 */
+      }
 
-        .c{
-            position: absolute;
-            top: 0px;
-            left: 100px;
-            background-color: rgb(0, 204, 255);
-            width: 100px;
-            height:100px ;
-            /* absolute는 범위 침범이 가능함 */
-            /* 반면, relative 범위를 침범하지 않음 */
-            /* absolute 언제? 팝업광고창 만들때 사용 */
+      .d {
+        position: fixed;
+        width: 100px;
+        background-color: #d1ff33;
+        /* 아래 두개로 하단에 고정시킴 */
+        bottom: 0;
+        right: 0;
+      }
+      /* 정말 고정된건지 확인하고 싶다면? */
+      body {
+        height: 200vh;
+        /* 스크롤을 만들어줌 */
+      }
 
-        }
+      .mom {
+        position: relative;
+        background-color: darkred;
+        width: 100px;
+        height: 100px;
+      }
 
-        .d{ 
-            position: fixed;
-            width: 100px;
-            background-color: #D1FF33;
-            /* 아래 두개로 하단에 고정시킴 */
-            bottom: 0;
-            right: 0;
-
-
-        }
-        /* 정말 고정된건지 확인하고 싶다면? */
-            body{
-                height: 200vh;
-                /* 스크롤을 만들어줌 */
-            }
-
-        .mom {
-            position: relative;
-            background-color: darkred;
-            width: 100px;
-            height:100px ;
-        }
-
-        .sun{
-            position: absolute;
-            background-color: black;
-            width: 100px;
-            height:100px ;
-        }
-            /* absolute는 자식이(sun) 부모를(mom) 기준으로 위치가 조절된다 */
-                /* relative > absolute */
-
+      .sun {
+        position: absolute;
+        background-color: black;
+        width: 100px;
+        height: 100px;
+      }
+      /* absolute는 자식이(sun) 부모를(mom) 기준으로 위치가 조절된다 */
+      /* relative > absolute */
     </style>
-</head>
-<body>
-    <div class = "a">A구역</div>
-    <div class = "b">B구역</div>
-    <div class = "c">C구역</div>
-    <div class ="d">D구역</div>
+  </head>
+  <body>
+    <div class="a">A구역</div>
+    <div class="b">B구역</div>
+    <div class="c">C구역</div>
+    <div class="d">D구역</div>
 
-    <div class="mom"> 부모
-    <div class="sun">자식</div>
+    <div class="mom">
+      부모
 
+      <div class="sun">자식</div>
     </div>
-
-
-</body>
+  </body>
 </html>
-
-
 
 <!-- 메인 화면의 파일명은 index로 하는 것이 규칙임 -->
