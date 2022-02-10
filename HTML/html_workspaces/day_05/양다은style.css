@@ -7,7 +7,8 @@
 .container {
   width: 100%;
   height: 100vh;
-  opacity: 0;
+  /* opacity 투명도 0 ~ 1*/
+  /* opacity: 0.6; */
   background-image: linear-gradient(#06cccc11, #06cccc11), url(blue.jpg);
   background-position: center;
   background-size: cover;
@@ -64,7 +65,7 @@
   text-align: center;
   font-size: 15px;
   font-weight: 100;
-  font-color: black;
+  color: black;
 }
 
 .book-form .depart {
@@ -93,7 +94,7 @@
   width: 45%;
   height: 50px;
   margin: 10px 5px 5px;
-  padding: auto;
+  padding: 10px;
 }
 
 .book-form .destination {
@@ -107,7 +108,7 @@
   background-color: #051736e3;
 }
 
-.body {
+body {
   width: 100%;
 }
 
@@ -115,4 +116,5 @@ div {
   text-align: center;
   width: 100%;
 }
+
 /* 이모지 가운데 정렬 body, div */
