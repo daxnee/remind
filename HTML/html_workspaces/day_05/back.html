@@ -50,24 +50,17 @@
       }
     </style>
     <script>
-        function doSuccess(){
-            alert("예약완료!");
-        }
+      function doSuccess() {
+        alert('예약완료!');
+      }
 
-        function doFail(){
-            alert("예약취소!");
-        }
+      function doFail() {
+        alert('예약취소!');
+      }
     </script>
-<!-- 자바스크립트는 ; 없어도 됨 -->
-
-
-
-
-
+    <!-- 자바스크립트는 ; 없어도 됨 -->
   </head>
   <body>
-    
-    
     <div class="container">
       <div class="book-form">
         <select name="" 메뉴="">
@@ -75,11 +68,21 @@
           <option value="아메리카노">아메리카노</option>
           <option value="라떼">라떼</option>
         </select>
-        
+
         <input type="text" placeholder="이름을 입력하세요" />
-        <input class="true" type="button" value="예약 완료" onclick="doSuccess();" />
-        <input class="false" type="button" value="예약 취소" onclick="doFail();" />
-        <input type="">
+        <input
+          class="true"
+          type="button"
+          value="예약 완료"
+          onclick="doSuccess();"
+        />
+        <input
+          class="false"
+          type="button"
+          value="예약 취소"
+          onclick="doFail();"
+        />
+        <input type="" />
         <!-- 위에 작성한 js의 함수를 온클릭에 복사 (매개변수까지) 
         자바스크립트 메소드-->
       </div>
