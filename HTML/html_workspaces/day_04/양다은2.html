@@ -25,8 +25,8 @@
 
         .container .p1{
             padding: 20px;
-            color: #042255;
-            font-size: 30px;
+            color: #02122e;
+            font-size: 25px;
             top: auto;
             text-align: center;
             font-weight: 600;
@@ -34,11 +34,12 @@
         }
 
         .container p{ 
-           
+           padding: 20px;
             color: #181D27;
-            font-size: 50px;
+            font-size: 60px;
             text-align: center;
             font-weight: 800;
+            color: #181D27;
            
         }
 
@@ -73,17 +74,17 @@
       
 
         .book-form .depart{
-            width: 50%;
+            width: 101%;
             height: 40px;
             margin: 10px 0;
+            padding: 10px;
         }
 
           .book-form .arrival{
-            width: 40%;
+            width: 101%;
             height: 40px;
             margin: 10px 0;
-            
-            
+            padding: 10px;
             cursor: pointer;
         }
 
@@ -95,7 +96,13 @@
         
     }
     </script>
+    
+    <!-- <script langauge="javascript">
 
+        window.open("https://www.agoda.com","찐아고다","width=800,height=400"); -->
+
+
+   </script>
 </head>
 <body>
    
@@ -104,7 +111,7 @@
             전 세계의 다양한 숙소를 최저가로 예약하세요! </p>
         
              <p>aguda</p>
-
+             
         <div class="book-form">
             <h2>어디로 떠나시나요?</h2>
          <label for="destination" placeholder="여행지" > </label>
@@ -118,15 +125,18 @@
                 <option value="싱가포르(싱가포르)               1,230개의 숙소"></option>
                 </datalist>
                 
-             
+            <div style="display: inline-block">
             <input class="depart" type="date">
+            </div>
+            <div style="display: inline-block">
              <input class="arrival" type="date"> 
+             </div>
 
             <input class="d" type="text" placeholder="출발지를 입력하세요" required="">
              <input class="count" type="number"  placeholder="인원수" min="1" max="10" >
              <input class="search" type="button" value="검색하기" onclick="search();" />
              
-             
+          
 
 
 
