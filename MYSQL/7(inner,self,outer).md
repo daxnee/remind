@@ -110,10 +110,13 @@
     즉, 동일 테이블을 두번 조인!(INNER JOIN으로!)
     => 자신이 자신과 조인, 1개의 테이블 사용
 
+    ex) emp테이블 안에 있는 각자의 사원번호로 
+    셀프 조인을 해서 서로의 사수, 후배를 알아보고 싶을때 사용
+
 
 ## 문제풀이
 
-    1. 사원들의 상사 이름과 번호를 조회
+    1. 사원의 담당 사수와 그 사수의 사원번호를 조회
     select
     sawon.empno as "사원 번호",
     sawon.ename as "사원 이름",
@@ -123,15 +126,15 @@
     inner join emp as sasu
     on sawon.mgr = sasu.empno
 
-    2. 상사들의 사원을 조회
-    select sawon.empno as "후임번호"
-    sasu.ename as "후임이름"
-    sasu.empno as "사수 번호"
+    2. 사수들의 담당 후배들을 조회
+    select 
+    sawon.empno as "후임 번호",
+    sawon.ename as "후임 이름",
+    sasu.empno as "사수 번호",
     sasu.ename as "사수 이름"
-    from 
-    emp as sasu
+    from emp as sasu
     inner join emp as sawon
-    on sasu.empno = sawon.mger
+    on sasu.empno = sawon.mgr
 
 
 
