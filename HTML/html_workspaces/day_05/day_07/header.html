@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>프로그래머스</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      header {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        padding: 2px;
+
+        /* header안에 있는 item들을 설정 */
+      }
+
+      .logo p {
+        color: white;
+        font-size: x-large;
+        font-weight: 700;
+      }
+      a {
+        text-decoration: none;
+        color: slategrey;
+        font-size: 20px;
+        font-weight: 800;
+      }
+      .menu {
+        display: flex;
+        list-style: none;
+        /* 리스트 나열 아이콘 지움 */
+      }
+      .menu li {
+        padding: 10px 12px;
+        height: 20px;
+      }
+      .menu li:hover {
+        background-color: white;
+        border-radius: 7px;
+      }
+      .icon p {
+        color: slategray;
+      }
+
+      footer {
+        padding: 20px;
+        height: 100px;
+        background-color: black;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <p>programmers</p>
+        </div>
+        <ul class="menu">
+          <!-- ul : UnorderList -->
+          <li><a href="">탑프로그래머스</a></li>
+          <li><a href="">스킬업</a></li>
+          <li><a href="">개발자 채용</a></li>
+          <li><a href="">코딩테스트 연습</a></li>
+          <li><a href="">프로그래밍 강의</a></li>
+          <!-- (li>a)*5  -->
+        </ul>
+        <div class="icon">
+          <p>아이콘 영역</p>
+        </div>
+      </header>
+      <div class="section">
+        <p>본문 1</p>
+      </div>
+      <footer>
+        <a href="https://programmers.co.kr/">programmers</a>
+      </footer>
+    </div>
+  </body>
+</html>

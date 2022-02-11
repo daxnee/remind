@@ -33,7 +33,7 @@
     - 디폴트값 static :돌
     - relative : 돌 -> 다리가 생김
     조건 : 원래 자기 자리에서 움직임
-###
+### relative
 ### fixed
     - fixed : 고정된 위치
         ex. 카카오톡 상담 아이콘 (스크롤을 내려도 따라오는)
@@ -72,7 +72,7 @@
 
 
 ### CSS 
-    1. position
+    1. position (static, fixed, absolute, relative)
     2. margin, padding, border-box
     3. flex (암기필수)
 
