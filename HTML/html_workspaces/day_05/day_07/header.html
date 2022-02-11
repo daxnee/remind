@@ -24,7 +24,6 @@
         justify-content: space-between;
         background-color: black;
         padding: 2px;
-
         /* header안에 있는 item들을 설정 */
       }
 
@@ -33,12 +32,6 @@
         font-size: x-large;
         font-weight: 700;
       }
-      a {
-        text-decoration: none;
-        color: slategrey;
-        font-size: 20px;
-        font-weight: 800;
-      }
       .menu {
         display: flex;
         list-style: none;
@@ -46,11 +39,17 @@
       }
       .menu li {
         padding: 10px 12px;
-        height: 20px;
+        height: auto;
       }
       .menu li:hover {
         background-color: white;
-        border-radius: 7px;
+        border-radius: 8px;
+      }
+      a {
+        text-decoration: none;
+        color: slategrey;
+        font-size: 20px;
+        font-weight: 800;
       }
       .icon p {
         color: slategray;
@@ -84,7 +83,16 @@
         </div>
       </header>
       <div class="section">
-        <p>본문 1</p>
+        <p>채용중인 포지션</p>
+        <ul class="menu">
+          <!-- ul : UnorderList -->
+          <li><a href="">Java</a></li>
+          <li><a href="">Spring</a></li>
+          <li><a href="">개발자 채용</a></li>
+          <li><a href="">코딩테스트 연습</a></li>
+          <li><a href="">프로그래밍 강의</a></li>
+          <!-- (li>a)*5  -->
+        </ul>
       </div>
       <footer>
         <a href="https://programmers.co.kr/">programmers</a>
