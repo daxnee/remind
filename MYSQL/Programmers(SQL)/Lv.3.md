@@ -56,3 +56,28 @@
 ```
 
 ### 헤비 유저가 소유한 장소
+```sql    
+    select
+    p.id,
+    p.name,
+    r.host_id
+    from (
+    select 
+        HOST_ID
+        from PLACES
+        group by HOST_ID
+        having count(*) >= 2
+    ) as r
+    inner join PLACES as p
+    on r.HOST_ID = p.HOST_ID
+    order by 1
+
+    from으로 해비유저(2개 이상 공간 보유) 조건 설정 후 
+    PLACES  테이블과 inner join해줘서 결과를 출력하기
+    아이디 순으로 조회할 땐 'places의 id'라는 것을 주의
+    
+```
+
+
+
+질문 : inner조인이기 때문에 selec절에(63번)호스트아이디를 출력할 때 p, r 둘 중 하나 지정해도 상관 없는지?
