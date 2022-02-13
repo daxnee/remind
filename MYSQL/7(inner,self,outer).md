@@ -59,9 +59,9 @@
 
 
     만약 내가 dept에 있는 데이터를 조회하고 싶으면?
-    : join 기준으로 왼쪽에 쓰고 left
-    반대면 join 기준으로 오른쪽에 쓰고 right
-    => 조건 : 손흥민 데이터는 emp에 있음 emp테이블은 오른쪽에 위치함
+    : join 기준으로 조회할 테이블을 왼쪽에 쓰고 left
+    반대면 join 기준으로 테이블을 오른쪽에 쓰고 right
+    => 조건 : 손흥민 데이터는 emp에 있음 
     select 
     *
     from emp as e 
@@ -69,6 +69,7 @@
     on e.DEPTNO = d.DEPTNO
     where e.DEPTNO is null
 
+    => emp를 왼쪽에 쓰고 left로 join하면됨
 
     *** as 명칭은 중복 안됨 ex) as e,  as ee
 
@@ -84,7 +85,7 @@
     on e.DEPTNO = d.DEPTNO
 
 
-    손흥민만 찾고 싶다면?
+    손흥민만 찾고 싶다면?(차집합 데이터)
     select 
     *
     from emp as e 
@@ -98,7 +99,7 @@
     3. left or right를 사용할지 확인
     select
     *
-    from emp as e *inner join* dept as d => 이너 조인 기준으로 위치 선정
+    from emp as e *inner join* dept as d => inner join을 기준으로 위치 선정
     on e.deptno = d.deptno
 
 
