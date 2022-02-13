@@ -16,9 +16,10 @@
 
 ### card 레이아웃
 - overflow : 컨텐츠가 너무 커서 요소내에 모두 보여주기 힘들때 사용
+
 - overflow : hidden(넘치는 부분 자름)
-               visible(기본값)
-               scroll (스크롤 바 추가)
+             visible(기본값)
+             scroll (스크롤 바 추가)
 
     .card에서 크기와 오버플로우를 설정해준 후 
     .card img의 크기를 조절한다.
@@ -113,7 +114,6 @@
 
 
 
-
 ### justify / wrap
 - justify-content: space-around;
 
@@ -124,6 +124,7 @@
 
     *둘중 하나를 선택해서 쓰기
 
+
 ### wrap
 
 - flex-wrap: wrap;
@@ -131,15 +132,27 @@
 
     시멘틱 레이아웃 확인하기(flex 사이트):  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
+
+
 ### header
 - header
 
-    <header></header>
-    <!-- <div class="class header"></div> 위와 같음-->
-    !-- 시멘틱 태그(header)로 설정하면 검색시 효율적인 검색이 가능함-->
+```css
+1. <header> </header>
+2. <div class="class header"></div>
+두 개 다 같음 (1번을 지향)
 
-    (li>a)*5
+!-- 시멘틱 태그(header)로 설정하면 검색시 효율적인 검이 가능함-->
+```
 
+### li 태그 여러개 만들기
+
+    <li><a href=""></a></li> 5개 만들기
+    =>  (li>a)*5
+    
+
+
+### 사이트 구성(Semantic layout)
     사이트 구성을 알고 싶다면 'Semantic layout' 구글링
     but, 실무에서 시멘틱을 지키는 회사는 거의 없다. 왜인지는 모름,, 
 
