@@ -33,7 +33,8 @@
       }
       .card:hover {
         cursor: pointer;
-        transform: scale(1.5);
+        transform: rotateX( 180deg )
+        /* transform: scale(1.2); */
         /* scale : 포인트 올릴 때 이미지 축소 */
         /* 1이 원래 크기
         1을 기준으로 숫자가 크면 확대, 작으면 축소 */
@@ -44,7 +45,7 @@
       .card img {
         height: 260px;
         width: 260px;
-        padding: ;
+        padding: auto;
         /* 카드 안 이미지 크기 조절 */
       }
       .text-wrap {
@@ -72,6 +73,7 @@
           <p>도룡뇽 포켓몬. 타입은 불꽃이다.</p>
         </div>
       </div>
+
       <div class="card">
         <img src="꼬북이.jpg" alt="" />
         <!-- ctrl + space bar 하면 day_07의 경로들이 나온다 -->
@@ -80,6 +82,7 @@
           <p>꼬마거북 포켓몬. 타입은 물이다.</p>
         </div>
       </div>
+
       <div class="card">
         <img src="이상해씨.jpg" alt="" />
         <!-- ctrl + space bar 하면 day_07의 경로들이 나온다 -->
@@ -88,6 +91,17 @@
           <p>씨앗 포켓몬. 타입은 풀/독이다.</p>
         </div>
       </div>
+
+      <div class="card">
+        <img src="메타몽.jpg" alt="" />
+        <!-- ctrl + space bar 하면 day_07의 경로들이 나온다 -->
+        <div class="text-wrap">
+          <h1>메타몽</h1>
+          <p> 포켓몬. 타입은 풀/독이다.</p>
+        </div>
+      </div>
+    </div>
+
     </div>
     <!-- card 관련 객체만 올 수 있음 -->
   </body>
