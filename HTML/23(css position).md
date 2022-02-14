@@ -58,13 +58,14 @@
             position: relative;
             background-color: darkred;
             width: 100px;
+            
             height:100px ;
         }
 
     .sun{
             position: absolute;
             background-color: black;
-            width: 100px;
+            width: 100%;
             height:100px ;
         }
 

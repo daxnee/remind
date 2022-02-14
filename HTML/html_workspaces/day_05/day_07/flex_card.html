@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .card-container{
+          display: flex;
+          width: 1000px;
+          height: 400px;
+          margin: 100px auto;
+          /* 상하, 좌우 */
+          
+          
+      }
+      .item{
+          flex: 1;
+          /* item에 flex:1 을 하면 아이템들이 동일한 크기를 가지게 됨 */
+          height: 100%;
+          /* 알아서 부모 사이즈에 맞게 */
+          padding: 25px;
+          color: white;
+          position: relative;
+          /* item태그 안에 있는 글자는 모두 흰색으로 변경됨 */
+          
+          /* 마우스 커서 대면 0.6초 속도로 움직임 */
+         
+          
+      }
+
+      .item:hover{
+        flex-grow: 2.5; 
+        transition: 0.6s;
+        /* 마우스 대면 2.5배 늘어남 */
+      }
+      
+      .item:hover .caption{
+        display: block;  
+        /* 커서 대면 숨겼던 디스플레이(버튼, 캡션)들이 보여야 함
+        hover되면 block, hover안 되면 none */
+        /* hover <> none */
+      }
+
+      .item:nth-child(1){
+          /* 첫번째 자식 태그 크로스핏을 의미함 */
+          background-color: rgb(217, 255, 0);
+      }
+
+      .item:nth-child(2){
+          /* 첫번째 자식 태그 헬스를 의미함 */
+        background-color: rgb(72, 255, 0);
+
+      }
+
+      .item:nth-child(3){
+          /* 세번째 자식 태그 요가를 의미함 */
+        background-color: aquamarine;
+      }
+
+      .item h2{
+          font-size: 30px;
+          text-align: center;
+          background-color: rgb(108, 194, 151);
+          width: 150px;
+          border-radius: 5px;
+          margin: auto;
+          /* 버튼 위치 가운데 */
+          
+      }
+      .caption{
+        display: none;
+          /* 캡션과 버튼을 안 보이게 해준것임 */
+          font-size: 20px;
+          font-weight: bold;
+          margin: 28px 0;
+          max-width: 300px;
+          /* 캡션 한 행의 글자가 많아져도 아래줄로 넘어가지 않게 
+           크기를 조절하면 글자가 넘어가지 않음 */
+      }
+
+      .caption button{
+          border: 1px solid white;
+          border-radius: 30px;
+          background: transparent;
+          padding: 8px 18px;
+          color: black;
+          background-color: aliceblue;
+          font-size: 14px;
+          cursor: pointer;
+          margin-top: 20px;
+          /* 캡션과 버튼의 간격 조절 */
+          /* caption p에 margin-bottom을 줘도 된다 */
+      }
+      .item img{
+          width: 200px;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+
+          /* 이미지 크기 조절 :  item img(자식)에 position: absolute; 
+          itme 태그(부모)에 position: relative;   */
+           
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="card-container">
+          <div class="item">
+              <h2>크로스핏</h2>
+              <div class="caption">
+                  <p>크로스핏에 대해 1도 모른다</p>
+                  <button>예약</button>
+              </div>
+              <img src="img1.png" alt="">
+          </div>
+          <div class="item">
+            <h2>헬스</h2>
+            <div class="caption">
+                <p>헬스는 어렵다</p>
+                <button>예약</button>
+            </div>
+            <img src="img2.png" alt="">
+        </div>
+        <div class="item">
+            <h2>크로스핏</h2>
+            <div class="caption">
+                <p>요가는 플라잉요가 해보고 싶다</p>
+                <button>예약</button>
+            </div>
+            <img src="img3.png" alt="">
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>

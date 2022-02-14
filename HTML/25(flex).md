@@ -3,8 +3,8 @@
 ### CSS
  - CSS는 3가지만 알기!
     1. position
-    2. margin, padding, border-box
-    3. flex (암기필수)
+    2. margin, padding, box-size
+    3. flex (암기필수) (or inline-block)
 
     
 ### position 4가지 
