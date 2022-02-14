@@ -29,7 +29,7 @@
      .card {
         display: inline-block;
         /* 카드를 가로로 배치해줘 */
-        /* 실무에선 잘 안쓰고 flex로 대체 */
+        /* 지금은 보통 flex로 대체함 (케바케) */
         
         margin: 15px;
         border-radius: 8px;
