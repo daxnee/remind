@@ -22,9 +22,9 @@
             url(hydrastrong.jpg);
             background-position: center;
             background-size: cover;
+            margin-bottom: 100px;
             
             
-
             /* 실무에서도 먼저 background-color를 이용해서 크기를 조절함 */
             /* 조절 후 background-color 주석처리 혹은 삭제 */
         }
@@ -34,12 +34,29 @@
             padding: 2% 6%;
             justify-content: space-between;
             align-items: center;
+            padding-left: 50px;
         }
         .nav img{
-            width: 100px;
+            
+            width: 150px;
             height: auto;
             
         }
+        
+        .second {
+            position: relative;
+            height: 700px;
+            width: 100%;
+            background-image: linear-gradient(
+                rgba(4, 10, 20, 0.8),
+                rgba(4, 10, 20, 0.8)
+            ),
+            url(hydrastrong.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-bottom: 100px;
+        }
+        
         .nav-links ul li{
             list-style: none;
               /* 밑줄 삭제 */
@@ -92,19 +109,27 @@
             background-color: blue;
             transition: 1s;
         }
+        .section{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
         .card{
-            display: inline-block;
             margin: 15px;
             border-radius: 8px;
             height: 400px;
+            width: 300px;
             overflow: hidden;
-            box-shadow: 0 2px 30px; rgb(82, 79, 80);
-            margin: 15px;
+        
+           
         } 
+
         .card img {
         height: 400px;
         width: 300px;
         padding: auto;
+       
+        
         
     }
 
@@ -135,36 +160,35 @@
     <a href="#">GET DETAIL</a>
 </div>
 </header>
+<div class="second"> 
     <div class="section">
             <div class="card">
               <img src="수영복1.jpg" alt="" />
-              <!-- ctrl + space bar 하면 day_07의 경로들이 나온다 -->
               <div class="text-wrap">
-                <h1>Swimwear</h1>
+                <h1>Women</h1>
                 <p></p>
               </div>
             </div>
 
             <div class="card">
-                <img src="수영복남.jpg" alt="" />
-                <!-- ctrl + space bar 하면 day_07의 경로들이 나온다 -->
+                <img src="수영복남.jpg" alt="" /> 
                 <div class="text-wrap">
-                  <h1>Swimwear</h1>
+                  <h1>Men</h1>
                   <p></p>
                 </div>
               </div>
 
               <div class="card">
                 <img src="kids.jpg" alt="" />
-                <!-- ctrl + space bar 하면 day_07의 경로들이 나온다 -->
                 <div class="text-wrap">
-                  <h1>Swimwear</h1>
+                  <h1>Kids</h1>
                   <p></p>
                 </div>
-              </div>
-  
-
+            </div>
+        </div>
     </div>
+</header2>
+</div>
 </div>
 </body>
 </html>
