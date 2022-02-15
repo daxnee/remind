@@ -41,7 +41,7 @@
 
         1) join이 없다.(비관계형이니까. 오로지 select!) 
 
-### 3.CREATE
+### 3.CREATE (테이블 생성)
 ```sql    
     CREATE TABLE emp
     (
