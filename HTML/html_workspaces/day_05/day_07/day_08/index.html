@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            position: relative;
+            height: 700px;
+            width: 100%;
+            background-image: linear-gradient(
+                rgba(4, 10, 20, 0.8),
+                rgba(4, 10, 20, 0.8)
+            ),
+            url(hydrastrong.jpg);
+            background-position: center;
+            background-size: cover;
+            
+            
+
+            /* 실무에서도 먼저 background-color를 이용해서 크기를 조절함 */
+            /* 조절 후 background-color 주석처리 혹은 삭제 */
+        }
+        
+        .nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav img{
+            width: 100px;
+            height: auto;
+            
+        }
+        .nav-links ul li{
+            list-style: none;
+              /* 밑줄 삭제 */
+            display: inline-block;
+            padding: 8px 12px;
+        }
+        .nav-links ul li a{
+            color: white;
+            text-decoration: none;
+            /* 밑줄 삭제 */
+            font-size: 25px;
+            font-weight: 800;
+        }
+        .nav-links ul li:hover{
+            background-color: rgb(51, 155, 216);
+            transition: 700ms;
+            /* hover시 백그라운드 반응 속도 */
+            border-radius: 5px;
+        }
+
+        .text-box{
+            position: absolute;
+            width: 90%;
+            color: white;
+            top: 45%;
+            left: 5%;
+            text-align: center;
+        }
+
+        .text-box h1{
+            font-size: 60px;
+        }
+
+        .text-box p {
+            margin-top: 10px;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .text-box a{
+            text-decoration: none;
+            color: white;
+            font-size: 20pt;
+            font-weight: 700;
+            border: 1px solid white;
+            padding: 12px 34px;
+        }
+        .text-box a:hover{
+            border: 1px solid blue;
+            background-color: blue;
+            transition: 1s;
+        }
+        .card{
+            display: inline-block;
+            margin: 15px;
+            border-radius: 8px;
+            height: 400px;
+            overflow: hidden;
+            box-shadow: 0 2px 30px; rgb(82, 79, 80);
+            margin: 15px;
+        } 
+        .card img {
+        height: 400px;
+        width: 300px;
+        padding: auto;
+        
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nav">
+               <img src="nike.jpg" alt="">
+                <div class="nav-links">
+                    <!-- 모바일 버전일 때 x버튼 태그 위치 -->
+                    <ul>
+                        <!-- ul>li*5 -->
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">PROGRAMS</a></li>
+                        <li><a href="">CONTACT</a></li>
+                       
+                    </ul>
+                </div>
+          
+    </div>
+    <div class="text-box">
+    <h1>SHOP NIKE SWIM</h1>
+    <p>NIKE HYDRASTRONG <br> nike's longest lasting swim fabric ever.</p>
+    <!-- 링크태그를 마치 버튼처럼 꾸밀 예정 -->
+    <a href="#">GET DETAIL</a>
+</div>
+</header>
+    <div class="section">
+            <div class="card">
+              <img src="수영복1.jpg" alt="" />
+              <!-- ctrl + space bar 하면 day_07의 경로들이 나온다 -->
+              <div class="text-wrap">
+                <h1>Swimwear</h1>
+                <p></p>
+              </div>
+            </div>
+
+            <div class="card">
+                <img src="수영복남.jpg" alt="" />
+                <!-- ctrl + space bar 하면 day_07의 경로들이 나온다 -->
+                <div class="text-wrap">
+                  <h1>Swimwear</h1>
+                  <p></p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="kids.jpg" alt="" />
+                <!-- ctrl + space bar 하면 day_07의 경로들이 나온다 -->
+                <div class="text-wrap">
+                  <h1>Swimwear</h1>
+                  <p></p>
+                </div>
+              </div>
+  
+
+    </div>
+</div>
+</body>
+</html>
