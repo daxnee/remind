@@ -1,5 +1,6 @@
 ## 220212
 
+### select는 내가 임의로 지정한 데이터도 조회가 가능하다
     select 10 해도 의미 없는 데이터가 나온다.
     select now 
     하면 지금 시간 나옴 
@@ -16,7 +17,8 @@
     from ANIMAL_OUTS
     group by date_format(DATETIME,'%H')
     order by 1
-
+    
+    union으로 기존에 없던 테이블을 새로 생성한다고 생각하자!
 
 ### between 
 

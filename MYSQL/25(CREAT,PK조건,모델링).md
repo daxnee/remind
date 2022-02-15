@@ -1,4 +1,5 @@
-### 220215
+## 220215
+
 ### 1. DDL/DML/DCL/TCL
     - DDL (SELECT UPDATE DELETE INSERT)  => 커밋포함(오토커밋)
     - DML (CREATE DROP ALTER) => 커밋 미포함
