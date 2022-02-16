@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .blackbox{
+        display: flex;
+        align-items: center;
+        /* 아이템 가운데 */
+        justify-content: center;
+        background-color: black;
+        margin: auto;
+        margin-top: 200px;
+        width: 400px;
+        height: 400px;
+        position: relative;
+        justify-content: space-around;
+        }
+
+        .redbox1{
+
+            width: 120px;
+            height: 120px;
+            margin: auto;
+            margin-top: 200px;
+            background-color: red;
+            margin-bottom: 200px;
+        }
+
+        .redbox2{
+            width: 120px;
+            height: 120px;
+            margin: auto;
+            margin-top: 200px;
+            background-color: red;
+            margin-bottom: 200px;
+            
+        }
+
+        .redbox2::after{
+            position: absolute;
+            content: "";
+          width: 30px;
+          height: 30px;
+          background-color: #fff;
+          top: 30px;
+          right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="blackbox">
+            <div class="red redbox1"></div>
+                <div class="red redbox2"></div>
+        </div>
+
+
+    </div>
+</body>
+</html>

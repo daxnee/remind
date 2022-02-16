@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .side-nav img{
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+        }
+        .side-nav{
+            position: fixed;
+            width: 250px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: salmon;
+            padding: 20px 30px;
+        }
+        .nav-links{
+            list-style: none;
+            /* 리스트의 점 없애주기 */
+        }
+        .nav-links li{
+            padding: 10px 10px;
+            margin-bottom: 10px;
+            
+        }
+        .nav-links li:hover{
+            background-color: skyblue;
+            transition: 0.8s;
+        }
+        .nav-links li a{
+            text-decoration: none;
+            color: white;
+            padding: 10px 14px;
+            font-weight: bold;
+        }
+        .nav-links li a i{
+            /* 아이콘 사이즈 설정 */
+            font-size: 20px;
+            margin-right: 10px;
+            
+        }
+
+
+
+    </style>
+    <script src="https://kit.fontawesome.com/ec2e6610a2.js"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            
+            <div class="side-nav">
+                <img src="구글로고.png" alt="">
+                <div class="nav-links">
+                    <!-- (li>a)*3 -->
+                    <li>
+                        <a href=""><i class="fa-solid fa-house"></i>HOME</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-comment-dots"></i>Messagge</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-gear"></i></i>Setting</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-map-location-dot"></i></i>Location</a>
+                    </li>
+
+                    <!-- 아이콘은 class 앞에 i가 붙는다 -->
+                </div>
+            </div>
+
+        </header>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .box1{
+         
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: black;
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            margin-top: 200px;
+            border-radius: 20%;
+            background: 
+            radial-gradient(circle at 33% 100%, 
+            #fed373 4%, 
+            #f15245 30%,
+            #d92e7f 62%,
+            #9b36b7 85%, 
+            #515ecf);
+        
+      }
+      .box2{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        border: 30px solid white;
+        border-radius: 20%;
+         
+        
+      }
+      .box3{
+            
+          align-items: center;
+          justify-content: center;
+          width: 150px;
+          height: 150px;
+          border: 30px solid white;
+          border-radius: 50%;
+      }
+      /* 인스타그램 점찍기 */
+      .box3::after{
+        position: absolute;  
+        content: "";
+          width: 30px;
+          height: 30px;
+          background-color: #fff;
+          border-radius: 50%;
+          top: 30px;
+          right: 20px;
+          
+        /*  */
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">
+      <div class="box2">
+          <div class="box3">
+
+          </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
