@@ -57,13 +57,13 @@
 ```  
 
 ### 4.기본키는 몇 개의 조건들이 따른다.(sqld 시험출제★★★) 
-### step1. on delete / on update (sql 빈출문제★)
+### step1. on delete / on update (sqld 빈출문제★)
     - on delete : 부모 데이터에 삭제 이벤트가 발생하면 자식 데이터에 이벤트 발생 
 
     - on update : 부모 데이터에 수정 이벤트가 발생하면 자식 데이터에 이벤트 발생
 
 
-### step2. 5가지 이벤트 종류 택 1 (sql 빈출문제★)
+### step2. 5가지 이벤트 종류 택 1 (sqld 빈출문제★)
 
      아래중 하나를 선택
      
