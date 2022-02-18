@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사진관리</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2%;
+        }
+        .gallery{
+            width: 80%;
+            margin: auto;
+        }
+
+        .gallery-title{
+            text-align: center;
+            
+        }
+        .gallery-title h1{
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .gallery-title p{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22px;
+            /* 문단과 문단 사이 간격 띄기 */
+            color: #777;
+        }
+
+        .gallery-col img{
+            width: 90%;
+            height: 60%;
+            border-radius: 10px;
+        }
+        .gallery-col {
+            position: relative;
+            /* gallery-col 안에 layer(사진)있으니까  
+            이게 부모태그(relative)
+             */
+            flex-basis: 22%;
+            /* row안에 있는 gallery-col(item)의 크기를 줄임 */
+            overflow: hidden;
+            
+        }
+        .layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90%;
+            height: 60%;
+           
+        }
+
+        .layer:hover {
+            background-color: rgba(232, 232, 232, 0.8);
+        }
+
+        .layer h3{
+           
+            position: absolute; 
+                  /* h3입장에서는 layer, gallery-col 둘 다 부모가 됨  */
+            left : 50%;
+            bottom: 0;
+            font-size: 20px;
+            color: aliceblue;
+            opacity: 0;
+            transform: translateX(-50%);
+            transition: 0.5s;
+        }
+
+        .layer:hover h3{
+            opacity: 1;
+            bottom: 48%;
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section gallery">
+            <!-- 사진, 사진 소개내용, 사진 부가설명 -->
+        <div class="gallery-title">
+            <h1>레스토랑</h1>
+            <p>뫄뫄 레스토랑은 다양한 메뉴가 준비되어 있습니다.</p>
+        </div>
+        <!-- h1, p 태그를 묶어주면 관리하기가 편함 
+        gallery titil h1 {css}-->
+        <div class="row">
+            <div class="gallery-col">
+                <img src="img/까르보나라.jpg" alt="">
+                <div class="layer">
+                    <h3>사진소개1</h3>
+                </div>
+            </div>
+            <div class="gallery-col">
+                <!-- gallery 안 사진들의 배열이 column이니까 이름을 이렇게 줌 -->
+                <img src="img/스테이크.jpg" alt="">
+                <div class="layer">
+                    <h3>사진소개2</h3>
+                </div>
+            </div>
+            <div class="gallery-col">
+                <img src="img/파스타.jpg" alt="">
+                <div class="layer">
+                    <h3>사진소개3</h3>
+                </div>
+            </div>
+            <div class="gallery-col">
+                <img src="img/피자.jpg" alt="">
+                
+                <div class="layer">
+                    <h3>사진소개4</h3>
+                </div>
+            </div>
+        </div>
+        </div>
+       </div>
+</body>
+</html>
