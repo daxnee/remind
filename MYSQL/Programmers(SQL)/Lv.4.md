@@ -99,7 +99,7 @@
         GROUP BY date_format(DATETIME,'%H')
     ) AS ao
     ON ao.ao_hour = h.hour
-```      
+     
 - union 
     
     2개 이상의 쿼리를 결합할 때 사용
@@ -110,3 +110,5 @@
     따라서 union으로 모든 시간을 가진 table을 생성한 후 
     기존에 있던 ANIMAL_OUTS테이블과 
     join해줘야 한다.
+    
+``` 

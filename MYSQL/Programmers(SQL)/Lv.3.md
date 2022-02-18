@@ -72,10 +72,16 @@
     on r.HOST_ID = p.HOST_ID
     order by 1
 
-    from으로 해비유저(2개 이상 공간 보유) 조건 설정 후 
-    PLACES  테이블과 inner join해줘서 결과를 출력하기
-    아이디 순으로 조회할 땐 'places의 id'라는 것을 주의
+해설:
+- from으로 해비유저(2개 이상 공간 보유) 조건 설정 후 
+    헤비유저를 설정한 테이블(as r) PLACES 테이블(as p)을 inner join해줘서 결과를 출력하기
+
+- 아이디 순으로 조회할 땐 'places의 id'라는 것을 주의
+
+- select 할때 r.host_id는 서브쿼리에서 필터링된 데이터라서 r로 호출해주고 , 나머지 p.id와 p.name은 서브쿼리에서 필터링 할 수없다(서로 다른 고유한 값이니까) 그래서 원래 테이블인 place as r로 출력해준다.
     
 ```
+
+
 
 
