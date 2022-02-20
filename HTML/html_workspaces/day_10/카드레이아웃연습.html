@@ -30,12 +30,10 @@
             font-size: 20px;
             line-height: 40px;
             font-weight: 600;
-        }
-
-        .gallery-col{
-            flex-basis: 22%;
-            margin: auto;
-            
+           
+            color: #2478FF;;
+            font-style: italic;
+         
         }
         .gallery-col img{
             width: 350px;
@@ -44,15 +42,49 @@
         }
         .gallery-col{
             position: relative;
+            flex-basis: 22%;
+            margin: auto;
+            border-radius: 10px;
+            
         }
-
-        .gallery-caption:hover{
+       
+        
+        .layer{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 350px;
+            height: 400px;
+        }
+        .layer:hover{
             background-color: rgba(232, 232, 232, 0.8);
+            
         }
 
-        .gallery-caption h3{
+        .layer h3{
             position : absolute;
+            left: 50%;
             font-size: 20px;
+            bottom: 0;
+            font-size: 20px;
+            
+            opacity: 0;
+            transform: translateX(-50%);
+            transition: 0.5s;
+            color: #2478FF;
+            font-style: italic;
+        }
+        .layer hover h3{
+            opacity: 1;
+            bottom: 48%;
+        }
+
+        .card-body-footer{
+            margin-bottom: 10px;
+            margin-top: 340px;
+            text-align: center;
+            color: slategrey;
+            line-height: ;
         }
         
     </style>
@@ -67,22 +99,38 @@
             <div class="row">
             <div class="gallery-col">
                 <img src="제주도.jpg" alt="">
-                <div class="gallery-caption">
+                <div class="layer">
                     <h3>3/19일 제주도 3박 4일 코스</h3>
                     <p>#제주도 #올레길코스 #한라산등반 </p>
+                    
+
+                    <div class="card-body-footer">
+                        <hr style="margin-bottom: 8px; opacity: 0.5; border-color: black">
+                        <i class="icon icon-view_count"></i>조회 38회
+                        <i class="icon icon-comments_count"></i>댓글 4개
+                    </div>
                 </div>
+              
             </div>
             <div class="gallery-col">
                 <img src="강릉.PNG" alt="">
-                <div class="gallery-caption">
+                <div class="layer">
                     <h3>4/5일 강릉 2박 3일 코스</h3>
-                    <p>#강릉 #주문진 #ㅌㅔㄹㅏㄹㅗㅅㅏ </p>
+                    <p>#강릉 #주문진 #테라로사 </p>
+                    
+                    <div class="card-body-footer">
+                        <hr style="margin-bottom: 8px; opacity: 0.5; border-color: black">
+                        <i class="icon icon-view_count"></i>조회 38회
+                        <i class="icon icon-comments_count"></i>댓글 4개
 
                 </div>
+                
             </div>
+            
         </div>
+        
         </div>
-
+        
 
     </div>
 </body>
