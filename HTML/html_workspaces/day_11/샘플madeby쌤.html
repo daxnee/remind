@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .movie {
+            width: 80%;
+            margin: auto;
+            
+        }
+        .intro {
+            text-align: center;
+        }
+        .intro h1{
+            font-size: 36px;
+            font-weight: 600;
+        }
+        .intro p {
+            color: slateblue;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 22px;
+            margin-top: 10px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2%;
+        }
+        
+        .movie-col {
+           flex-basis: 10%;
+           /* movie-col img의 간격들을 조절 */
+           border-radius: 10px;
+           text-align: left;
+           
+        }
+
+        .movie-col img{
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .movie-col h1{
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .intro h1{
+        font-family: "Arial Black", sans-serif;
+        font-size: 60px;
+        font-weight: bold;
+        color: #0D47A1;
+        text-shadow: 4px 4px 0px #1565C0, 8px 8px 0px #42A5F5, 12px 12px 0px #E3F2FD;
+      }
+
+      
+        
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="container">
+
+        <section class="movie">
+            <div class="intro">
+                <h1>자연 경관</h1>
+                <p>계절마다 다른 자연을 느껴보세요*^^*</p>
+            </div>
+            <!-- row 사진을 담는 박스 -->
+            <div class="row">
+                <div class="movie-col">
+                    <img src="봄.jpg" alt="">
+                    <h1>봄</h1>
+                    <p>봄은 따뜻해요</p>
+                </div>
+                <div class="movie-col">
+                    <img src="가을.jpg" alt="">
+                    <h1>가을</h1>
+                    <p>가을은 선선해요</p>
+                </div>
+                <div class="movie-col">
+                    <img src="겨울.jpg" alt="">
+                    <h1>겨울</h1>
+                    <p>겨울은 추워요</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

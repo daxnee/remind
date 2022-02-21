@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      section{
+        width: 80%;
+        height: 200px;
+        margin: auto;
+        margin-bottom: 50px;
+        background-color: #777;
+        
+      }
+      .row{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        
+      }
+      .item {
+        flex-basis: 20%; 
+        background-color: rgb(78, 235, 182);
+          width: 200px;
+          height: 180px;
+          border: 2px solid black;
+          /* 아이템 초기 크기 설정 
+          아이템의 간격이 넓어지니까 
+          html에 아이템을 추가하면 개수를 늘릴 수 있음
+           = flex : 1; : 1을 하게 되면 모든 아이템 크기가 flex-basis : 100%된 것처럼 행동 */
+      }
+    
+      .class02 .row .item:nth-child(1) {
+        background-color: red;
+        /* flex-grow : 아이템 성장! */
+        flex-grow: 1;
+        }
+
+      .row-col{
+          display: flex;
+          width: 50%;
+          height: 150px;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+
+      
+      .item-col {
+        width: 100%;
+        height: 20px;
+        background-color: black;
+        border: 2px solid #fff;
+        animation: item-col 4s linear infinite;
+      }
+      @keyframes item-col{
+        
+        0%{
+            width: 0%;
+        }
+        
+        80%{
+            width: 80%;
+        }
+
+        /* --- */
+        /* 0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+          transform: scale(0.3);
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        } */
+         
+         /* --- 아래는 회전 ---  */
+          /* 0% {
+          transform: rotate(0turn);
+          bottom: 0;
+          left: 0;
+          opacity: 0.1;
+        }
+        40% {
+          opacity: 0.5;
+          transform: rotate(3turn);
+        } */
+      }
+   
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <section class="class01">
+          <div class="row">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        </div>
+       </section>
+
+      <section class="class02">
+            <div class="row">
+          <div class="item">
+              <div class="row-col">
+                  <div class="item-col"></div>
+                  <div class="item-col"></div>
+                  <div class="item-col"></div>
+              </div>
+          </div>
+          <div class="item"></div>
+          <div class="item"></div>
+          </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
