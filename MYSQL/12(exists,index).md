@@ -85,13 +85,20 @@
 
 ### 데이터 모델링 프로그램 설치 
     1. ERwin 7.3.zip 알집 풀기
+    
     2. setup 파일 속  CAEDM73_b1666.exe설치
+    
     3. username 아래 칸에 DW으로 이름 설정 
+    
         나오는 next, install 계속 클릭
+        
     4. ER 검색하면 나오는 ERwin Data Modeller 프로그램 작업표시줄에 고정
+    
     5. 'ALLFutsion ~ 어쩌고 ~ r7' 클릭 
+    
     6. 하단에 활성화된 번호 입력창에 제품키 입력(ERwin 7.3.key.txt에서 복붙) -  add 
 
+    <파일 생성하기>
     1.  파일 - new - logical (모델링만 그리고 싶어) / physical(모델링한게 바로 create)
 
     2. model - model properties - notation - IE - OK
