@@ -99,7 +99,7 @@
     6. 하단에 활성화된 번호 입력창에 제품키 입력(ERwin 7.3.key.txt에서 복붙) -  add 
 
     <파일 생성하기>
-    1.  파일 - new - logical (모델링만 그리고 싶어) / physical(모델링한게 바로 create) , 둘 다 (logical,physical)
+    1. 파일 - new - logical (모델링만 그리고 싶어) / physical(모델링 설계한거 바로 create하고 싶다면) , logical,physical(둘 다)
 
     2. model - model properties - notation - IE - OK
 
