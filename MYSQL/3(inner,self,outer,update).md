@@ -364,6 +364,9 @@
 
     
 ## update
+
+    UPDATE [테이블] SET [열] = '변경할값' WHERE [조건]
+
     update emp 
     set ename = '홍길동'
 
