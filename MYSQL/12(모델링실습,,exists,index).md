@@ -84,17 +84,24 @@
 ## 모델링 실습
 
 ### 데이터 모델링 프로그램 설치 
-1. ERwin 7.3.zip 알집 풀기
-2. setup 파일 속  CAEDM73_b1666.exe설치
-3. username 아래 칸에 DW으로 이름 설정 
-    나오는 next, install 계속 클릭
-4. ER 검색하면 나오는 ERwin Data Modeller 프로그램 작업표시줄에 고정
-5. 'ALLFutsion ~ 어쩌고 ~ r7' 클릭 
-6. 하단에 활성화된 번호 입력창에 제품키 입력(ERwin 7.3.key.txt에서 복붙) -  add 
+    1. ERwin 7.3.zip 알집 풀기
+    
+    2. setup 파일 속  CAEDM73_b1666.exe설치
+    
+    3. username 아래 칸에 DW으로 이름 설정 
+    
+        나오는 next, install 계속 클릭
+        
+    4. ER 검색하면 나오는 ERwin Data Modeller 프로그램 작업표시줄에 고정
+    
+    5. 'ALLFutsion ~ 어쩌고 ~ r7' 클릭 
+    
+    6. 하단에 활성화된 번호 입력창에 제품키 입력(ERwin 7.3.key.txt에서 복붙) -  add 
 
-1.  파일 - new - logical (모델링만 그리고 싶어) / physical(모델링한게 바로 create)
+    <파일 생성하기>
+    1. 파일 - new - logical (모델링만 그리고 싶어) / physical(모델링 설계한거 바로 create하고 싶다면) , logical,physical(둘 다)
 
-2. model - model properties - notation - IE - OK
+    2. model - model properties - notation - IE - OK
 
 
 ### 모델링할 테이블 생성
@@ -142,6 +149,7 @@
     구매 테이블은 회원, 상품이 있어야 생성이 가능하다.(누가 뭘 구매했는지 있어야 하니까!) 
     즉, 구매테이블이 다대다테이블이다.
 
+<<<<<<< HEAD:MYSQL/12(exists,index).md
     - 셰프 + 재료 => 음식
     - 선수 + 팀 => 대회
 
@@ -151,3 +159,9 @@
 ```
 
     로켓이 있는 쪽을(화살표) 자식 테이블 (FK가 있음)
+=======
+    - 셰프 + 재료 = 음식
+    - 선수 + 팀 = 대회
+    - 
+```
+>>>>>>> b38c69fc91ba3089f39876b4aaa6159730678da8:MYSQL/12(모델링실습,,exists,index).md
