@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      section {
+          width: 90%;
+          height: 200px;
+          background-color: gray;
+          margin: auto;
+          margin-bottom: 50px;
+      }
+      .row{
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+
+      }
+
+      .item{
+          background-color: aqua;
+          width: 200px;
+          height: 180px;
+          flex-basis: 20%;
+          border: 3px solid dodgerblue;
+      }
+
+      .class2 .row .item:nth-child(1){
+          background-color: blue;
+          flex-grow: 1;
+          
+      }
+      .row-box{
+          display: flex;
+          width: 50%;
+          height: 150px;
+          flex-direction: column;
+          justify-content: space-evenly;
+      }
+      .box {
+          width: 100%;
+          height: 20px;
+          background-color: black;
+          border: 3px solid #fff;
+      }
+
+      .box {
+          animation: box 1s linear infinite;
+      }
+
+      @keyframes box {
+          0%{
+              width: 0%;
+          }
+          50%{
+              width: 50%;
+          }
+          100%{
+              width: 100%;
+          }
+      }
+
+      .item .row-box .box:nth-child(2) {
+          animation: move 1.5s linear infinite;
+      }
+
+      @keyframes move {
+        0%{
+              width: 0%;
+          }
+          50%{
+              width: 50%;
+          }
+          100%{
+              width: 100%;
+          }
+      }
+      
+      .item .row-box .box:nth-child(3) {
+          animation: move1 1.7s linear infinite;
+      }
+
+      @keyframes move1 {
+        0%{
+              width: 0%;
+          }
+          50%{
+              width: 50%;
+          }
+
+          100%{
+              width: 100%;
+          }
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="class1">
+            <div class="row">
+
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+
+        </section>
+
+        <section class="class2">
+            <div class="row">
+
+                <div class="item">
+                    <div class="row-box">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
+
+
+<!-- Q. margin 순서에 따라 결과가 달라지나? auto -> bottom -->
