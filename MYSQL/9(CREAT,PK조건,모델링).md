@@ -11,16 +11,19 @@
     GRANT : 권한부여
     REVOKE : 권한회수
 
-    ex) 홍길동이 DB접속 INSERT 5번 날리고 COMMIT
-    길동이가 실수로 DELETE
-    그러면 ROLLBACK을 이용해서 최신 COMMIT 상태로 돌아감
-
+    - TCL (COMMIT ROLLBACK) 
+    길동이가 DB접속해서 INSERT 5번하고 COMMIT함
+    But, 길동이가 실수로 DELETE를 해버림
+    => ROLLBACK을 이용해서 최신 COMMIT 상태로 돌아감
+    (가장 최근에 한 COMMIT 시점으로 돌아간다.)
     
 
 ### 2. '관계형 데이터베이스'와 '비관계형 데이터베이스'
-    -관계형 데이터베이스(R(관계)DBMS)
+
+     1. 관계형 데이터베이스(R(관계)DBMS)
         : 신뢰할만한 데이터를 안전하게 저장할 수 있는 구조
         
+        <RDBMS 특징>
         1) join이 있다.
 
         2) 부모테이블과 자식테이블이 존재
@@ -28,18 +31,21 @@
         deptno컬럼은 dept테이블에서 갖고와야 
         emp테이블에 조회가 가능하니까!
 
-        emp(자식)는 dept(부모)를 참고하고 있음
-        *참조를 받으면 부모
+        emp테이블(자식)은 dept(부모)를 참조하고 있다.
+        참조 하는 쪽 : 자식테이블 
+        참조 해주는 쪽 : 부모테이블
 
-        화살표를 쏘는 쏘는게 자식
-        화살표를 받는 쪽이 부모
+        자식 테이블 ---> 부모 테이블
+        (화살표를 쏘는게 자식)
+       
 
         *누구를 참조하지 않는 테이블 : 원시테이블
 
-    -비관계형 데이터베이스(NoSQL) (Dynamodb, MongoDB)
+    2. 비관계형 데이터베이스(NoSQL) (Dynamodb, MongoDB)
         : 분석이 목적임(데이터면 일단은 저장)
 
         1) join이 없다.(비관계형이니까. 오로지 select!) 
+
 
 ### 3.CREATE (테이블 생성)
 ```sql    
@@ -86,7 +92,10 @@
 ### 기본키 조건 사용 방법
     on delete / update + 이벤트 종류(5가지 중 택1)
     ex)
-    foreign key (deptno) references dept(deptno) on delete cascade               
+    create table emp(
+        테이블에 넣을 컬럼명과 조건들
+    )
+    CONSTRAINT foreign key (deptno) references dept(deptno) on delete cascade               
     => 가령 dept의 deptno 데이터 중 10번을 지우면 emp의 deptno 10번 데이터가 삭제됨
 
 
@@ -113,6 +122,25 @@
     3) 참조키를 사용하여 부모 테이블의 유일한 값을 참조한다. ( 예를들어, 부모테이블의 기본키를 참조 )
 
     4) 참조키의 값이 부모테이블의 기본키일 필요는 없지만 유일해야 한다.
+
+### 6. ALTER
+    1. 컬럼 추가
+    ALTER TABLE '테이블명' ADD '컬럼명' 데이터타입(길이) 제약조건
+
+    2. 컬럼 여러개 추가시
+     ALTER TABLE '테이블명' 
+     ADD '컬럼명' 데이터타입(길이) 제약조건,
+     ADD '컬럼명' 데이터타입(길이) 제약조건
+     ADD '컬럼명' 데이터타입(길이) 제약조건
+
+    3. 컬럼 맨 앞에 추가할시
+    ALTER TABLE '테이블명' ADD '새 컬럼명' 데이터타입(길이) 제약조건 FIRST
+
+    4. 컬럼 중간에 추가
+    ALTER TABLE '테이블명' ADD '새 컬럼명' 데이터타입(길이) 제약조건 AFTER '앞컬럼명'
+
+    5. COLUMN 속성 변경
+    ALTER TABLE '테이블명' ALTER COLUMN '컬럼명' 데이터타입(길이) 제약조건
 
 
     
