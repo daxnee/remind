@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+           
+        }
+        .section-gallery{
+            background-color: skyblue;
+            width: 80%;
+            height: auto;
+            margin: 50px auto 50px;
+            opacity: 0.8;
+            
+            
+        }
+
+        .gallery{
+            width: 80%;
+            margin : auto;
+            margin-top: 2%;
+        }
+      
+        
+       
+        .gallery-title  {
+            font-size: 20px;
+            line-height: 40px;
+            font-weight: 600;
+            color: #2478FF;;
+            font-style: italic;
+            text-align: center;
+            margin: 20px 0 20px;
+            padding: 20px;
+         
+        }
+
+      
+        .gallery-col img{
+            width: 350px;
+            height: 400px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+        }
+        .gallery-col{
+            position: relative;
+            flex-basis: 22%;
+            margin: auto;
+          
+            
+        }
+       
+        
+        .layer{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 350px;
+            height: 400px;
+        }
+        
+       .layer:hover{
+            cursor: pointer;
+            transition: 0.8s;
+            background-color: #2478FF;
+            opacity: 0.2;
+            border-radius: 20px;
+        }
+        .layer {
+            text-align: center;
+        }
+    
+        
+    </style>
+</head> 
+<body>
+    <div class="container">
+        <div class="section-gallery">
+
+            <div class="gallery-title">
+                <h2>Take your mind</h2>
+                <p>갤러리</p>
+            </div>
+            <div class="row">
+            <div class="gallery-col">
+                <img src="노을.jpg" alt="">
+                <div class="layer">
+                    <h2>안녕하세요</h2>
+            
+                </div>
+              
+            </div>
+            <div class="gallery-col">
+                <img src="노을.jpg" alt="">
+                <div class="layer">
+                    <h2>노을입니당</h2>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        </div>
+        
+
+    </div>
+</body>
+</html>

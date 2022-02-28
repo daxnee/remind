@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .section{
+            margin: 50px auto 0;
+
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .title h2{
+            font-size: 30pt;
+            
+        }
+        
+        .row{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .item{
+            background-color: darkmagenta;
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+            padding: 2% 5% ;
+            /* 박스와 그 안 글자들 간격 조절 */
+            text-align: center;
+        }
+
+        .item h2{
+            margin-top: 20px;
+        }
+
+        .item ul li{
+            list-style:none;
+            margin: 50px 0 30px;
+            padding: 10px 0 10px;
+            font-size: 22px;
+            font-weight: 600;
+            color: seagreen;
+            transition: 0.8s;
+           
+            /* hover하면 서서히 명암지는것 */
+        }
+
+        .item button{
+            width: 100%;
+            padding: 14px 20px 14px;
+            background: transparent;
+            border: 2px solid snow;
+            border-radius: 3px;
+            margin-top: 30px;
+            color: seagreen;
+            font-size: 20px;
+            font-weight: 800;
+            
+        }
+        .item button:hover{
+            cursor: pointer;
+            background-color: slateblue;
+        }
+
+        .item ul li:hover{
+            cursor: pointer;
+            background-color: aqua;
+            border-radius: 10px;
+            
+        }
+        .item p span{
+            font-size: 18px;
+           
+        }
+
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <div class="title">
+            <h2>Choose your Mind </h2>
+        </div>
+        </div>
+        <div class="row">
+        <div class="item">
+                <p> <span> MakeUp </span></p>
+                <h2>HERA COLLECTION</h2>
+                <ul>     
+                <li>New</li>
+                <li>Skin Care</li>
+                <li>Lip</li>
+                <li>Eye-Makeup</li>
+                <li>Base-Makeup</li>
+                </ul>
+                <button>Add to Heart</button>
+          </div>
+          <div class="item"></div>
+          <div class="item"></div>
+        
+    </div>
+
+
+    </div>
+</body>
+</html>

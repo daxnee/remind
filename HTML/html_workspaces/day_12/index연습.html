@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+       * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      section {
+          width: 90%;
+          height: 200px;
+          background-color: black;
+          margin: auto;
+          margin-bottom: 50px;
+      }
+      .row{
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+
+      }
+
+      .item{
+          background-color: wheat;
+          width: 200px;
+          height: 180px;
+          flex-basis: 20%;
+          border: 3px solid white;
+          border-radius: 30px;
+      }
+
+    
+      .row-box{
+          display: flex;
+          width: 50%;
+          height: 150px;
+          flex-direction: column;
+          justify-content: space-evenly;
+      }
+     
+    
+       
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <section class="class1">
+            <div class="row1">
+
+                <div class="item1"></div>
+                <div class="item1"></div>
+                <div class="item1"></div>
+            </div>
+        </section>
+
+        <section class="class2">
+            <div class="row">
+
+                <div class="item">
+                    <div class="row-box">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </section>
+    </div>
+  </body>
+</html>
