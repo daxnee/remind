@@ -28,6 +28,7 @@ Node.js 설치해서 JavaScript 공부를
 7. 상단의 Terminal - New Terminal 
 8. 아래 창에 node i 까지 입력 후 tab키 누르기 (node 다음 스페이스바 간격 띄어주기)
 9. Hello World 글자 확인
+10. 설치 후 vscode를 재시작해야 node.js 사용이 가능하다.
 
 
 ```
