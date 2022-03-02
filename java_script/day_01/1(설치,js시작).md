@@ -15,7 +15,7 @@
 앞으로의 진도?
 JavaScript 버전 5
 Node.js 설치해서 JavaScript 공부를 
-바닐라.js
+바닐라.js로 배우겠다.
 ```
 ### Node.js 설치하기
 ```
