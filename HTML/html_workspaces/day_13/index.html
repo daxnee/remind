@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .section{
+            width: 700px;
+            height: 100px;
+            margin: 50px auto 0;
+            font-size: 20pt;
+            font-style: italic;
+            color: lawngreen;
+        }
+
+        .row{
+            display: flex;
+            justify-content: space-around;
+           
+
+        }
+
+        .item{
+            background-color: darkgreen;
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+            padding: 10% 5% 10%;
+            /* 박스와 그 안 글자들 간격 조절 */
+            text-align: center;
+            font-size: 15pt;
+        
+            
+        }
+
+        .item ul il{
+            list-style:none;
+        }
+
+        .caption{
+            text-align: center;
+        }
+
+        button{
+            padding: 5%;
+            font-size: 20px;
+           font-weight: bold;
+           background-color: aquamarine;
+           border-radius: 10px;
+            border: 2px solid yellow;
+            margin-top: 50px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        .title{
+            margin: 0 auto 20px;
+        }
+        
+        .item ul li{
+            list-style: none;
+            padding: 2%;
+        }
+        .title h2{
+           margin-bottom: 20px;
+        }
+        .title h2 p{
+            margin-bottom: 10px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <div class="caption">
+                <h2>Choose your plan</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <div class="title">
+                    <h2>HELLO</h2>
+                    <p> <span>INDEX</span> </p>
+                </div>
+                <ul>     
+                <li>INFO</li>
+                <li>LOCATION</li>
+                <li>ORGANIZION</li>
+                <li>HISTORY</li>
+                <li>BLAH</li>
+                <button>GET DETAIL</button>
+                </ul>
+            </div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>

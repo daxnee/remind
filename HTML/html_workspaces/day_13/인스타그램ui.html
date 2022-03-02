@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .section{
+            display: grid;
+            /* grid : 2차원적인 UI */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            /* repeat() : grid 안에 있는 모든 아이템들의 크기를 조절하는 함수 */
+            /*repeat(x, y) : 
+             x: 반복 횟수 
+            y: 값 */
+            /* minmax() : 크기가 아무리 작아져도 min, 아무리 커져도 max로 설정하겠다 */
+            /* fr(fraction) :flex :1 과 동일 */
+            grid-gap: 50px;
+            /* grid 사이 간격 조절 */
+            width : 80%;
+            height: auto;
+            margin: 30px auto 0;
+            background-color: rgb(190, 199, 207);
+            padding: 2%;
+       
+        
+        }
+        .card {
+        /* display: inline-block; */
+
+        border-radius: 8px;
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+        /* box-shadow: 0 5px 35px rgb(42, 43, 41); */
+        padding: 5px;
+        transform: scale(1);
+        transition: 0.2s;
+    
+      }
+      .card:hover {
+        cursor: pointer;
+       
+
+        }
+        /* .item{
+            width : 100%;
+            height: 200px;
+            background-color: red;
+            border: 2px solid white;
+        } */
+        .card img {
+        height: 260px;
+        width: 300px;
+        padding: auto;
+      
+      }
+      .text-wrap {
+        padding: 20px;
+        text-align: left;
+        background-color: gray;
+        line-height: 2;
+      }
+      .text-wrap h1 {
+        font-size: 17pt;
+        font-weight: bold;
+        
+      }
+     .text-wrap p{
+        font-size: 16px;
+     }
+     .text-wrap a{
+         font-size: 15px;
+     }
+    
+      header{
+          background-color: greenyellow;
+          width: 80%;
+          height: 200px;
+          margin: 10px auto 10px;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header></header>
+        <div class="section">
+            <div class="card">
+                <img src="꽃.jpg" alt="" />
+                <div class="text-wrap">
+                  <h1>뫄뫄프로젝트</h1>
+                  <p> 어쩌고 프로젝트를 했습니다.</p>
+                  <a href="페이지이동.html">상세 보기</a>
+                </div>
+              </div>
+        
+              <div class="card">
+                <img src="꽃2 (1).jpg" alt="" />
+                <div class="text-wrap">
+                  <h1></h1>
+                </div>
+              </div>
+        
+              <div class="card">
+                <img src="꽃2 (2).jpg" alt="" />
+                <div class="text-wrap">
+                  <h1></h1>
+                </div>
+              </div>
+        
+              <div class="card">
+                <img src="꽃2 (3).jpg" alt="" />
+                <div class="text-wrap">
+                  <h1></h1> 
+                </div>
+              </div>  
+              
+              <div class="card">
+                <img src="꽃2 (3).jpg" alt="" />
+                <div class="text-wrap">
+                  <h1></h1> 
+                </div>
+              </div> 
+
+              <div class="card">
+                <img src="꽃2 (3).jpg" alt="" />
+                <div class="text-wrap">
+                  <h1></h1> 
+                </div>
+              </div> 
+
+              <div class="card">
+                <img src="꽃2 (3).jpg" alt="" />
+                <div class="text-wrap">
+                  <h1></h1> 
+                </div>
+              </div> 
+
+              <div class="card">
+                <img src="꽃2 (3).jpg" alt="" />
+                <div class="text-wrap">
+                  <h1></h1> 
+                </div>
+              </div> 
+
+              <div class="card">
+                <img src="꽃2 (3).jpg" alt="" />
+                <div class="text-wrap">
+                  <h1></h1> 
+                </div>
+              </div> 
+
+              <div class="card">
+                <img src="꽃2 (3).jpg" alt="" />
+                <div class="text-wrap">
+                  <h1></h1> 
+                </div>
+              </div> 
+             
+        </div>
+    </div>
+</body>
+</html>

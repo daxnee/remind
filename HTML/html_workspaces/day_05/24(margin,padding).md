@@ -24,6 +24,8 @@
       *이런식으로 사용도 가능
       padding-top : 10px;
 
+      *padding은 auto가 없음 (margin은 가능)
+
 ### margin
 
     margin : 부모와 부모 거리두기
