@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* root : 최상 계층 / 보통 root권한 있냐고 물어본다(모든 권한이 있냐는 말)*/
+
+/* 자주 사용하는 Color 모음 */
+--mainColor: #eaeaea;
+--secondaryColor : #fff;
+--borderColor: #c1c1c1;
+/* 자주 사용하는 Color에 변수이름을 만들고 변수를 활용함 */
+
+}
+/* h3~ h6 공통처리 (전역 변수개념)  */
+h3, h6{
+    font-weight: 500;
+    font-family: 'Russo One', sans-serif;
+    /* font-family : 폰트 지정 */
+}
+
+
+.section{
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+    padding: 2%;
+   
+}
+
+.project-catainer {
+    width : 1500px;
+    /* 위 아래는 없고 오른쪽 왼쪽은 자동으로 맞추기 */
+    margin: 0 auto;
+}
+
+.project-catainer h3{
+    font-size: 35px;
+    text-align: center;
+    margin: 28px 0;
+    font-weight: 800;
+    color: teal;
+}
+
+.post-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 280px);
+    gap: 20px;
+   
+}
+
+.post img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* object-fit : 사진 깨짐 방지 */
+}
+
+.post-preview{
+    background-color: var(--secondaryColor);
+    padding: 5%;
+}
+
+.post-preview h6{
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+
+.post-preview p{
+    color: #4b5156;
+    font-size: 14px;
+    margin: 14px 0;
+
+}
+
+.post-preview a{
+    text-decoration: none;
+    color: #17a2b8;
+}
+
+.post{
+    border: 1px solid var(--borderColor);
+    border-radius: 5px;
+    box-shadow: -2px 7px 12px -9px rgba(0, 0, 0, 0.75);
+}
