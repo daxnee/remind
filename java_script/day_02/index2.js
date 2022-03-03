@@ -44,3 +44,17 @@ for(var i=0; i<=len; i++){
 
 }
 
+for(var i=0; i<6; i++){
+    if(i%2==0){
+        console.log(i+"는 짝수입니다")
+    }
+}
+
+var len = array.length;
+for(var i=0; i<len; i++){
+    if(max < array[i]){
+        
+    }
+    
+}
+console.log(max)

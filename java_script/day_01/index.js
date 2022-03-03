@@ -44,3 +44,8 @@ for(var i=0; i<6; i++){
     console.log('')
 }
 
+for(var i=0; i<6; i++){
+    if(i%2==0){
+        console.log(i+"는 짝수입니다")
+    }
+}
