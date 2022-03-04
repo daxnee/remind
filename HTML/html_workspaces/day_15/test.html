@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header{
+            width: 80%;
+            height: 100px;
+            margin: 50px auto 20px;
+        }
+        header h2{
+            text-align: center;
+            font-size: 30pt;
+            font-weight: bold;
+            color: blue;
+        }
+        .row{
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .item{
+            flex-basis: 20%;
+            background-color: blueviolet;
+            border-radius: 10px;
+            padding: 2%;
+            
+            
+        }
+
+        .item ul li{
+            margin: 20px auto 20px;
+            font-size: 19pt;
+            padding: 3%;
+            list-style: none;
+            color: white;
+        }
+
+        .item ul li::before{
+            content: "✿˘◡˘✿  ";
+        }
+        
+        .caption {
+            text-align: center;
+            
+        }
+        .caption h2{
+            font-size: 25pt;
+        }
+        .caption p span{
+            font-size: 30pt;
+        }
+        button{
+            padding: 5%;
+            font-size: 20px;
+           font-weight: bold;
+           background-color: purple;
+           border-radius: 10px;
+            border: 2px solid yellow;
+            margin-top: 50px;
+            color: white;
+            margin-left: 70px;
+            background: none;
+        }
+        
+
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Choose your mind</h2>
+            
+        </header>
+
+        <div class="row">
+            <div class="item">
+                <div class="caption">
+                <h2>Starter</h2>
+                <p> <span>19$</span> /month</p>
+                </div>
+            <ul>
+                <li>Website</li>
+                <li>Website</li>
+                <li>Website</li>
+                <li>Website</li>
+                <li>Website</li>
+                <li>Website</li>
+                <button>Add To Cart</button>
+            </ul>
+            </div>
+            <div class="item">
+                <div class="caption">
+                    <h2>Starter</h2>
+                    <p> <span>19$</span> /month</p>
+                    </div>
+                <ul>
+                    <li>Website</li>
+                    <li>Website</li>
+                    <li>Website</li>
+                    <li>Website</li>
+                    <li>Website</li>
+                    <li>Website</li>
+                    <button>Add To Cart</button>
+                </ul>
+            </div>
+            <div class="item">
+                <div class="caption">
+                    <h2>Starter</h2>
+                    <p> <span>19$</span> /month</p>
+                    </div>
+                <ul>
+                    <li>Website</li>
+                    <li>Website</li>
+                    <li>Website</li>
+                    <li>Website</li>
+                    <li>Website</li>
+                    <li>Website</li>
+                    <button>Add To Cart</button>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

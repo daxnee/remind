@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            display: inline-block;
+            /* span 태그는 inline-block 명시해줘야 애니메이션 실행이 된다 */
+            animation: waviy 1.5s infinite;
+            animation-delay: calc(0.1s * var(--i));
+        }
+        @keyframes waviy{
+            0%,
+            40%,
+            100%{
+                transform: translateY(0);
+            }
+            20%{
+                /* transform: translateY(-20px); */
+                /* 위로 점프 */
+                transform: rotate(45deg);
+                /* 45도 오른쪽으로 회전 */
+            }
+
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="main-container">
+            <!-- greeting-wrapper : 인사글 -->
+            <div class="greeting-wrapper">
+                    <!-- intro-wrapper: 본인소개 : 증명사진 및 뭐하는지 -->
+                <h1>
+                    <span style="--i:1">H</span>
+                    <span style="--i:2">E</span>
+                    <span style="--i:3">L</span>
+                    <span style="--i:4">L</span>
+                    <span style="--i:5">O</span>
+                    <span style="--i:6">,</span>
+                    <span style="--i:7">W</span>
+                    <span style="--i:8">O</span>
+                    <span style="--i:9">R</span>
+                    <span style="--i:10">L</span>
+                    <span style="--i:11">D</span>
+                    <span style="--i:12">!</span>
+                </h1>
+            </div>
+            <div class="intro-wrapper">
+                <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <!-- id 이름은 고유해야 한다 -->
+                    <div id="dot-1" class="dot"></div>
+                    <div id="dot-2" class="dot"></div>
+                    <div id="dot-3" class="dot"></div>
+                </div>
+            </div>
+            <!-- 내정보 -->
+            <div class="info-wrapper">
+                <img src="프로필.jpg" alt="">
+                <h5>Yang Da Eun</h5>
+            
+            </div>
+            <div class="do-wrapper">
+                <div class="preview-shadow">
+                    <div class="preview">
+                        <div class="corner" id="corner-tl"></div>
+                        <div class="corner" id="corner-tr"></div>
+                        <h3>What I DO</h3>
+                        <p>Javascript와 AWS를 주로 다룹니다.</p>
+                        <div class="corner" id="corner-br"></div>
+                        <div class="corner" id="corner-bl"></div>
+                    </div>
+                    </div>
+                </div>
+            <!-- grid 예정 -->
+        </div>
+    </header>
+</body>
+</html>

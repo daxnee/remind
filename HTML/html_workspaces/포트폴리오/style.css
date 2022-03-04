@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Hubballi&family=Shizuru&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -83,4 +84,231 @@ h3, h6{
     border: 1px solid var(--borderColor);
     border-radius: 5px;
     box-shadow: -2px 7px 12px -9px rgba(0, 0, 0, 0.75);
+}
+
+.main-container{
+    width: 1200px;
+    height: 615px;
+    margin: 0 auto;
+}
+
+.about-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.about-me{
+    width: 550px;
+    height: auto;
+}
+
+.about-me p{
+    margin: 16px 0;
+}
+
+.about-me h4{
+    font-size: 24px;
+    margin: 32px 0;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f0ead6;
+    border-radius: 10px;
+}
+
+.skills ul{
+    list-style: none;
+    padding-left: 40px;
+    padding: 16px 0;
+}
+
+.skills ul li{
+    color: #4b5156;
+}
+
+.social-links {
+    width: 550px;
+    height: auto;
+}
+
+.social-links img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 1px solid gray;
+}
+
+.social-links h3{
+    text-align: center;
+    margin-top: 28px;
+    font-size: 28px;
+}
+
+.github {
+    text-align: center;
+}
+.github a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #17a2b8;
+   
+}
+
+header{
+    background-color: var(--mainColor);
+    border-bottom: var(--borderColor);
+}
+
+.greeting-wrapper{
+    padding: 46px 0;
+
+}
+
+.greeting-wrapper h1{
+    text-align: center;
+    font-size: 56px;
+    font-family: 'Dancing Script', cursive;
+    color: cornflowerblue;
+}
+
+.intro-wrapper{
+    background-color: white;
+    border: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+    /* border-radius: (위 왼쪽) (위 오른쪽) (아래 오른쪽) (아래 왼쪽) */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 모든 아이템의 크기를 동일하게 맞춤 */
+    grid-template-areas: "nav-wrapper nav-wrapper" "info-wrapper do-wrapper";
+    /* 위 4개가 클래스이름(4등분하겠다) */
+    box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+}
+
+.nav-wrapper{
+    width: 100%;
+    grid-area: nav-wrapper;
+    /* nav-wrapper가 grid의 지역이 되겠다 */
+    border-bottom: 1px solid var(--borderColor);
+    background-color: var(--mainColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* id는 # /  class는 . */
+#dot-1{
+    background-color: #fc6058;
+}
+
+#dot-2{
+    background-color: #fec02f;
+}
+
+#dot-3{
+    background-color: #2aca3e;
+}
+
+.dot{
+    padding: 10px;
+    /* dot의 크기 조절 */
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 8px;
+    box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    transition: 0.3s;
+}
+.dot:hover {
+    transform: scale(2);
+}
+
+.dots-wrapper{
+    display: flex;
+    padding: 10px;
+}
+
+.info-wrapper{
+    grid-area: info-wrapper;
+    padding: 30px 0;
+}
+
+.info-wrapper img{
+    display: block;
+    width: 230px;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: -2px 7px 12px -9px rgba(0, 0, 0, 0.75);
+    border: 1px solid black;
+   
+}
+
+.info-wrapper h5{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    color:orchid;
+}
+
+.do-wrapper{
+    grid-area: do-wrapper;
+    padding: 50px 10px;
+} 
+
+.preview-shadow{
+    background-color: #f0ead6;
+    width: 300px;
+    height: 180px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.preview{
+    width: 330px;
+    border: 1.5px solid #12a2b8;
+    background-color: rgb(251, 249, 243, 0.8);
+    padding: 15px;
+    position: relative;
+}
+
+.corner{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1.5px solid #12a2b8;
+    position: absolute;
+}
+
+#corner-tl{
+    top: -5px;
+    left: -5px;
+
+}
+#corner-tr{
+    top: -5px;
+    right: -5px;
+}
+#corner-br{
+    bottom: -5px;
+    right : -5px;
+}
+#corner-bl{
+    bottom: -5px;
+    left: -5px;
+}
+
+.preview h3{
+    font-size: 28px;
+    margin: 28px 0;
+}
+
+.preview p {
+    font-size: 18px;
+    color: #4b5156;
+    margin: 16px 0;
 }
