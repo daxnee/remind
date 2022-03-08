@@ -13,7 +13,9 @@
 
 - ### 실무시 공통된 이름은 앞에 적어야 한다
 ```
+ex)
 section-about.html
+section-project.html
 
 ```
 
