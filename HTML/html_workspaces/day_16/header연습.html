@@ -31,7 +31,10 @@
         .dropdown-content {
             width: 160px;
             background-color: white;
+            position: absolute;
             display: none;
+
+            
          
         }
         .dropdown-content a{
@@ -39,7 +42,17 @@
             text-decoration: none;
             text-align: left;
             color: black;
+            display: block;
+
         }
+        .dropdown:hover .dropdown-content{
+            display: block;
+
+        }
+       .dropdown-content a:hover{
+           background-color: aquamarine;
+       }
+        
 
 
     </style>
