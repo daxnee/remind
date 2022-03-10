@@ -47,6 +47,7 @@ Q. SMITH의 직업과 급여를 알고싶다.
    SMITH의 부서위치를 알고싶다.
 emp :
 {
+    ename : "SMITH"
     job : "CLERK",
     sal : 1200,
     dname : "SALES",

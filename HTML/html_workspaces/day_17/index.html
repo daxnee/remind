@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .blue{
+            background-color: blue;
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .red{
+            background-color: red;
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+        }
+        .yellow{
+            background-color: yellowgreen;
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- javascript를 이용한 css 컨트롤 -->
+    <!-- blue -->
+    <div class="container">
+        <div id="blue" class="blue" onclick="changeColor()"></div>
+        <!-- onclick : 클릭 시 함수 호출
+            onclick : javascript에 정의한 함수이름 위치 -->
+        <div id="red" class="red" onclick="hide()"></div>
+        <div class="clear">
+            <button onclick="setInitialization()">ALL CLEAR</button>
+        </div>
+        <div id="yellow" class="yellow" onclick="changeColor1()"></div>
+        <div class="form">
+            <input id="userPassword" type="password" value="" onkeyup="">
+            <!-- userPassword :비밀번호 입력 -->
+            <input id="userPassword2" type="password" value="" onkeyup="checkUserId()">
+            <!-- userPassword2 :비밀번호 체크하는 input 태그 -->
+            <!-- onkeyup : 키보드를 눌렀다 뗐을때 발생하는 함수 호출 -->
+        </div>
+    </div>
+    <script>
+        // blue 도형을 누르면 움직이는 기능을 구현해보자 
+        //함수(메소드)를 만들어야 한다.
+        // javascript 함수는 리턴타입이 없다.
+        function changeColor() {
+            var color = document.getElementById("blue").style.backgroundColor;
+            
+            if(color == "black"){
+                alert("이미 배경색깔은 검은색입니다.");
+                return 0;
+                // 여기선 return의 데이터 타입이 없으니까 아무거나 써도 무방하다.
+            }
+            document.getElementById("blue").style.backgroundColor = "black";
+            console.log(color);
+        }
+        // 함수 이름은 항상 동사(verb)로!!
+        function hide() {
+            document.getElementById("blue").style.display = "none";
+            // none을 blue라는 함수에 대입해준 것임
+            // 같은 원리로 flex도 가능
+        }
+        // document로 색상을 가져오는 것 : 바닐라 스크립트 문법
+
+        function setInitialization(){
+            document.getElementById("blue").style.backgroundColor = "blue";
+            document.getElementById("blue").style.display = "block";
+            document.getElementById("yellow").style.backgroundColor="pink";
+        }
+
+        function changeColor1(){
+          document.getElementById("yellow").style.backgroundColor="pink";
+        }
+
+        function checkUserId() {
+           var Password = document.getElementById("userPassword").value;
+           var Password2 = document.getElementById("userPassword2").value;
+           if(Password == Password2){
+           confirm("비밀번호가 일치합니다.")
+        }
+    }
+    </script>
+</body>
+</html>
+
