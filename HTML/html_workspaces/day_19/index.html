@@ -5,29 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    
     <style>
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            transition: 0.5s;
+            /* 전체에 속성을 주면 화면 축소, 확대시 부드럽게 움직임 */
         }
         
         
         .top-section {
             display: flex;
-            padding: 2% 5%;
+            padding-right: 2% ;
             justify-content: space-between;
             align-items: center;
             padding-left: 50px;
             width: 100%;
             
             
+            
+        }
+        .icon-space h2:hover{
+            cursor: pointer;
+        }
+        .icon-space h2 span{
+            color: blue;
         }
         .top-section h2{
             
-            font-size: 20pt;
+            font-size: 30pt;
             height: auto;
             color: white;
+            
+            font-weight: 800;
             
         }
 
@@ -36,18 +51,23 @@
             justify-content: space-between;
         
         }
-        .info-nav li {
+        .info-nav ul li {
            
             list-style: none;
             margin: 2px 10px 0;
             
             font-weight: bold;
+            float: left;
            
         }
-        .info-nav li a{
+        .info-nav ul li a{
             color: white;
             text-decoration: none;
             margin: 10px;
+        }
+
+        .info-nav ul li a:hover{
+            color: purple;
         }
       
         .main-section{
@@ -55,20 +75,20 @@
             
         }
 
-        footer{
-            position: absolute;
+        footer MARQUEE{
+            position: fixed;
             /* margin-bottom: 10px; */
-            background-color: pink;
+            background-color: rgb(211, 97, 116);
             width: 100%;
             height: auto;
+            bottom: 0;
+            color: white;
+            font-size: 16pt;
+            letter-spacing:2px;
+            font-weight: 800;
         }
 
-        .bottom-info p{
-            color: white;
-            text-align: center;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
+        
       
         .main-textwrap{
             text-align: center;
@@ -79,7 +99,7 @@
         .main-textwrap h1{
             margin-bottom: 70px;
             color: white;
-            font-size: 35pt;
+            font-size: 48pt;
         }
         
         .main-textwrap p{
@@ -89,52 +109,144 @@
             font-weight: bold;
         }
 
+        .button{
+        
+        font-size: 40px;
+        font-weight:900;
+        color: green;
+        }
+
+       .button:hover{
+           cursor: pointer;
+       }
+
+      
+
         .side-nav{
-        position: fixed;
+            position: fixed;
             color: white;
-            height: 100%;
+            /* height: auto; */
+            width: 50px;
             top: 350px;
-            right: 0;
-            /* background-color: salmon; */
+            right: 40px;
+            
             
         }
+
+        .side-nav h3{
+        
+        height: auto;
+        width: 100px;
+        
+        }
+        .side-nav h3{
+        transform: rotate(90deg);
+        /* padding: 1%; */
+        font-size: 15pt;
+        letter-spacing:4px;
+        margin-right: 20px ;
+        position: absolute;
+        
+    
+        }
+
+        
+        .side-nav h3:hover{
+            cursor: pointer;
+        }
+
         .side-nav h2{
             width: 200px;
             height: 200px;
             background-color: black;
         }
       
+
+
         .background{
             justify-content: space-around;
             padding-top: 20px;
             width: 100%;
-            height: 100vh;
-            background-image: 
-            /* linear-gradient(
-                rgba(4, 10, 20, 0.8),
-                rgba(4, 10, 20, 0.8)
-            ), */
-            url(pexels-maria-tyutina-752036.jpg);
+            height:100vh;
+            background-image: url(경기장.jpg);
+            background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             
         }
 
-        .main-textwrap h2{
-        
-            font-size: 30px;
-           font-weight: bold;
-           color: white;
+      
+        .main-textwrap h1 span{
+            color: rgb(180, 64, 103);
         }
-        .main-textwrap h2:hover{
-            cursor: pointer;
+
+        .second-section{
+            height: 100vh;
         }
-     
+
+        .second-section-caption{
+            display: flex;
+            justify-content: space-around;
+           
+        }
         
 
-        .main-textwrap h1 span{
-            color: palevioletred;
+        .second-section-caption li{
+            list-style: none;
+            flex-basis: 10%;
+            font-size: 20pt;
+            
         }
+        .second-icon-space h1{
+            font-size: 30pt;
+            
+        }
+        .second-icon-space h1 span{
+            color: rgb(29, 29, 230);
+        }
+        .second-section-caption li:hover{
+            cursor: pointer;
+        }
+
+        .swiper {
+            margin-top: 100px ;
+            width: 1200px;
+            height: 620px;
+            
+            }
+
+        .swiper-slide img{
+            width: 100%;
+            object-fit: cover;
+            background-size: cover;
+            
+        }
+        .swiper-slide img:hover{
+            cursor: pointer;
+        }
+
+     
+
+        .swiper-button-prev{
+            color: white;
+        }
+
+        .swiper-button-next{
+            color: white;
+        }
+        .swiper-pagination{
+            color: black;
+        }
+        .second-icon-space h1:hover{
+            cursor: pointer;
+        }
+        .second-section-caption h1{
+            padding-top: 4%;
+        }
+        .second-section-caption li {
+            padding-top: 1% ;
+        }
+       
     </style>
 </head>
 <body>
@@ -143,52 +255,108 @@
         <header>
             <div class="top-section">
                 <div class="icon-space">
-                    <h2>DAEUN</h2>
+                    <h2>SAL<span>U</span>T <span>!</span></h2>
                 </div>
                 <div class="info-nav">
+                    <ul>
                         <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Events</a></li>
-                        <li><a href="">Community</a></li>
                         <li><a href="">Join</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Collection</a></li>
+                        <li><a href="">Board</a></li>
                         <li><a href="">Members</a></li>
+                    </ul>
                     </div>
                 </div>   
             </header>
             
         <div class="main-section">
             <div class="side-nav">
-                <h3>DONATION</h3>
+                <h3> JOIN US! <span>♡</span></h3>
             </div>
             <div class="main-textwrap">
-            <h1>The focus is on <span>HER</span></h1>
+            <h1>You do need this  <span>ITEM</span>. </h1>
             <p>LEARN MORE</p>
-            <h2>∨</h2>
-        </div>
+            <div id='main-button' class="button">∨</div>
+    </div>
+
         </div>
         <footer>
             <div class="bottom-info">
-                <p>Life begins at the end of your comfort zone - yang da eun         Life begins at the end of your comfort zone - yang da eun  Life begins at the end of your comfort zone - yang da eun   Life begins at the end of your comfort zone - yang </p>
+                <MARQUEE bgColor="pink" scrollamount="5"  behavior="alternate">
+                    Life is C(Chicken) between B(Burger) and D(Donuts) - Yang Da Eun  &nbsp; &nbsp; &nbsp;      
+                    Life is C(Chicken) between B(Burger) and D(Donuts) - Yang Da Eun  &nbsp; &nbsp; &nbsp; 
+                </MARQUEE>
             </div>
         </footer>
     </div>
 
-  
+    <div class="second-section">
+        <section class='section' id='arrival-section'></section>
+    <div class="second-header">
+    <div class="second-section-caption">
+        <div class="second-icon-space">
+            <h1>SAL<span>U</span>T <span>!</span></h1>
+        </div>
+        <li>All</li>
+        <li>Outer</li>
+        <li>Top</li>
+        <li>Bottom</li>
+        <li>Only Salut</li>
+    </div>
+    </div>
+    <div class="shop-display">
+        <div class="swiper">
+   
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="꽃.jpeg" alt=""></div>
+              <div class="swiper-slide"><img src="화보1.jpeg" alt=""></div>
+              <div class="swiper-slide"><img src="화보2.jpeg" alt=""></div>
+            </div>
+            
+            <div class="swiper-pagination"></div>
+          <!-- If we need pagination : 페이지 몇 개인지 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            </div> 
+    </div>
+    </div>
 </div>
+</body>
+
+
+<script >
+    const movebutton = document.getElementById('main-button');
+    const movesection = document.getElementById('arrival-section');
+
+    movebutton.addEventListener('click', () => {
+        window.scrollBy({top: movesection.getBoundingClientRect().top, behavior: 'smooth'});
+    });
 
     
+</script>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>const swiper = new Swiper('.swiper', {
+ 
        
-
-</div>
-           
+        autoplay : {
+            delay: 4000,
+        },
+        loop: true,
+       
+        pagination: {
+          el: '.swiper-pagination',
+        },
       
+        
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+    
+      });</script>
 
-</body>
+
 </html>
-
-
-<!-- 화면 꽉차게 
-나브 윗 공간 축소
-사이드 나브 글씨 세로 배치
-하단 글자 움직이는 애니메이션 -->

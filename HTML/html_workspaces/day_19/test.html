@@ -36,20 +36,39 @@
         }
         
     </style>
-  </head>
-  <body>
-    <div class="container">
-        <header>
-          
-              <li><a href="">Home</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">Events</a></li>
-              <li><a href="">Community</a></li>
-              <li><a href="">Join</a></li>
-              <li><a href="">Contact</a></li>
-        
-
-    </header>
-    </div>
-  </body>
-</html>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         .section {
+             height: 100vh;
+         }
+     </style>
+ </head>
+ <body>
+     <div>
+         <button id='button1'>Section1</button>
+     </div>
+ 
+     <section class='section'>
+         <span>페이지를 내리기 위한 구간 ...</span>
+     </section>
+ 
+     <section class='section' id='section1'>
+         <h2>Section1 Title</h2>
+         <span>Section1 Description ...</span>
+     </section>
+ </body>
+ <script>
+     const button1 = document.getElementById('button1');
+     const section1 = document.getElementById('section1');
+ 
+     button1.addEventListener('click', () => {
+         window.scrollBy({top: section1.getBoundingClientRect().top, behavior: 'smooth'});
+     });
+ </script>
+ </html>
