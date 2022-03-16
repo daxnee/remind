@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .popup{
+            width: 1000px;
+            height: 300px;
+            background-color: #777;
+            margin: 100px auto;
+            position: relative;
+        }
+        .close{
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            background-color: aliceblue;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .container{
+            width: 500px;
+            height: 200px;
+            /* border: 1px solid black; */
+            margin: 50px auto;
+        }
+        button {
+            cursor: pointer;
+            padding:  3%;
+            font-size: 24px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="popupclose" class="popup">
+        <div class="close" onclick="closePopup()"></div>
+    </div>
+    <div class="container">
+        <button onclick="openPopup()">확인</button>
+    </div>
+
+    <script>
+        function closePopup(){
+            document.getElementById('popupclose').style.display = "none";
+        }
+        // closePopup() : id = popup 의 div를 없애주는(none) 기능의 함수!
+        function openPopup(){
+            var style = document.getElementById('popupclose').style.display = "none";
+                if(style == "none") {
+                    document.getElementById('popupclose').style.display = "block";
+                    return 1;
+                }
+        }
+    
+    </script>
+
+</body>
+</html>
+
+<script>
+    // 바닐라 js 문법
+  
+
+    function openPopup(){
+        var style = document.getElementById("popup").style.display;
+        if(style === "none"){
+            document.getElementById("popup").style.display = "block";
+         return true;
+        }
+        
+    }
+
+   

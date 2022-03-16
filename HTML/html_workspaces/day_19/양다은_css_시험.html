@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    
+
+</head>
+<body>
+    <div class="container">
+        <div class="background">
+        <header>
+            <div class="top-section">
+                <div class="icon-space">
+                    <h2>SAL<span>U</span>T <span>!</span></h2>
+                </div>
+                <div class="info-nav">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Join</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Collection</a></li>
+                        <li><a href="">Board</a></li>
+                        <li><a href="">Members</a></li>
+                    </ul>
+                    </div>
+                </div>   
+            </header>
+            
+        <div class="main-section">
+            <div class="side-nav">
+                <h3> JOIN US!<span>♡</span></h3>
+            </div>
+            <div class="main-textwrap">
+            <h1>You do need this  <span>ITEM</span>. </h1>
+            <p>LEARN MORE</p>
+            <div id='main-button' class="button">∨</div>
+    </div>
+
+        </div>
+        <footer>
+            <div class="bottom-info">
+                <MARQUEE bgColor="pink" scrollamount="5"  behavior="alternate">
+                    Life is C(Chicken) between B(Burger) and D(Donuts) - Yang Da Eun  &nbsp; &nbsp; &nbsp;      
+                    Life is C(Chicken) between B(Burger) and D(Donuts) - Yang Da Eun  &nbsp; &nbsp; &nbsp; 
+                </MARQUEE>
+            </div>
+        </footer>
+    </div>
+
+    <div class="second-section">
+        <section class='section' id='arrival-section'></section>
+    <div class="second-header">
+    <div class="second-section-caption">
+        <div class="second-icon-space">
+            <h1>SAL<span>U</span>T <span>!</span></h1>
+        </div>
+        <li>All</li>
+        <li>Outer</li>
+        <li>Top</li>
+        <li>Bottom</li>
+        <li>Only Salut</li>
+    </div>
+    </div>
+    <div class="shop-display">
+        <div class="swiper">
+   
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="꽃.jpeg" alt=""></div>
+              <div class="swiper-slide"><img src="화보1.jpeg" alt=""></div>
+              <div class="swiper-slide"><img src="화보2.jpeg" alt=""></div>
+            </div>
+            
+            <div class="swiper-pagination"></div>
+          <!-- If we need pagination : 페이지 몇 개인지 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            </div> 
+    </div>
+    </div>
+</div>
+</body>
+
+
+<script >
+    const movebutton = document.getElementById('main-button');
+    const movesection = document.getElementById('arrival-section');
+
+    movebutton.addEventListener('click', () => {
+        window.scrollBy({top: movesection.getBoundingClientRect().top, behavior: 'smooth'});
+    });
+
+    
+</script>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>const swiper = new Swiper('.swiper', {
+ 
+       
+        autoplay : {
+            delay: 4000,
+        },
+        loop: true,
+       
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+    
+      });</script>
+
+
+</html>

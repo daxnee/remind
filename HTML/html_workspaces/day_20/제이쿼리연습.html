@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .popup{
+            width: 1000px;
+            height: 300px;
+            background-color: #777;
+            margin: 100px auto;
+            position: relative;
+        }
+        .close{
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            background-color: aliceblue;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .container{
+            width: 500px;
+            height: 200px;
+            /* border: 1px solid black; */
+            margin: 50px auto;
+        }
+        button {
+            cursor: pointer;
+            padding:  3%;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="popup"class="popup">
+    <!-- 컨텐츠 외적인 것은 컨테이너 밖에다 만들기  -->
+    <div id="close" class="close" onclick="closePopup()"></div>
+    </div>
+    <div class="container">
+        <button onclick="openPopup()">확인</button>
+        <!-- 내가 만들 사이트 내용들 -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+
+        function closePopup(){
+            $("#popup").hide();
+            $(".container").append('<button onclick="openPopup()">취소</button>')
+        }
+
+        function openPopup(){
+          var style =  $("#popup").css("display");
+          if(style == "none")
+          $("#popup").show();
+          //$("#popup").css("dispaly", "block") 위와 같은 문법임 
+          // 실무땐 회사에 맞춰서 사용하기!
+          return true;
+        }
+
+
+        function openPopup(){
+            var style = $("#popup").css("display");
+            if(style == "none")
+            $("#popup").show();
+            return true;
+        }
+    </script>
+</body>
+</html>
