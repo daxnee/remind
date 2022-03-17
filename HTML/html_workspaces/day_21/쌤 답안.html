@@ -77,9 +77,9 @@
       </div>
       <div class="row">
         <div class="item">
-          <div  class="col" onclick="removeItem(this)">곱창 파스타</div>
-          <div  class="col" onclick="removeItem(this)">육회</div>
-          <div  class="col" onclick="removeItem(this)">지코바</div>
+          <div class="col" onclick="removeItem(this)">곱창 파스타</div>
+          <div class="col" onclick="removeItem(this)">육회</div>
+          <div class="col" onclick="removeItem(this)">지코바</div>
           <div class="col" onclick="removeItem(this)">빠에야</div>
           <div class="col" onclick="removeItem(this)">알리오 올리오</div>
         </div>
@@ -97,24 +97,28 @@
     ></script>
     <script>
       function removeItem(val) {
+        //선택한 아이템 myMenu에 추가(이동)
         $('#myMenu').append(val);
       }
-
-  
       function doOrder() {
-        var array = [];
-        var len = $('#myMenu').children().length;
-        // $('#myMenu').show();
-        for(i=0; i<len; i++){
-          array[i] = $('#myMenu').children()[i].innerText
-        }
-        if(len<1){
-          alert("메뉴를 선택하세요.")
-        }else{
-          alert("선택하신 메뉴는 " + array + " 이고 총 " + len + "개 입니다.")
-        }
-     
- 
+         var len = $('#myMenu').children().length;
+         if(len < 1){
+           alert('메뉴를 선택하시오');
+           return false;
+         }
+         var menu = '';
+         for(var i=0; i<len; i++){
+          if($('#myMenu').children()[i].innerHTML === '곱창 파스타'){
+            alert($('#myMenu').children()[i].innerHTML+' 재료소진 입니다!');
+            return false;
+          }         
+          if(i == len-1){
+            menu += $('#myMenu').children()[i].innerHTML;
+            break;
+          }
+          menu += $('#myMenu').children()[i].innerHTML + ',';
+         }
+         confirm('선택한 메뉴는 '+menu+' 총'+len+'개를 주문하시겠습니까?');
       }
       function doClear() {
         window.location.reload();

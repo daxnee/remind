@@ -29,16 +29,17 @@ $('.className').append
 ### 바인딩 : on()으로 이벤트를 받을 준비 
 
 ###  클로저 : js는 return에 함수를 구현할 수 있다.(자유롭다, 자바는 안됨)
+```js
 ex) 
  function name() {
      return function namex(){
 
      }
  }
-
+```
 
 ### js는 함수를 구현하는 방법이 크게 두가지다
-```
+```js
 1. 
  $('#children').on("click",function() {
         console.log("hello world");
@@ -63,6 +64,7 @@ ex)
 
 ### children() : 자식 태그의 정보 호출
 ```
+childre(). : 자식 태그 정보 호출
 children().length;: 해당 태그의 자식이 몇 개인지(배열 길이)
 
 ```
@@ -94,9 +96,9 @@ $('.row') -> 제이쿼리
 
 - id면 # , 클래스이면 .
 
-1. document.getElementById('name').style
+방법1. document.getElementById('name').style 
 
-2. $('#name').show()
+방법2. $('#name').show()
 
 
 //제이쿼리 hide 함수 호출
@@ -104,7 +106,7 @@ $('#name').hide()
 
 ```
 ### this : 본인 , super : 부모
-```
+```js
  <div class="item" onclick="clickItem(this)">한가람식당</div>
 
 
@@ -114,9 +116,41 @@ $('#name').hide()
         }
 </script>
 
-```
+
 
 객체지향프로그램에서 통용되는 개념
 객체지향프로그램 : 자바, 파이썬, js ,node, 리액트, C++, C#
 
 *절차지향 프로그래밍 : C, 코볼...
+```
+
+
+### 쿼리 짜기 전에 '플로우 차트' 먼저 짜야 한다.
+```
+주문
+myMenu에 데이터가 있음 or 없음
+있으면
+곱창파스타에 메뉴가 있음  or 없음 -- 여기서 for문 사용
+Y : alert("재료 소진입니다")
+N : alert(주문메뉴 + 주문수량)
+
+```
+
+
+### 
+```js
+<div class="col" onclick="removeItem(this)">곱창 파스타</div>
+
+ function removeItem(val) {
+        $('myMenu').append(val);
+        }
+
+// 함수 (인자값) 
+// 원래는 비어있지만 위 this(자신의 값)이 있기 때문에 함수호출시 인자값을 넣어줘야 한다. (이름은 아무거나, 위 아래 똑같이 맞춰줌) 
+```
+
+### 예약어는 변수명이 안된다.
+```
+new, this, super,(데이터타입이 object) 연산자
+는 이미 시스템에서 정해진 언어기 때문에 변수명으로 지정할 수 없다.
+```
