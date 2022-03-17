@@ -67,9 +67,6 @@ function openPopup(){
 // 결과 : 화면에 id="popupclose"(div.popup)이 없으면 버튼 클릭시 div.popup을 보여준다.
 ```  
 
-
-
-
 ### Jquery 설치
 ```
 구글에 'Jquery' 검색 - CDN -  minified -  script 복사 - html에 복붙
