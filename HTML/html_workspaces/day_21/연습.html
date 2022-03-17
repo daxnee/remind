@@ -81,7 +81,7 @@
           <div class="col" onclick="removeItem(this)">육회</div>
           <div class="col" onclick="removeItem(this)">지코바</div>
           <div class="col" onclick="removeItem(this)">빠에야</div>
-          <div class="col" onclick="removeItem()">알리오 올리오</div>
+          <div class="col" onclick="removeItem(this)">알리오 올리오</div>
         </div>
         <div id="myMenu" class="item"></div>
       </div>
@@ -97,12 +97,12 @@
     ></script>
     <script>
         function removeItem(val) {
-          
-        $('myMenu').append(val);
+        $('#myMenu').append(val);
         }
 
         function doOrder() {
-           
+           var array = [];
+           var len = $()
         }
         function doClear() {
           window.location.reload();
