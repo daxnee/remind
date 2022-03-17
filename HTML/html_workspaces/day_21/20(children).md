@@ -64,9 +64,11 @@ ex)
 
 ### children() : 자식 태그의 정보 호출
 ```
-childre(). : 자식 태그 정보 호출
-children().length;: 해당 태그의 자식이 몇 개인지(배열 길이)
 
+- children().length;: 해당 태그의 자식이 몇 개인지(배열 길이)
+
+- children()[ index 번호 ]로 배열호출 가능
+ex) children()[0].
 ```
 
 
@@ -91,17 +93,17 @@ children().length;: 해당 태그의 자식이 몇 개인지(배열 길이)
 
 ### 제이쿼리 설명
 ```
-document.getElementById -> 바닐라js
-$('.row') -> 제이쿼리
+
 
 - id면 # , 클래스이면 .
 
-방법1. document.getElementById('name').style 
+방법1(vallia.js)
+: document.getElementById('name').style 
 
-방법2. $('#name').show()
+방법2(Jquery)
+: $('#name').show()
 
-
-//제이쿼리 hide 함수 호출
+ex) 제이쿼리 hide 함수 호출
 $('#name').hide()
 
 ```
@@ -109,6 +111,14 @@ $('#name').hide()
 ```js
  <div class="item" onclick="clickItem(this)">한가람식당</div>
 
+
+ <script>
+        function clickItem(value){
+            console.log(value);
+        }
+</script>
+
+=> div.item을 클릭하면 웹페이지 f12 console창에 item에 관한 모든 정보를 볼 수 있다. 
 
  <script>
         function clickItem(value){
