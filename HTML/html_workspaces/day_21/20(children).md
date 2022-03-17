@@ -22,13 +22,21 @@ $('.className').append
 
 ```
 ### append로 for문 만들기
-```
-
+```js
+ function createItem(){
+        for (var i =0; i<5; i++){
+        $('.row').append(' <div class="item"></div>');
+    }
+}
 
 ```
 ### 바인딩 : on()으로 이벤트를 받을 준비 
+  .on('click',function(){}
+  => click하면 function을 실행 
+  
+  function뒤에 함수명이 없음 : 익명함수
 
-###  클로저 : js는 return에 함수를 구현할 수 있다.(자유롭다, 자바는 안됨)
+### 클로저 : js는 return에 함수를 구현할 수 있다.(자유로움. 자바는 안됨)
 ```js
 ex) 
  function name() {
@@ -45,12 +53,15 @@ ex)
         console.log("hello world");
     } );
 
+// fuction(){여기에 입력한 행동들을 실행하는 함수}
+
 2. 
    function createItem(){
         for (var i =0; i<5; i++){
         $('.row').append(' <div class="item"></div>');
     }
 }
+// 기존에 알던 함수정의 방법. for(row태그에 div.item을 생성한다) => 6번 반복
 
 ```
 ### 구매 개수 제한
@@ -63,14 +74,25 @@ ex)
 
 
 ### children() : 자식 태그의 정보 호출
-```
+```js
 
 - children().length;: 해당 태그의 자식이 몇 개인지(배열 길이)
 
 - children()[ index 번호 ]로 배열호출 가능
 ex) children()[0].
-```
 
+$("#children").on('cilck',function(){
+var len = $("row").children().length;
+// len = 자식의 길이를 변수 대입
+console.log($(".row")children());
+//  부모 태그인 row가 자식에 대한 정보 호출
+console.log($(".row").children()[0].innerText);
+}); 
+//  0번째 자식 태그의 innerText를 가져오겠다 
+// on = click하면 function(){ } 을 실행하겠다.
+
+
+```
 
 ### 아이템 길이 체크하기
 ```js
@@ -89,12 +111,8 @@ ex) children()[0].
        }
 ```
 
-
-
 ### 제이쿼리 설명
 ```
-
-
 - id면 # , 클래스이면 .
 
 방법1(vallia.js)
@@ -126,12 +144,14 @@ $('#name').hide()
         }
 </script>
 
+```
 
-
+### 객체지향/ 절차치향
+``` 
 객체지향프로그램에서 통용되는 개념
 객체지향프로그램 : 자바, 파이썬, js ,node, 리액트, C++, C#
 
-*절차지향 프로그래밍 : C, 코볼...
+*절차지향 프로그래밍 : C, 코볼...(거의 다 오래된 언어들)
 ```
 
 
