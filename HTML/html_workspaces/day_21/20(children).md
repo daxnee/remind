@@ -12,8 +12,9 @@ $('.className').append
                .css('display')
                .css('display', 'block') 
                <!-- display를 block으로 replace 하겠다 -->
-
-자주 사용하는 Jquery
+```
+### 자주 사용하는 Jquery
+```
 1. show, hide
 2. append(해당하는 태그에 원하는 태그를 붙여줌)
 3. children
@@ -21,7 +22,7 @@ $('.className').append
 5. attr 
 
 ```
-### append로 for문 만들기
+### append로 item 한번에 여러개 추가하기
 ```js
  function createItem(){
         for (var i =0; i<5; i++){
@@ -29,13 +30,15 @@ $('.className').append
     }
 }
 
+
 ```
 ### 바인딩 : on()으로 이벤트를 받을 준비 
+```
   .on('click',function(){}
   => click하면 function을 실행 
   
   function뒤에 함수명이 없음 : 익명함수
-
+```
 ### 클로저 : js는 return에 함수를 구현할 수 있다.(자유로움. 자바는 안됨)
 ```js
 ex) 
