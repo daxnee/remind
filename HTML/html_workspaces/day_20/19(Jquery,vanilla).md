@@ -46,13 +46,33 @@ function closePopup(){
  
 
 ### vanilla js 사용 해보기(if문)
+1. if문이 실행될 함수 만들기 (function openPopup())
+
+2. 만들어 놓은 html div 태그에 id를 주기 (id="popupclose")
+
+3. 변수 지정 ( var style = document.getElementById('popupclose').style.display = "none";) 
+<!--id="popupclose" 의 display가 none임을 변수 style에 넣어줌 -->
+4. if문 작성
+```js
+function openPopup(){
+            var style = document.getElementById('popupclose').style.display = "none";
+                if(style == "none") {
+                    document.getElementById('popupclose').style.display = "block";
+                    return 1;
+                }
+        }
+5. 만든 함수 해당 div 태그에 onclick으로 넣어줌
+
+// 만약 style이 none이면 id="popupclose" 의 div를 block(보여줘)
+// 결과 : 화면에 id="popupclose"(div.popup)이 없으면 버튼 클릭시 div.popup을 보여준다.
+```  
 
 
 
 
 ### Jquery 설치
 ```
-구글에 Jquery 검색 - CDN -  minified -  script 복사 - html에 복붙
+구글에 'Jquery' 검색 - CDN -  minified -  script 복사 - html에 복붙
 
 ```
 
@@ -75,5 +95,6 @@ function closePopup(){
             // * 버튼박스는 html의 div 태그 그대로 복붙해서 넣어주면 된다.
 ```
 3. closePopup() 함수가 실행할 수 있게 onclick="closePopup()" 을 해당 div 태그에 넣어준다.
+
 결과 : 함수를 넣어준 div를 클릭하면 id = popup 숨기고 '취소' 버튼 박스가 생성된다.
 
