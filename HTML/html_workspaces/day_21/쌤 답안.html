@@ -116,8 +116,10 @@
           if(i == len-1){
             menu += $('#myMenu').children()[i].innerHTML;
             break;
+            // 1번 i = 4가 될때까진 실행이 안되고 2번이 실행된다.
           }
           menu += $('#myMenu').children()[i].innerHTML + ',';
+          // 2번 
          }
          confirm('선택한 메뉴는 '+menu+' 총'+len+'개를 주문하시겠습니까?');
       }
