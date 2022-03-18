@@ -118,23 +118,23 @@
          $('#userId').focus();
          // 버튼 누르면 커서가 자동으로 감
          return false;
-        //  결과 값을 끝내려는 return. 어떠한 의미도 없음!
+        //  결과 값을 끝내려는 return. false엔 어떠한 의미도 없음!
        }
-      //  var len = userId.length;
-      //  if(len > 20){
-      //    alert("아이디를 20글자 이하로 설정해주세요")
-      //    return false;
-      //   }
+       var len = userId.length;
+       if(len > 20){
+         alert("아이디를 20글자 이하로 설정해주세요")
+         return false;
+        }
 
         //  쌤 답안 
-        if(userId.length >= 20){
-          alert("아이디는 20글자 이하로 작성해주세요.");
-          $('#userId').focus();
-          // 커서 자동으로 옮겨주기
-          $('#userId').val("");
-          // 다시 원 상태로 set 
-          return false;
-        }
+        // if(userId.length >= 20){
+        //   alert("아이디는 20글자 이하로 작성해주세요.");
+        //   $('#userId').focus();
+        //   // 커서 자동으로 옮겨주기
+        //   $('#userId').val("");
+        //   // 다시 원 상태로 set 
+        //   return false;
+        // }
         
         // 비번 설정하기
         var password = $('#password').val().trim();
