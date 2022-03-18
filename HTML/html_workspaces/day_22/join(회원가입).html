@@ -109,10 +109,12 @@
       function join() {
         // 아이디 설정하기
        var userId = $('#userId').val().trim(); //메소드체이닝(리턴 값이 있는 함수만 가능)
-      // #userId의 val() 함수를 공백 제거해서 리턴하겠다.
+      //  #userId의 공백을 제거해서 변수에 넣어줌 
+       // #userId의 val() 함수를 공백 제거해서 리턴하겠다.
       // val()라는 함수가 return이 있어서 trim을 사용할 수 있는것임!
        if(userId == ''){
-         alert("아이디를 입력해주세요!");
+        //  userId가 없다면
+         alert("아이디를 입력해주세요!"); 
          $('#userId').focus();
          // 버튼 누르면 커서가 자동으로 감
          return false;
