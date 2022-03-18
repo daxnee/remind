@@ -34,9 +34,13 @@ $('.className').append
 ```
 ### 바인딩 : on()으로 이벤트를 받을 준비 
 ```
-  .on('click',function(){}
+  .on('click',function(){});
   => click하면 function을 실행 
-  
+  이벤트 받고 {} 안에 행동들 실행
+
+  Key point! : 자바스크립트는 매개변수에 함수를 넣을 수 있다(사용 가능!
+
+
   function뒤에 함수명이 없음 : 익명함수
 ```
 ### 클로저 : js는 return에 함수를 구현할 수 있다.(자유로움. 자바는 안됨)
@@ -88,14 +92,32 @@ $("#children").on('cilck',function(){
 var len = $("row").children().length;
 // len = 자식의 길이를 변수 대입
 console.log($(".row")children());
-//  부모 태그인 row가 자식에 대한 정보 호출
+//  부모 태그 기준으로  row가 자식에 대한 정보 호출
 console.log($(".row").children()[0].innerText);
 }); 
 //  0번째 자식 태그의 innerText를 가져오겠다 
 // on = click하면 function(){ } 을 실행하겠다.
 
+*children은 자식만 찾을 수 있음
+손자를 찾는 방법은? find (족보를 찾아줌)
 
 ```
+### append()
+```
+
+부모 태그에 붙여주면 
+자식 태그가 생성됨
+
+포스트잇이라고 생각하면 됨 
+a태그에 붙였다가 b태그에도 붙일 수 있음 
+
+ex)  function removeItem() {
+        $('#myMenu').append();
+        }
+
+   =>  id가 myMenu인 부모 태그에 자식 태그를 생성해줘 (이동)
+```
+
 
 ### 아이템 길이 체크하기
 ```js

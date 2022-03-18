@@ -111,6 +111,7 @@
           if($('#myMenu').children()[i].innerHTML === '곱창 파스타'){
             alert($('#myMenu').children()[i].innerHTML+' 재료소진 입니다!');
             return false;
+            // 여기서 return값은 큰 의미 없음. 단지 결과값을 끝내려고 하는 용도임!
           }         
           if(i == len-1){
             menu += $('#myMenu').children()[i].innerHTML;
