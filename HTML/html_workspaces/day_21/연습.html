@@ -125,12 +125,12 @@
             return false;
           }
           if(i == len-1){
-            menu = menu + $('#myMenu').children()[i].innerHTML;;
+            menu +=  $('#myMenu').children()[i].innerHTML;
             break;
           }
-          menu = menu + $('#myMenu').children()[i].innerHTML; + ',';
+          menu += $('#myMenu').children()[i].innerHTML; + ',';
         }
-        confirm('선택한 메뉴는' + menu+ '총' + len + '개를 주문하시겠습니까?')
+        confirm('선택한 메뉴는 ' + menu+ ' 총 ' + len + ' 개를 주문하시겠습니까?')
       }
         function doClear() {
           window.location.reload();
