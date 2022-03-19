@@ -100,8 +100,10 @@
         //선택한 아이템 myMenu에 추가(이동)
         $('#myMenu').append(val);
       }
+
       function doOrder() {
          var len = $('#myMenu').children().length;
+                // 마이메뉴 자식 태그의 길이 : 현재 0
          if(len < 1){
            alert('메뉴를 선택하시오');
            return false;
@@ -116,7 +118,7 @@
           if(i == len-1){
             menu += $('#myMenu').children()[i].innerHTML;
             break;
-            // 1번 i = 4가 될때까진 실행이 안되고 2번이 실행된다.
+            // 1번 i = 4가 될때까진 실행이 안되고 아래쪽 2번이 실행된다.
           }
           menu += $('#myMenu').children()[i].innerHTML + ',';
           // 2번 
