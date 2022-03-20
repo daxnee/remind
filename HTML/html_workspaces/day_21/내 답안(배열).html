@@ -98,23 +98,31 @@
     <script>
   
       function removeItem(val) {
-        $('#myMenu').append(val);
-        // 왜 인자값 val? : removeItem(this) this가 있어서 인자값에 내가 임의로 정한 인자값을 넣어줘야 한다.
+       $('#myMenu').append(val);
       }
       function doOrder() {
-        var array = [];
         var len = $('#myMenu').children().length;
-        for(i=0; i<len; i++){
-          array[i] = $('#myMenu').children()[i].innerText
+        if(len <1){
+          alert("메뉴를 선택하세요!");
+          return false;
+        }
+      var menu = '';
+      for(var i=0; i<len; i++ ){
+        if( $('#myMenu').children()[i].innerHTML==='곱창 파스타'){
+          alert($('#myMenu').children()[i].innerHTML+ '재료 소진입니다.')
+        return false;
+        }
+        if(i === len -1){
+          menu += $('#myMenu').children()[i].innerHTML;
+          break;
         }
       
-        if(len<0){
-          alert("메뉴를 선택하세요.")
-        }else{
-          alert("선택하신 메뉴는 " + array + " 이고 총 " + len + "개 입니다.")
-        }
-    
+          menu += $('#myMenu').children()[i].innerHTML + ',';
+          // 2번 
+         }
+         confirm('선택한 메뉴는 '+menu+' 총'+len+'개를 주문하시겠습니까?');
       }
+      
       function doClear() {
         window.location.reload();
       }

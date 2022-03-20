@@ -98,6 +98,7 @@
     <script>
       function removeItem(val) {
         //선택한 아이템 myMenu에 추가(이동)
+         // 왜 인자값 val? : removeItem(this) this가 있어서 인자값에 내가 임의로 정한 인자값을 넣어줘야 한다.
         $('#myMenu').append(val);
       }
 
