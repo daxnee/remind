@@ -1,9 +1,9 @@
 ### 220318
 
-### append / append2
+### append / appendTo
 
 ```
-append2 자식 옆 태그를 이동시켜줌(구글링 해보기)
+appendTo 자식 옆 태그를 이동시켜줌(구글링 해보기)
 
 ```
 

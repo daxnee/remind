@@ -6,15 +6,14 @@ a태그 text-aline : center 안됨
 div태그로 묶어주거나 
 
 
-### =, ==, ===
+### =, ==, === 의미
 ```
-A == B : A는 B와 같다.
-A === B : A와 B는 같고 자료형도 같다.
+A == B : A는 B와 같다. (데이터 타입이)
+A === B : A와 B는 같고 자료형도 같다. (데이터 타입+ 문자)
 var a1 = 1;
 var a1 = 1; 
 a == a1 // true
 a === a1 // false
-
 
 = : 대입 연산자
 == : 데이터 타입만 같은지 확인
@@ -42,11 +41,11 @@ a === a1 // false
 function closePopup(){
             document.getElementById('popupclose').style.display = "none";
         }
-// closePopup()이라는 함수에 popupclose가 안 보이는 기능을 추가한거라고 보면 됨!
+// closePopup()이라는 함수에 id=popupclose인 div태그가 안 보이는 기능을 추가한거라고 보면 됨!
 
 ```
 3. closePopup() 함수가 실행할 수 있게 onclick="closePopup()" 을 해당 div 태그에 넣어준다.
-결과 : 함수를 넣어준 div를 클릭하면 id= "popupclose"가 있는 div는 보이지 none이 됨.
+결과 : 함수를 넣어준 div를 클릭하면 id = "popupclose"인 div태그는 none이 됨.
 
  
 
@@ -72,6 +71,11 @@ function openPopup(){
 // 결과 : 화면에 id="popupclose"(div.popup)이 없으면 버튼 클릭시 div.popup을 보여준다.
 ```  
 
+---
+
+# Jquery 시작
+
+
 ### Jquery 설치
 ```
 구글에 'Jquery' 검색 - CDN -  minified -  script 복사 - html에 복붙
@@ -88,15 +92,20 @@ function openPopup(){
 ### Jqeury 사용해보기
 
 1. function(함수)을 만들어 기능을 추가하기 ($("#popup").hide();)
-2. 만들어 놓은 html 태그에 id를 주기 (id를 popup으로 줬다면             $("#popup")으로 함수 안에 들어감! )
+2. 만들어 놓은 html 태그에 id를 주기 (id를 popup으로 줬다면  $("#popup")으로 함수 안에 들어감! )
 ```js
+<div id="popup" class="popup"></div>
+<button onclick="openPopup()"> button </button>
+
  function closePopup(){
             $("#popup").hide();
             $(".container").append('<button onclick="openPopup()">취소</button>')
-            // 버튼 클릭하면 popup 숨기고, container에 버튼박스를 추가해
+            // 해석 : 버튼 클릭하면 popup 숨기고, container에 버튼박스를 추가해
             // * 버튼박스는 html의 div 태그 그대로 복붙해서 넣어주면 된다.
+
 ```
 3. closePopup() 함수가 실행할 수 있게 onclick="closePopup()" 을 해당 div 태그에 넣어준다.
+ ex) <button onclick="openPopup()"> button </button>
 
 결과 : 함수를 넣어준 div를 클릭하면 id = popup 숨기고 '취소' 버튼 박스가 생성된다.
 

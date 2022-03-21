@@ -16,13 +16,13 @@ $('.className').append
 ### 자주 사용하는 Jquery
 ```
 1. show, hide
-2. append(해당하는 태그에 원하는 태그를 붙여줌)
-3. children
-4. val, text, focus *****
+2. append(해당하는 태그에 원하는 태그를 추가해줌, 다른 태그에 적용하면 이동)
+3. children(부모태그에 적용하면 자식 태그에 대한 정보 호출 )
+4. val(값 호출), text, focus(해당태그에 focus) *****
 5. attr 
 
 ```
-### append로 item 한번에 여러개 추가하기
+### append로 item 한번에 여러개 추가하기(for문 사용)
 ```js
  function createItem(){
         for (var i =0; i<5; i++){
@@ -61,14 +61,15 @@ ex)
     } );
 
 // fuction(){여기에 입력한 행동들을 실행하는 함수}
+// 익명 함수로 바로 실행문을 작성해주기 (이름 짓기 귀찮으니까)
 
 2. 
    function createItem(){
-        for (var i =0; i<5; i++){
+        for (var i=0; i<5; i++){
         $('.row').append(' <div class="item"></div>');
     }
 }
-// 기존에 알던 함수정의 방법. for(row태그에 div.item을 생성한다) => 6번 반복
+// 기존에 알던 함수정의 방법. for(row태그에 div.item을 생성한다) => 6번 반복 
 
 ```
 ### 구매 개수 제한
@@ -137,7 +138,7 @@ ex)  function removeItem() {
 ```
 
 ### 제이쿼리 설명
-```
+```js
 - id면 # , 클래스이면 .
 
 방법1(vallia.js)
@@ -150,8 +151,10 @@ ex) 제이쿼리 hide 함수 호출
 $('#name').hide()
 
 ```
+
 ### this : 본인 , super : 부모
 ```js
+
  <div class="item" onclick="clickItem(this)">한가람식당</div>
 
 
@@ -161,13 +164,9 @@ $('#name').hide()
         }
 </script>
 
-=> div.item을 클릭하면 웹페이지 f12 console창에 item에 관한 모든 정보를 볼 수 있다. 
+=> div.item을 클릭하면 웹페이지 console창에서 item에 관한 모든 정보를 볼 수 있다. 
 
- <script>
-        function clickItem(value){
-            console.log(value);
-        }
-</script>
+
 
 ```
 
@@ -192,7 +191,7 @@ N : alert(주문메뉴 + 주문수량)
 ```
 
 
-### 
+### this 
 ```js
 <div class="col" onclick="removeItem(this)">곱창 파스타</div>
 
