@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>멤버소개</li>
+            <li>오시는길</li>
+            <li>회사소개</li>
+            <li>서비스</li>
+        </ul>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+        $(function(){
+            // each 제이쿼리 반복문(for문)
+            $('.container ul li').each(function (index, item){ // item = this 
+            if(index == 1){ // index는 0부터 시작
+                console.log("hello world")
+            }
+                console.log(index); // 결과 : 0,1,2,3
+                console.log($(item).text()); // item = this/ 나 자신을 호출할 수 있음.
+            console.log(item); 
+        
+        });
+        });
+    </script>
+</body>
+</html>
