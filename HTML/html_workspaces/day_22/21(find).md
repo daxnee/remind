@@ -66,6 +66,9 @@ java에서 사용되는 문자열 함수(trim ,substr ...)가 다운로드 없�
 ### js메소드체이닝 (구글링!) ★★★
 ```
 : 객체를 return 하게 되면 메소드의 반환 값인 객체를 통해 또 다른 함수를 호출할 수 있다.
+$().val().trim() 
+val의 리턴값이 trim으로 넘어가는 것
+
 
 ex)
 var userId = $('#userId').val().trim();
@@ -74,7 +77,10 @@ userId로 return 해주겠다.
 
 $('#userId').val(); = "라이츄".trim(); (같은 거라고 볼 수 있음)
 
-String(n).split('').sort().reverse() => 이런식으로 체이닝한다.
+String(n).split('').sort().reverse() => 보통 이런식으로 체이닝한다.
+
+
+
 ```
 
 ### 정규표현식(Reguler Expression)

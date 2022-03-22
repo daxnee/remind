@@ -34,7 +34,7 @@ $('.className').append
 ```
 ### 바인딩 : on()으로 이벤트를 받을 준비 
 ```
-  .on('click',function(){});
+  $('#id').on('click',function(){});
   => click하면 function을 실행 
   이벤트 받고 {} 안에 행동들 실행
 
@@ -207,4 +207,16 @@ N : alert(주문메뉴 + 주문수량)
 ```
 new, this, super,(데이터타입이 object) 연산자
 는 이미 시스템에서 정해진 언어기 때문에 변수명으로 지정할 수 없다.
+```
+
+### 변수명 지을 때 동사+명사
+```
+ex) removeItem
+
+```
+
+### boolean형(true/false) 변수명 지을 때 is+동사
+```
+ex) isCheck
+
 ```
