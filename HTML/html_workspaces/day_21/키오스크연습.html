@@ -114,7 +114,9 @@
         $('#myMenu').append(val);
       }
       
-   
+      
+    
+    
 
       // function removeItem(val){
       //  var sold = menu.children;
@@ -126,10 +128,42 @@
       //    break;
       //   }
       //   $('#myMenu').append(val); 
+      
       // }
       // }
 
+// 배열에 넣어보기
+      // function removeItem(val){
+      //  var sold =  $('#myMenu').children()[i];
+      //  var length =  $('#myMenu').children()[i].length;
+      //   for(var i=0; i<length; i++){
+      //   if(sold[i]  === '곱창 파스타'){
+      //     alert('재료 소진입니다')
+      //    break;
+      //   }
+      //   $('#myMenu').append(val); 
+      
+      // }
+      // }
+  
+// if문
+      // function removeItem(move){
+      //  var sold = $('#sold').innerHTML;
+      //  if(sold === '곱창 파스타') {
+      //   alert('재료 소진입니다')
+      //  }
+      // }
 
+      // function removeItem(move){
+      //   var val = $(col).val(move);
+      //   if (val === '곱창 파스타'){
+      //     alert('재료 소진입니다.')
+      //     return false;
+      //   }
+      //   $('#myMenu').append(move);
+      // }
+       
+  
        
       function doOrder(){
         var len = $('#myMenu').children().length;
@@ -140,7 +174,7 @@
         var menu = '';
         for(var i=0; i<len; i++){
           if($('#myMenu').children()[i].innerHTML === '곱창 파스타'){
-            alert($('#myMenu').children()[i].innerHTML + '는 오늘 재료 소진입니다')
+            alert($('#myMenu').children()[i].innerHTML +  '는 오늘 재료 소진입니다')
            return false;
           }
          if(i ==len-1){
@@ -150,8 +184,9 @@
          menu += $('#myMenu').children()[i].innerHTML + ', ';
           }
         confirm(menu + ' 총 ' + len + ' 개 주문하셨습니다.')
-        } 
+        }
   
+    
         function doClear() {
           window.location.reload();
         } 
