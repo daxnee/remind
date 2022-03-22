@@ -61,11 +61,11 @@
         // option:eq(1): option 1번째 (option은 0부터 시작)
         // atrr('selected','selected') selected 속성에 selected 값 넣기 : selected의 속성을 selected 하겠다.
         $('#menu option:eq(1)').attr('selected','selected');
-        // option이 아메리카노로 설정됨
+        // menu의 option 1번째로 selected됨 (아메리카노)
         
     }
 
-    if(orderMenu === '아이스티'){
+   if(orderMenu === '아이스티'){
         $('#menu option:eq(2)').attr('selected','selected');
     }
 
@@ -106,7 +106,7 @@
         }
     }
 
-    //결과 : input에 메뉴명을 입력하고 enter하면 select 창에 
+    //결과 : input에 메뉴명을 입력하고 enter하면 select 창에 동일한 메뉴명이 뜸
 });
    
 </script>
