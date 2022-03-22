@@ -108,8 +108,8 @@
       function removeItem(val){
         var len = $('#myMenu').children(val).length;
         for(var i=0; i<len; i++){
-        var sold = $('#myMenu').children(val).innerHTML;
-        if(sold === '곱창 파스타'){
+        var sold = $('#item').text();
+        if(sold == '곱창 파스타'){
           alert('재료 소진입니다')
           return false;
         }
