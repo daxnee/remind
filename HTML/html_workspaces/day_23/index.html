@@ -26,7 +26,7 @@
        <select id="menu">
         <option value="none" selected>---커피를 선택하시오---</option>
            <option value="americano">아메리카노</option>
-           <option value="icetea" selected>아이스티</option>
+           <option value="icetea">아이스티</option>
            <option value="latte">카페라떼</option>
            
        </select>
@@ -81,7 +81,7 @@
 // keydown : 키보드를 눌렀을 때 실행
     $('#order').on('keyup',function(e){ // keyup 이벤트 발생 -> 익명함수 파라미터에 이벤트 json을 넘겨준다
         console.log(e);
-        if(key.keyCode == 13){ // enter의 key number는 13
+        if(e.keyCode == 13){ // enter의 key number는 13
             // key의 keyCode가 13이라면 
             // 엔터 눌렀을 때 실행코드
             var orderMenu =  $('#order').val();

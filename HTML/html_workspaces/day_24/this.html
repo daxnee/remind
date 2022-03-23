@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="member">
+        <p onclick="doClick(1)">강인석</p>
+        <p onclick="doClick(100)">류근환</p>
+        <p onclick="doClick(this)">김준수</p>
+        <p onclick="doClick(this)">오승택</p>
+        <!-- 인자값을 this로 주면 나 자신 태그가 그대로 출력된다. -->
+    </div>
+</body>
+<script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+<script>
+    function doClick(변수이름){
+        var htmlText = $(변수이름).text(); // 나 자신 태그에서 text만 출력. click 했을때 이름만 나온다 ex) 강인석
+        var htmlText = $(변수이름).css('color', 'red'); // 나 자신 태그의 css 변경
+        console.log(htmlText);
+    }
+</script>
+</html>

@@ -70,28 +70,28 @@
             var menu2 = $('#menu-2').val();
             var menu3 = $('#menu-3').val();
 
-            var array = ['1','2','3'] // 기존에 알던 배열 
-            var array2 = new Array(); // 새로운 방법의 배열. *Array  : 내장된 class (만들지 않았는데 불러올 수 있음) 
-            array2.push(menu1); // 배열에 값 추가 
-            array2.push(menu2);
-            array2.push(menu3);
-            for(var i=0; i<array2.length; i++){ //배열이 잘 들어왔나 확인 하는 방법
-                console.log(array2[i]);
+            // var array = ['1','2','3'] // 기존에 알던 배열 
+            var array = new Array(); // 새로운 방법의 배열. *Array  : 내장된 class (만들지 않았는데 불러올 수 있음) 
+            array.push(menu1); // 배열에 값 추가 
+            array.push(menu2);
+            array.push(menu3);
+            for(var i=0; i<array.length; i++){ //배열이 잘 들어왔나 확인 하는 방법
+                // console.log(array2[i]);
                 // if(array2[i] === '가츠동'){
                 //     console.log('가츠동입니다')
                 // }
               
-                if (array2[i] === '돈까스'){
+                if (array[i] === '돈까스'){
                     // 속성 바꾸는 2가지 방법
                    $('#menu-2').attr('value','치즈돈까스') // 돈까스 -> 치즈돈까스 변경 (방법1)
                     $('#menu-2').val('치즈듬뿍돈까스'); // 치즈돈까스 -> 치즈듬뿍돈까스 (방법2)
                 } 
-                if(array2[i] === '삼겹살'){ // 삼겹살 지우기
-                    array2.splice(i,1) // index(0) 부터 1개의 요소 제거(삼겹살)
-                }
+                // if(array[i] === '삼겹살'){ // 삼겹살 지우기
+                //     array.splice(i,1) // index(0) 부터 1개의 요소 제거(삼겹살)
+                // }
             
             }
-            console.log(array2.length); // 배열 길이 최종확인 : 2 
+            console.log(array.length); // 배열 길이 최종확인 : 2 
             // 배열에서 지워진 거지 html에서 지워진 것은 아님!
         });
      

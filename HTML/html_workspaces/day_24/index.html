@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li id="boxing">복싱</li>
+            <li> <p>수영</p> </li>
+            <li>유도</li>
+            <li>헬스</li>
+            <li>레슬링</li>
+        </ul>
+        <div>사격</div>
+    </div>
+    <div class="text-wrapper">
+        <input id="userName" type="text" value="박카스">
+        <input id="userEmail" type="text" value="박카스@gamil.com">
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+<script>
+   var containerChildren = $('.container').children();
+    // console.log(containerChildren[0].children)
+    // console.log($('.container').children());
+    // console.log(containerChildren[0].children[0].innerHTML) // containerChildren 복싱
+    // console.log(containerChildren[0].children[1].innerHTML) // 수영
+    // console.log(containerChildren[0].children[2].innerHTML) // 유도
+    // console.log(containerChildren[0].children[3].innerHTML) // 헬스
+    // console.log(containerChildren[0].children[4].innerHTML) // 레슬링
+    // console.log(containerChildren[1].innerHTML) = div 사격 찾기
+    // console.log(containerChildren[0].children[0].id) = 복싱 id 찾기
+    
+//   li 태그 for문으로 찾기
+    // console.log(containerChildren[0].children.length)
+    var len = containerChildren[0].children.length
+    for(var i=0; i<len; i++){
+        // innerHTML : html 태그와 text를 보여줌 -> ex) <p>수영</p> 
+        // innerText : text만 보여줌 -> ex) 수영
+        var innerText = containerChildren[0].children[i].innerHTML
+        console.log(innerText);
+    }
+
+    // -----------------------for문으로 input id 찾아보기
+    // step 1 console에 찍어서 화살표 눌러보기
+    var textWrapper = $('.text-wrapper').children();
+    var len = textWrapper.length;
+    for(var i=0; i<len; i++){
+        console.log(textWrapper[i].id)
+        console.log(textWrapper[i].value)
+        // value 찾기 1
+        console.log($('#'+ textWrapper[i].id).val());  // input이 많아지면 배열을 for문으로 돌려 한 번에 처리가 가능(한번 더 풀어보기)
+        // value 찾기 2
+
+    }
+    var container = $('.container')
+    console.log(container[0])
+
+ </script>
+</body>
+</html>
+

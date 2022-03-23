@@ -58,3 +58,7 @@ for(i : array)
 
 생성자 안에 사용된 this
 : 생성자 함수가 생성하는 객체로 this가 바인딩 됨.
+
+
+
+sum 전역변수 :  function 밖에다 써줘야 함 
