@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="member">
-        <p onclick="doClick(1)">강인석</p>
-        <p onclick="doClick(100)">류근환</p>
+        <p onclick="doClick(1)">강인석</p> 
+        <p onclick="doClick(100)">류근환</p> 
         <p onclick="doClick(this)">김준수</p>
         <p onclick="doClick(this)">오승택</p>
         <!-- 인자값을 this로 주면 나 자신 태그가 그대로 출력된다. -->
@@ -23,7 +23,7 @@
 <script>
     function doClick(변수이름){
         var htmlText = $(변수이름).text(); // 나 자신 태그에서 text만 출력. click 했을때 이름만 나온다 ex) 강인석
-        // var htmlText = $(변수이름).css('color', 'red'); // 나 자신 태그의 css 변경
+        var htmlText = $(변수이름).css('color', 'red'); // 나 자신 태그의 css 변경
         console.log(htmlText);
     }
 
