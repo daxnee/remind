@@ -85,3 +85,42 @@ cd..: 현재 경로에서 뒤로 가기
 java는 final
 Java Script는 const PI= 3.14
 ```
+
+
+### JSON의 개념
+```
+JSON 
+: 소프트웨어와 하드웨어에서 데이터를 전송할 때 많이 사용되는 경량의 DATA 교환 형식
+  실무 프로젝트시 DB설계 - JSON 설계 - 코딩 순으로 작업을 진행한다. 
+  장점 : 1. 문서화를 할 수 있다.
+         2. 재사용 가능.
+
+  단점 : 없다고 봄.
+
+DATA 형식
+1. 표현방법 : 중괄호 {}
+2. key(중복 x), value(중복 o) 구성
+    value(문자형, 정수형, 논리형, 배열, JSON)
+
+    key : 변수명 value : 데이터 타입 
+
+```
+
+### JSON 개념
+```
+json은 js 뿐만 아니라 java, python에도 쓰이는 개념임
+백엔드 개발자가 직접 만든 json문서를 프론트 개발자에게 전달, 업무를 공유한다.
+```
+
+
+### JSON 
+
+```
+HTML(client) -----------(JQuery)-----------> 백엔드(server)  ex) java
+                                                   | 
+                                                   |(Mybatis)
+                                                   ↓        
+                                                 MySQL 
+
+json은 데이터 (배송소포)
+jquery는 택배 기사

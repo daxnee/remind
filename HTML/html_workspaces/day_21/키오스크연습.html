@@ -68,9 +68,16 @@
         background-color: #e74a3b;
       }
       button{
+     
         padding: 2%;
-        font-size: 20px;
+        font-size: 22px;
        background-color: black;
+      
+      }
+
+      button:hover{
+        transition: 0.5s;
+        background-color: darkgreen;
       }
      
     </style>
@@ -83,7 +90,7 @@
       </div>
       <div class="row">
         <div class="item">
-          <div id="sold" class="col" onclick="removeItem(this)">곱창 파스타</div>
+          <div id="sold" class="col" onclick="removeItem()">곱창 파스타</div>
           <div class="col" onclick="removeItem(this)">육회</div>
           <div class="col" onclick="removeItem(this)">지코바</div>
           <div class="col" onclick="removeItem(this)">빠에야</div>
@@ -95,7 +102,7 @@
         <button id="btn-order" type="button" onclick="doOrder()">주문</button>
         <button id="btn-clear" type="button" onclick="doClear()">취소</button>
       </div>
-      <button id="just" onclick="just()" >just</button>
+      <button id="notice" onclick="doNotice()" >NOTICE</button>
      
     </div>
     <script
@@ -105,66 +112,25 @@
     ></script>
     <script>
 
+        $('#sold').click(function(){
+          var sold = $('#sold').text();
+         if(sold === '곱창 파스타'){
+           alert('죄송합니다, 오늘 ' + sold + '는 재료 소진입니다. 🙏')
+           return false;
+         }
+          }
+           );
+
       function removeItem(val){
-        var sold = $('#sold').text();
-        if(sold === '곱창 파스타'){
-          alert('재료 소진입니다')
-        
-        }
         $('#myMenu').append(val);
       }
-      
-      
+
+      function doNotice(){
+      $('#notice')
+        alert('매장 특성상💟 주인장 기분에 따라 영업시간이 자주 바뀔 수 있어요    ㅠㅠ 매장 컨셉을 이해하지 못하는 분들은 저희도 정중히 사양합니다🙏 영업 시간은 기분 내키면 인스타로 공지해드릴게요☺')
+      }
+
     
-    
-
-      // function removeItem(val){
-      //  var sold = menu.children;
-      //   var sold =  $('#myMenu').children(val)[i].innerHTML;
-      //   for(var i=0; i<sold.length; i++){
-        
-      //   if(sold[i]  === '곱창 파스타'){
-      //     alert('재료 소진입니다')
-      //    break;
-      //   }
-      //   $('#myMenu').append(val); 
-      
-      // }
-      // }
-
-// 배열에 넣어보기
-      // function removeItem(val){
-      //  var sold =  $('#myMenu').children()[i];
-      //  var length =  $('#myMenu').children()[i].length;
-      //   for(var i=0; i<length; i++){
-      //   if(sold[i]  === '곱창 파스타'){
-      //     alert('재료 소진입니다')
-      //    break;
-      //   }
-      //   $('#myMenu').append(val); 
-      
-      // }
-      // }
-  
-// if문
-      // function removeItem(move){
-      //  var sold = $('#sold').innerHTML;
-      //  if(sold === '곱창 파스타') {
-      //   alert('재료 소진입니다')
-      //  }
-      // }
-
-      // function removeItem(move){
-      //   var val = $(col).val(move);
-      //   if (val === '곱창 파스타'){
-      //     alert('재료 소진입니다.')
-      //     return false;
-      //   }
-      //   $('#myMenu').append(move);
-      // }
-       
-  
-       
       function doOrder(){
         var len = $('#myMenu').children().length;
         if(len < 1){
@@ -186,7 +152,7 @@
         confirm(menu + ' 총 ' + len + ' 개 주문하셨습니다.')
         }
   
-    
+        
         function doClear() {
           window.location.reload();
         } 
