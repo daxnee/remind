@@ -72,7 +72,8 @@
         padding: 2%;
         font-size: 22px;
        background-color: black;
-      
+      margin: auto 600px auto;
+
       }
 
       button:hover{
@@ -84,6 +85,7 @@
   </head>
   <body>
     <div class="container">
+      <button id="notice" onclick="doNotice()" >NOTICE</button>
       <div class="row">
         <div class="item"><h2>Menu</h2></div>
         <div class="item"><h2>My Menu</h2></div>
@@ -101,9 +103,7 @@
       <div class="order-wrapper">
         <button id="btn-order" type="button" onclick="doOrder()">주문</button>
         <button id="btn-clear" type="button" onclick="doClear()">취소</button>
-      </div>
-      <button id="notice" onclick="doNotice()" >NOTICE</button>
-     
+      </div> 
     </div>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
