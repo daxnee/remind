@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+<!-- 소스 구현 -->
+<script>
+    /* 
+    no : 데이터 고유 번호
+    driver : 운전자
+    car : 탑승 차량
+    mileage : 주행 거리
+    createAt : 운행시작 날짜
+    endAt : 운행종료 날짜
+    */
+    var carData = [
+        {
+            no : 1,
+            driver : '박재범',
+            car : 'K5',
+            mileage : '30',
+            createAt : '2022-03-24 09:30:21',
+            endAt : '2022-03-24 10:30:55'
+        },
+        {
+            no : 2,
+            driver : '김종국',
+            car : 'K5',
+            mileage : '10',
+            createAt : '2022-03-24 10:55:12',
+            endAt : '2022-03-24 11:10:12'
+        },
+        {
+            no : 3,
+            driver : '박재범',
+            car : 'K5',
+            mileage : '5',
+            createAt : '2022-03-24 11:20:00',
+            endAt : '2022-03-24 11:30:12'
+        },
+        {
+            no : 4,
+            driver : '김종국',
+            car : 'K5',
+            mileage : '17',
+            createAt : '2022-03-24 12:00:30',
+            endAt : '2022-03-24 12:50:00'
+        }
+    ];
+    console.log(carData) // 일단 찍어보기
+
+    var sum = 0;
+    var sum2 = 0;
+    var len = carData.length;
+   
+    // 문제 1. 운전자가 김종국인 차량 주행거리 총합을 구하시오.
+    var total = 0;
+    for(var i=0; i<len; i++){
+        if(carData[i].driver == '김종국'){
+            total =  carData[i].mileage;
+            total = parseInt(total);
+            sum += total;
+        }
+    }
+    console.log(sum)    
+        
+
+    // 문제 2. 운전자가 박재범인 차량의 json데이터 수는?
+    var count2 = 0;
+    for(var i=0; i<len; i++){
+        if(carData[i].driver  == '박재범'){
+            count2++; 
+        }
+    }
+    console.log('count는 : '+ count2)
+ 
+    //문제 3. 자동차가 K5인 차량의 주행거리 총합을 구하시오
+    var total = 0;
+    for(var i=0; i<len; i++){
+        if(carData[i].car == 'K5'){
+            total = carData[i].mileage; // json 데이터 수 
+            total = parseInt(total);
+            sum2 += total;
+        }
+    }
+    console.log(sum2)
+
+    //문제 4. 운전자가 김종국인 차량의 운행시작과 운행종료를 모두 출력하시오.
+    for(var i=0; i<len; i++){
+        if(carData[i].driver == '김종국'){
+        var startTime =  carData[i].createAt;
+        var lastTime =  carData[i].endAt;
+        console.log("운행시작 시간은 : " + startTime + "," + "운행종료 시간은 : " + lastTime)  
+        }
+    }
+
+// ---------------------------------선생님 답안---------------------------
+var sum = 0;
+    var count = 0;
+    var totalSum = 0;
+    carData.forEach(function(element){
+        console.log(element); // element : 배열 원소 값 (아무 이름이 나와도 된다)
+        //문제 1. 운전자가 김종국인 차량 주행거리 총합을 구하시오.
+        //문제 4. 운전자가 김종국인 차량의 운행시작과 운행종료를 모두 출력하시오.
+        if(element.driver === '김종국'){
+            sum += Number(element.mileage);
+            console.log(element.createAt);
+            console.log(element.endAt);
+        }
+        //문제2. 운전자가 박재범인 차량의 json 데이터 수는?
+        if(element.driver === '박재범'){
+            ++count;
+        }
+        //문제3. 자동차가 K5인 차량의 주행거리 총합을 구하시오.
+        if(element.car === 'K5'){
+            totalSum += Number(element.mileage)
+        }
+    });
+    console.log(sum);
+    console.log(count);
+    console.log(totalSum);
+ 
+// ---------------------------------------------------------------------------
+
+    // 날짜 계산 
+    var start = carData[0].createAt;
+    var end = carData[0].endAt;
+    
+    // step1. 문자를 날짜형식으로 변경
+    start = new Date (start);
+    console.log('start 날짜 문자로 변경 : ' + start);
+    end = new Date (end);
+    console.log('end 날짜 문자로 변경 : ' + end);
+    
+    // step2. 날짜를 초단위로 변경
+    // 1970년 1월 1일 자정기준 부터 Millisecond 시간 (1/1000초)
+    // 1초 === 1000ms, 1분 === 60초
+    // Millisecond로 변환한 숫자데이터를 1000으로 나눠주면 분 단위 추출 가능!(1초 === 1000m)
+    console.log(start.getTime()) // getTime() 메소드 이용해서 시간 추출
+    console.log(end.getTime()) 
+
+    // step3. 끝시간 - 처음시간 계산
+    var diffDay = (end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24);
+    console.log(diffDay) // 걸린 시간 (일)
+
+    var diffSeconds = (end.getTime() - start.getTime()) / (1000 * 60 * 60);
+    console.log(diffSeconds) // 걸린 시간 (시간)
+    
+    var diffMinute = (end.getTime() - start.getTime()) / (1000 * 60); 
+    console.log(diffMinute) // 걸린 시간 (분)
+
+    var diffHour = (end.getTime() - start.getTime()) / 1000;
+    console.log(diffHour) // (초)
+
+</script>
+</body>
+</html>
