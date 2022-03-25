@@ -36,12 +36,11 @@
 
     //    var name = '참이슬'; : 
     //    $('#' + name); // === $('#참이슬') 
-    //     var result = $('#'+name)
-    //     .val() // val의 return 값이 넘어감
-    //     .trim(); // trim으로 넘어가고, 그 값이 result로 대입됨.
-    //     // 메소드체이닝
-    //     // 제이쿼리의 모든 함수는 return 값이 있어서 가능한 것!
-    //     console.log(result);
+    //    var result = $('#'+name).val().trim();  
+    //    val의 return 값이 넘어감
+    //    trim으로 넘어가고, 그 값이 result로 대입됨 => 메소드체이닝   
+    //    제이쿼리의 모든 함수는 return 값이 있어서 가능한 것!
+    //    console.log(result);
 
 
 
@@ -54,9 +53,7 @@
         for(var i=0; i<textWrapperChildren.length; i++){
            var id = textWrapperChildren[i].id
            console.log('id는 : '+id)
-           var value = $('#' + id) 
-            .val()
-            .trim();
+           var value = $('#' + id) .val().trim();
             console.log('value는 : '+value)
             if(value == ''){
                 alert('필수입력란을 지정해주세요!')
@@ -64,7 +61,6 @@
             }
             
         }
-
 
         for(var i=0; i<textWrapperChildren.length; i++){
             textWrapperChildren[i].id
