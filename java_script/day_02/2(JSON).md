@@ -20,9 +20,8 @@ JSON : 데이터 형식(단순히 데이터를 표시하는 표현 방법)
 JSON은 엄밀히 말하면 프로그래밍, 서버 간의 의사소통 방식이다.
 파일 확장자를 json으로 하는 것도 가능.
 
-
 ```
-### JSON 변수이름 지정해주는 방법>
+### JSON 변수이름 지정해주는 방법
 ```
 1. 명사
 2. 복합명사일 때 (카멜 표기법)
@@ -36,6 +35,7 @@ ex) isLogin (로그인 여부)
 변수가 오는 쪽이 key,
 값이 오는 쪽이 value
 ```
+
 ### JSON은 key와 value로 구성됨
 ```
 1. key는 중복 불가능 value는 중복 가능
@@ -104,23 +104,37 @@ DATA 형식
 
     key : 변수명 value : 데이터 타입 
 
+    => key값을 이용해서 value를 알아낸다.
+
+    ex) var 변수 = {name : '보노보노'}
+        console.log(변수.name) => 보노보노의 값이 나옴
+        
+        ★value 값을 알아내기 위해선 key값을 이용해야 한다.★
+
 ```
 
 ### JSON 개념
 ```
 json은 js 뿐만 아니라 java, python에도 쓰이는 개념임
-백엔드 개발자가 직접 만든 json문서를 프론트 개발자에게 전달, 업무를 공유한다.
-```
-
-
-### JSON 
+백엔드 개발자가 직접 만든 json문서를 프론트 개발자에게 전달, 서로 업무를 공유한다.
 
 ```
-HTML(client) -----------(JQuery)-----------> 백엔드(server)  ex) java
-                                                   | 
-                                                   |(Mybatis)
+
+### JSON으로 보는 프로그램 시스템 
+
+```
+                          json                   ex) java                          json
+HTML(client) -----------(JQuery)-----------> 백엔드(server)-----------(Mybatis)-------------> MySQL(DB)
+                                                   |                    
+                                                   |json
+                                                   |
+                                                   |
                                                    ↓        
-                                                 MySQL 
+                                                Python
 
-json은 데이터 (배송소포)
+
+json은 데이터 택배 (배송소포)
 jquery는 택배 기사
+
+json을 관리해주는 프로그램 : Postman (json 전송 체킹 관리 시스템)
+

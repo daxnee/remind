@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- value : 사용자가 입력한 값. 아래와 같이 입력했다고 가정. -->
+    <div class="text-wrapper">
+        <input id="cham" type="text" value="참이슬  " > 
+        <input id="daeseon" type="text" value="대선">
+        <input id="yeo" type="text" value="여수  밤바다  ">
+        <input id="han" type="text" value="한라산">
+        <input id="lyn" type="text" value="린">
+    </div>
+    <button>클릭</button>
+</body>
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script>
+        // 클릭을 했을 때 input value를 호출(조건 : 공백 제거)
+        // 방법1 : input value에 id 주기 (id는 중복 안되니까)
+        // 단점 : input이 많아지면 코드도 길어짐
+        
+
+    //    var name = '참이슬'; : 
+    //    $('#' + name); // === $('#참이슬') 
+    //     var result = $('#'+name)
+    //     .val() // val의 return 값이 넘어감
+    //     .trim(); // trim으로 넘어가고, 그 값이 result로 대입됨.
+    //     // 메소드체이닝
+    //     // 제이쿼리의 모든 함수는 return 값이 있어서 가능한 것!
+    //     console.log(result);
+
+
+
+        // 방법2 : 부모와 자식을 이용. text-wrapper이용(with for문)
+        // text-wrapper의 자식정보가 변수에 대입
+        var textWrapperChildren = $('.text-wrapper').children(); // return값이 배열임 
+        console.log(textWrapperChildren) // children을 이용해서 자식정보를 상세히 알 수 있음!
+
+        //배열 === 반복문(while, each, for)
+        for(var i=0; i<textWrapperChildren.length; i++){
+           var id = textWrapperChildren[i].id
+           console.log('id는 : '+id)
+           var value = $('#' + id) 
+            .val()
+            .trim();
+            console.log('value는 : '+value)
+            if(value == ''){
+                alert('필수입력란을 지정해주세요!')
+                $('#'+id).focus();
+            }
+            
+        }
+
+
+        for(var i=0; i<textWrapperChildren.length; i++){
+            textWrapperChildren[i].id
+            console.log(textWrapperChildren[i].id)
+
+               }
+    </script>
+</html>
