@@ -61,15 +61,14 @@
     var textWrapper = $('.text-wrapper').children();
     var len = textWrapper.length;
     for(var i=0; i<len; i++){
-        console.log(textWrapper[i].id)
-        console.log(textWrapper[i].value)
-        // value 찾기 1
-        console.log($('#'+ textWrapper[i].id).val());  // input이 많아지면 배열을 for문으로 돌려 한 번에 처리가 가능(한번 더 풀어보기)
-        // value 찾기 2
-
+        console.log(textWrapper[i].id) // id 찾기 
+        console.log(textWrapper[i].value) // (이렇게 쓰면 제이쿼리 문법을 사용할 수 없다.)
+        console.log($('#'+ textWrapper[i].id).val());  //  value 찾기 2 
+        // 이렇게 써야 제이쿼리 문법 사용이 가능! (더 자유로워지는 장점)
+        // input이 많아지면 배열을 for문으로 돌려 한 번에 처리가 가능(한번 더 풀어보기)
     }
     var container = $('.container')
-    console.log(container[0])
+    console.log(container[0]) 
 
  </script>
 </body>
