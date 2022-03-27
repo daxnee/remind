@@ -31,7 +31,7 @@
         <input id="email" type="text" placeholder="이메일을 입력하세요..."> <br>
         <input id="companyNumber" type="text" placeholder="사업자등록번호를 입력하세요..."> <br>
         <input id="userName" type="text" placeholder="이름을 입력하세요..."> <br>
-        <input id="phoneNumber" type="text" placeholder="핸드폰 번호를 입력하세요..."> <br>
+        <!-- <input id="phoneNumber" type="text" placeholder="핸드폰 번호를 입력하세요..."> <br> -->
         <!-- input이 20개 있다고 가정. -->
     </div>
     <button id="btn" type="button">사업제출</button> 
@@ -42,31 +42,36 @@
     crossorigin="anonymous"></script>
 
     <script>
+
+$('#btn').click(function () {
+        console.log('hello world');
+        //문제1. for문을 완성 -> console.log로 id를 출력할 것
+        var formsChildren = $('.forms').children();
+        for (var i = 0; i < formsChildren.length; i++) {
+          var value = $('#' + formsChildren[i].id).val();
+          if (value === '') {
+            console.log('정보를');
+            return false;
+          }
+          if (formsChildren[i].id === 'email' && !doCheckEmail(value)) {
+            console.log('이메일 형식이 올바르지 않습니다.');
+                 var isEmail =  doCheckEmail(value);
+            return false;
+          }
+          if (
+            formsChildren[i].id === 'companyNumber' &&
+            !doCheckCompanyNumber(value)
+          ) {
+            console.log('사업자번호가 올바르지 않습니다.');
+            // 314 86 37230 (실제 사업자등록번호)
+            return false;
+          }
+        }
+        submitData();
+        // submitData(); // 필터링된 데이터가 전송됨.
+      });
   
-        //방법2 
-        $('#btn').click(function () {
-         
-            var info = $('.forms').children()
-            for(var i=0; i<info.length; i++) {
-                var value = $('#'+ info[i].id).val()
-            
-                if(value === ''){
-                    alert('정보를 입력해주세요!')
-                    return false;
-            
-            }
-            if(info[i].id ==='email' && !doCheckEmail(value)){
-                console.log('이메일 형식이 아닙니다!')
-               var isEmail =  doCheckEmail(value);
-               return false;
-            }
-            
-            if(info[i].id === 'companyNumber' && !doCheckCompanyNumber(value)){
-                console.log('사업자 등록번호 형식이 아닙니다')
-                var isCompanyNumber = doCheckCompanyNumber(value);
-                return false;
-                // 314 86 37230 (실제 사업자등록번호)
-            }
+       
 
             // if(info[i].id === 'PhoneNumber' && !doCheckPhoneNumber(value)){
             //     console.log('핸드폰 번호 형식이 아닙니다')
@@ -74,9 +79,6 @@
             //     return false;
             // }
 
-        }
-        submitData(); // 필터링된 데이터가 전송됨.
-    });
 
         // 이메일을 확인하다.
         function doCheckEmail(email){
