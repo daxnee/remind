@@ -49,11 +49,7 @@
             var info = $('.forms').children()
             for(var i=0; i<info.length; i++) {
                 var value = $('#'+ info[i].id).val()
-                
-                var value2 = $('#')
-                if(value === ''){
-              console.log(value)
-            }
+             
             if(info[i].id ==='email' && !doCheckEmail(value)){
                 console.log('이메일 형식이 아닙니다!')
                var isEmail =  doCheckEmail(value);
