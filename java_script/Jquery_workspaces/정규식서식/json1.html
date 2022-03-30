@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="forms">
+        <div id="input" class="input-box">
+        <input id="email" type="text" placeholder="이메일을 입력해주세요...">
+        <input id="name" type="text" placeholder="이름을 입력해주세요...">
+        <input id="age" type="text" placeholder="나이를 입력해주세요...">
+        <input id="phone" type="text" placeholder="핸드폰 번호를 입력해주세요...">
+        </div>
+        
+        <button id="button" type="button">클릭</button>
+    </div>
+</body>
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+ <script>
+     var jsonData = {};
+     $('#button').on('click',function(){
+    var inputBoxChildren = $('#input').children();
+    for(var i=0; i<inputBoxChildren.length; i++){ 
+    var elementId = inputBoxChildren[i].id;
+    var elementValue = $('#'+elementId).val().trim();
+    if(elementValue === ''){
+        alert('빈칸이 있습니다!');
+        return false;
+    }
+    if(elementId === 'email' && !docheckEmail(elementValue)){
+        alert('이메일 형식이 아닙니다!')
+        return false;
+    }
+
+    if(elementId === 'name' && !doCheckName(elementValue)){
+        alert('이름은 띄어쓰기 없이 한글로 입력해주세요!')
+        return false;
+    }
+
+    if(elementId === 'age' && !doCheckAge(elementValue)){
+        alert('나이는 숫자로만 입력해주세요!')
+        return false;
+    }
+
+    if(elementId === 'phone' && !doCheckPhoneNumber(elementValue)){
+        alert('핸드폰 번호가 올바르지 않습니다!')
+        return false;
+    }
+    jsonData[elementId] = elementValue;
+}
+console.log(jsonData);
+     
+});
+
+
+
+
+
+
+    function docheckEmail(email){
+         var regonlyEmail = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+         var isEmail = regonlyEmail.test(email);
+         return isEmail; // return type : boolean
+       };
+
+    function doCheckName(name){
+           var regName =  /^[가-힣]+$/;
+           var isName = regName.test(name);
+           return isName;
+       }
+
+    function doCheckAge(num){
+        var regAge = /^[0-9]+$/;
+        var isAge = regAge.test(num);
+        return isAge;
+    }
+
+    function doCheckPhoneNumber(PhoneNum){
+        var regPhoneNumber = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+        var isPhoneNumber = regPhoneNumber.test(PhoneNum)
+        return isPhoneNumber;
+    }
+    
+ </script>
+</html>

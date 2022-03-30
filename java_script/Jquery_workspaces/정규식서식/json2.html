@@ -42,6 +42,11 @@
                 return false;
             }
 
+            if(infoCheck[i].id === 'userName' && !doCheckName(value)){
+                console.log('이름은 띄어쓰기 없이 입력해주세요!')
+                return false;
+            }
+
             if(infoCheck[i].id === 'phoneNumber' && !doCheckPhoneNumber(value)){
                 console.log("핸드폰 번호가 올바르지 않습니다!")
                 return false;
@@ -64,6 +69,12 @@
         return isCompanyNumber;
     }
 
+    function doCheckName(name){
+        var regName =  /^[가-힣]+$/;
+        var isgName = regName.test(name);
+        return isgName;
+    }
+
     function doCheckPhoneNumber(PhoneNum){
         var regPhoneNumber = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
         var isPhoneNumber = regPhoneNumber.test(PhoneNum)
@@ -73,8 +84,8 @@
     function submitData() {
         var jsonData = {};
         jsonData.email = $('#email').val();
-        console.log(jsonData.email);
         jsonData.CompanyNumber = $('#companyNumber').val();
+        jsonData.name = $('#name').val();
         jsonData.userName = $('#userName').val();
         console.log(jsonData);
     }
