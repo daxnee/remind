@@ -35,36 +35,42 @@
                 alert('메뉴를 선택하세요!')
                 return false;
             }
-
+            // <시간 호출 방법>
             var selectedDate = $('#reservationDate').val();
+            //1. 달력의 선택된 날짜 value를 호출.
+            
 
            var nowTime = new Date();
-           console.log(nowTime) // Wed Mar 30 2022 12:05:31 GMT+0900 (한국 표준시)
-           console.log(nowTime.getTime()) // 1648609531419
+           console.log('오늘 날짜 : '+ nowTime) 
+           console.log('오늘 날짜 변환 : ' + nowTime.getTime()) 
            var selectedTime = new Date(selectedDate); // 선택한 날짜를 파라미터에 넣는다
-           // var selectedTime = new Date(selectedDate).getTime(); 이것도 가능
+           //2. date 함수 호출 
            // ★Keypoint2: 문자타입에서 Date타입으로 변경.
-           console.log(selectedTime)
-           console.log(selectedTime.getTime())
-
+           
            var diffDay = (nowTime.getTime() - selectedTime.getTime()) / (1000 * 60 * 60 * 24);
            console.log(diffDay)
-        //   양수 : 지난 날짜(오늘 이전 날짜) 
+           // 3. 변환된 시간 데이터 계산(선택된 날짜 - 오늘 날짜) : 음수 또는 0.1(당일) 나와야 함. 
+           // 양수 : 지난 날짜(오늘 이전 날짜) 
+
+           // nowTime 날짜형식으로 변환
+           var year = nowTime.getFullYear();
+           var month = ('0' + (nowTime.getMonth() + 1)).slice(-2);
+           var day = ('0' + nowTime.getDate()).slice(-2);
+           var dateString = year + '-' + month  + '-' + day;
+
 
            if(diffDay >= 1){
             // selectedTime을 오늘날짜로 설정하면 0.1이 나옴 
             // 하루 전 날짜로 설정하면 1.1이 나오니까 if 조건을 1로 설정해줘야 함.
-               alert('오늘날짜 이후로 예약이 가능합니다')
+            
+               alert(dateString +'일자 이후로 예약이 가능합니다.')
                return false;
            }
-
+           // 방법2. 시간 호출 함수에 getTime 메소드 체이닝
            var now = new Date().getTime();
            var select = new Date(selectedDate).getTime();
-           diffDay
-           console.log();
-            
-         
-            
+           diffrentDay = (now - select) / (1000*60*60*24);
+           console.log(':'+ diffrentDay);
             
 
         });

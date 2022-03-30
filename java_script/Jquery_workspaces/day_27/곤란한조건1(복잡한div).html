@@ -35,34 +35,37 @@
     crossorigin="anonymous"></script>
  <script>
      
-     var formschildren = $('.forms').children();
-     console.log(formschildren)
+    //  var formschildren = $('.forms').children();
+    //  console.log(formschildren)
+  
      
      var inputBoxChildren = $('.input-box').children()
-     console.log(inputBoxChildren)
+    //  console.log(inputBoxChildren) 
      
         var count = 0;
     
      $('#button').on('click',function(){
         if(count >= 3){
-        alert('3번 이상틀렸습니다. 내일 다시 시도해주세요 ')
+        alert('3번 이상 잘못 입력했습니다. 내일 다시 시도해주세요 ')
         return false;
         }
 
         var jsonData = {};
         function submitData() {
         jsonData.email = $('#email').val();
-        }
+        } // json데이타 submit하기
+
+
         for(var i=0;  i< inputBoxChildren.length; i++){
             var elementId = inputBoxChildren[i].id;
-           var elementValue = $('#' + elementId).val().trim();
+            var elementValue = $('#' + elementId).val().trim();
            if(elementValue === ''){
                alert('빈칸을 확인해주세요!')
                $('#' + elementId).focus();
                count++;
                return false;
             }
-            if(inputBoxChildren[i].id === 'email'  && !checkEmail(elementValue)){
+            if(elementId === 'email'  && !docheckEmail(elementValue)){
                 console.log('이메일 형식이 아닙니다!')
                 $('#' + elementId).focus();
                 count++;
@@ -75,7 +78,7 @@
         console.log(jsonData);
     });
 
-    function checkEmail(email){
+    function docheckEmail(email){
           var regonlyEmail = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
           var isEmail = regonlyEmail.test(email);
          return isEmail; // return type : boolean
