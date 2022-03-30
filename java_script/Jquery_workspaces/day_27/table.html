@@ -27,14 +27,14 @@
                 <th>구매자</th>
             </tr>
         </thead>
-        <tbody>
-            <!-- DB에서 받아온 실질 데이터가 아니니까 주석 or 삭제함 -->
+        <tbody id="list">
+            <!-- DB에서 받아온 실질 데이터가 아니니까 눈으로 확인 후 주석 or 삭제함 -->
             <!-- 퍼블리셔에게 임시 데이터 한 줄만 넣어달라고 요청하면 된다. -->
             <tr>
                 <td>123</td>
-                <td>아이폰13</td>
+                <td>아이폰8+</td>
                 <td>10</td>
-                <td>2022-07-30</td>
+                <td>2019-07-30</td>
                 <td>양다은</td>
             </tr>
 
@@ -47,9 +47,36 @@
       crossorigin="anonymous"
     ></script>
     <script>
+        $(function(){
+            doResponseData(); // 페이지 첫 로딩시 아래에 만든 해당함수 강제 호출!
+        })
         // 그려주다 -> rendering
-        function responseData(){
+        // rendering 방법이 크게 두 가지!
+        // 1번째 방법 : append() , html(), text()함수를 이용해서 rendering
+        // 장점 : 진입장벽 낮음 / 단점 : 유지보수 힘듦.
+        // 2번째 방법은 Spring 시간에!
+        function doResponseData(){
+            // 서버에서 응답온 데이터라고 가정!
+            var json = {
+                no : 500,
+                goods : '아이폰13',
+                cnt : 10,
+                creatAt : '2022-07-30',
+                name : '양다은'
 
+            }
+            
+
+            var html = '<tr><td>'+json.no+'</td><td>'+json.goods+'</td><td>'+json.cnt+'</td><td>'+json.creatAt+'</td><td>'+json.name+'</td></tr>'  // 받아온 json을 넣어서 문자로 합쳐줌 
+            // tr, td를 변수에 넣어줘서 함수를 호출함
+           for(var i=0; i<10; i++){ // for문 돌린 횟수만큼 데이터 가져옴
+            var html = '<tr><td>'+i+'</td><td>'+json.goods+'</td><td>'+json.goods+'</td><td>'+json.creatAt+'</td><td>'+json.name+'</td></tr>'
+            $('#list').append(html);
+        }
         }
     </script>
 </html>
+
+
+<!-- 1. id 줘서 append()
+2. html변수에 받아온 json데이터를 합쳐주고 append로 tbody에 넘겨준다 -->
