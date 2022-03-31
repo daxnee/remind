@@ -97,7 +97,6 @@
         for(var i=0; i<len; i++){
           // var date = movies[i].createdAt;
         var date = new Date(movies[i].createdAt).getTime() /(1000*60*60*24);
-        console.log(date)
         if(date > max) {
         max = date
       }
@@ -107,8 +106,10 @@
     }
       
       
-    
-  
     </script>
   </body>
 </html>
+
+
+
+<!-- max : 최대 시간 대입  temp는 i-->
