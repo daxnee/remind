@@ -58,6 +58,7 @@
 
         for(var i=0;  i< inputBoxChildren.length; i++){
             var elementId = inputBoxChildren[i].id;
+            console.log(elementId)
             var elementValue = $('#' + elementId).val().trim();
            if(elementValue === ''){
                alert('빈칸을 확인해주세요!')
