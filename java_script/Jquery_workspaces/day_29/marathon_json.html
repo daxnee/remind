@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=marathon, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 제1회 DW 마라톤 참가자 리스트
+      /*
+        no : 마라톤 등번호
+        participant : 참가자
+        isComplete : 마라톤 완주 여부 (true : 완주, false: 미완주)
+        type : 마라톤 코스
+        records : 완주 기록
+       */
+      const marathonList = [
+        {
+          no: 300,
+          participant: '현상원',
+          isComplete: false,
+          type: 'half marathon',
+          records: 'null',
+        },
+        {
+          no: 400,
+          participant: '류근환',
+          isComplete: true,
+          type: 'half marathon',
+          records: '2022-04-01 13:35:00',
+        },
+        {
+          no: 410,
+          participant: '강인석',
+          isComplete: true,
+          type: 'half marathon',
+          records: '2022-04-01 13:37:20',
+        },
+        {
+          no: 500,
+          participant: '유영준',
+          isComplete: true,
+          type: 'half marathon',
+          records: '2022-04-01 13:40:15',
+        },
+        {
+          no: 201,
+          participant: '이승섭',
+          isComplete: true,
+          type: 'half marathon',
+          records: '2022-04-01 13:31:45',
+        },
+        {
+          no: 555,
+          participant: '홍준호',
+          isComplete: false,
+          type: 'half marathon',
+          records: 'null',
+        },
+        {
+          no: 777,
+          participant: '이정배',
+          isComplete: true,
+          type: 'half marathon',
+          records: 'null',
+        },
+      ];
+      // 1. half marathon에 참여한 참가자는 총 몇 명인지 구하고 출력하시오. (길이)
+        console.log(marathonList)
+        console.log('문제 1번 : '+ marathonList.length +'명')
+
+        var count1= 0;
+        for(var i=0; i<marathonList[i].length; i++){
+          if(marathonList[i].type === 'half marathon'){
+          ++ count1;
+          }
+          console.log(count1)
+      }
+
+        // 2. 완주하지 못한 참가자의 이름과 등번호를 출력하시오. (if조건)
+        for(var i=0; i<marathonList.length; i++){
+          if(!marathonList[i].isComplete){
+            console.log('문제 2번 : '+ marathonList[i].participant +','+ marathonList[i].no)
+          }
+        }
+        // 3. 완주는 했는데 기록이 없는 참가자의 이름과 등번호를 출력하시오.(if조건)
+        
+        for(var i=0; i<marathonList.length; i++){
+          if(marathonList[i].isComplete && marathonList[i].records === 'null'){
+            console.log('문제 3번 : '+ marathonList[i].participant +','+ marathonList[i].no)
+          }
+        }
+        // 4. 완주한 사람 중 가장 기록이 좋은 참가자의 이름과 등번호를 출력하시오. (인덱스 중 최소값 구하기)
+        // (마라톤 시작 시간은 '2022-04-01 13:00:00' 입니다.) 
+      
+      //   var min = 0;
+      //   var avg = 0;
+        
+      //   var nowT = '2022-04-01 13:00:00';
+      //   var startTime = new Date(nowT).getTime(); // 출발시간
+      //   startTime = parseInt(startTime)
+      //   for(var i=0; i<marathonList.length; i++){
+      //     if(marathonList[i].records != 'null'){
+      //     var arrivalTime = new Date(marathonList[i].records).getTime() // 도착시간
+      //     arrivalTime = parseInt(arrivalTime)
+      //     var diffTime = arrivalTime - startTime
+      //     if(min < diffTime){
+      //        min = diffTime
+      //       }
+      //     if(min === diffTime)  
+      //     console.log('문제 4번 :' +marathonList[i].participant)
+          
+      //   }
+      // }
+
+      // -----4. 선생님 풀이
+      var marathonStartTime = new Date('2022-04-01 13:00:00').getTime();
+      var min = 0;
+      var temp = 0;
+      var cnt = 0;
+      for(var i=0; i<marathonList.length; i++){
+        if(marathonList[i].records !== 'null'){ 
+          var participantTime = new Date(marathonList[i].records).getTime();
+          var diffTime =  participantTime - marathonStartTime ;
+          if(cnt === 0) {
+            min = diffTime
+          }
+          ++cnt; // 위 if를 더이상 실행 안하게 하려고 증감연산자를 줌
+          if(min > diffTime){
+            min = diffTime;
+            temp = i;
+          }
+        }
+      }
+      console.log(marathonList[temp].participant)
+
+
+
+      // 5. 완주한 사람들의 평균 기록을 구하고 출력하시오. (분)
+      // (단, 기록이 null인 사람은 제외)
+      var avg = 0;
+      var startTime = new Date('2022-04-01 13:00:00').getTime();
+        var count = 0;
+        for(var i=0; i<marathonList.length; i++){
+          if(marathonList[i].records !== 'null'){
+            count ++; 
+            var arrivalTime = new Date(marathonList[i].records).getTime()
+            var diffTime = (arrivalTime - startTime) / (1000*60); 
+            avg += diffTime
+          }
+        }
+        console.log('문제 5번 : ' + avg / count)
+
+
+      // -----5. 선생님 풀이
+        var marathonStartTime = new Date('2022-04-01 13:00:00').getTime();
+        var totalTime = 0;
+        var cnt = 0;
+        for(var i=0; i<marathonList.length; i++){
+          if(marathonList[i].records !== 'null'){
+            var participantTime = new Date(marathonList[i].records).getTime();
+            var diffMinute = (participantTime - marathonStartTime) / (1000 * 60);
+            totalTime += diffMinute
+            ++cnt
+          }
+        }
+        console.log(totalTime / cnt)
+    </script>
+  </body>
+</html>
