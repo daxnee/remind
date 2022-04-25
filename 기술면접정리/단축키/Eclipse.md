@@ -28,3 +28,6 @@
 
 ### import
     ctrl + shift + o
+
+### 디버깅
+    f11
