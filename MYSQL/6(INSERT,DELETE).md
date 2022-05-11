@@ -6,9 +6,10 @@
     UPDATE
     SELECT
 ### INSERT
+```
 - insert : 데이터를 저장
 
-    - 작성법1)
+ - 작성법1)
     해당 테이블에 원하는 데이터만 넣는다면 테이블 뒤 괄호 작성
     ex)
     insert into dept(deptno, dname)
@@ -39,18 +40,25 @@
 
     insert into dept(deptno, dname, loc)
     values(80, '쏘리쏘리', '대전')
-    
+```  
 
-### delete
-    delete : 데이터를 삭제
-    DELETE FROM dept
-    WHERE deptno = 70
+### `Delete`
+delete : 데이터를 삭제
+```sql
+DELETE FROM dept
+WHERE deptno = 70
+// deptno가 70인 데이터를 삭제
 
-    사용시 주의점 : 
-        1. 해당 컬럼이 ON DELETE CASCADE로 설정되어 있으면,
-        연관된 컬럼 모두 삭제됨. = > 관계형DB 라서 delete하기가 까다로움 (테이블생성시간에 다시...)
+* 사용시 주의점 : 해당 컬럼이 ON DELETE CASCADE로 설정되어 있으면, 연관된 컬럼 모두 삭제됨. = > 관계형DB 라서 delete하기가 까다로움 
              
-    실무시, 실제로는 데이터 삭제 x
-    컬럼을 만듦
-    ex) 컬럼이름 : 회원탈퇴여부
-        데이터 : 'y' or 'n' = > 이걸로 조회한다
+실무시, 실제로는 데이터 삭제하지 않고 컬럼을 따로 만들어서 회원 정보를 보관한다(데이터가 곧 회사의 자산이기 때문에)
+ex) 컬럼이름 : 회원탈퇴여부
+    (데이터 조회시, 'y' or 'n' 으로 조회)
+```
+
+### delete할때 주의점(where)
+```
+delete시 where조건에  pk와 같이 입력해서 delete해야 
+다른 where 조건에 해당되는 컬럼들이 전부 다 지워지지 않는다.
+
+```
