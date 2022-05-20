@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Lato:wght@300&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="양다은style.css">
+    <title>aguda</title>
+    <style>
+        * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  /* opacity 투명도 0 ~ 1*/
+  /* opacity: 0.6; */
+  background-image: linear-gradient(#06cccc11, #06cccc11), url(blue.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.container .p1 {
+  padding: 20px;
+  color: #02122e;
+  font-size: 20px;
+  top: auto;
+  text-align: center;
+  font-weight: 600;
+}
+
+.container .p {
+  padding: 20px;
+  color: #181d27;
+  text-align: center;
+  font-weight: 800;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container .p2 {
+  font-size: 15px;
+  text-align: center;
+  display: inline-block;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.book-form {
+  width: 400px;
+  height: auto;
+  background-color: #c2c9d37a;
+  margin: 3% auto 0;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  /* 테두리 둥글게 */
+}
+.book-form input {
+  width: 100%;
+  border: 2px solid rgba(250, 248, 248, 0.938);
+  background-color: #a2bcccd2;
+
+  height: 50px;
+  /* 버튼 박스 높이 */
+  margin: 10px auto;
+  /* 버튼간 간격 */
+  border-radius: 5px;
+  /* 모서리 둥글게 */
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 100;
+  color: black;
+}
+
+.book-form .depart {
+  width: 45%;
+  height: 50px;
+  margin: 10px 5px 5px;
+  padding: 10px;
+}
+
+.book-form h2{
+    font-size: 16pt;
+}
+
+.book-form .arrival {
+  width: 45%;
+  height: 50px;
+  margin: 10px 5px 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.book-form .plane {
+  width: 45%;
+  height: 50px;
+  margin: 10px 5px 5px;
+  padding: auto;
+}
+
+.book-form .hotel {
+  width: 45%;
+  height: 50px;
+  margin: 10px 5px 5px;
+  padding: 10px;
+}
+
+.book-form .destination {
+  font-size: 20px;
+}
+
+.book-form .search {
+  font-size: 20px;
+  font-weight: 800;
+  color: #e9ecf1;
+  background-color: #051736e3;
+}
+
+body {
+  width: 100%;
+}
+
+div {
+  text-align: center;
+  width: 100%;
+}
+
+#date{
+    word-spacing: 110px;
+    color: #48505f;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+#txtMobile{
+    width: 100px; 
+    height: 40px;   
+}
+
+#bill{
+    height: auto;
+    width: auto;
+    font-size: 20px;
+}
+
+/* 이모지 가운데 정렬 body, div */
+
+    </style>
+    <script>
+        // window.open("https://www.agoda.com","찐아고다","width=800,height=400");
+        function search(){
+            alert("국내 최저가 사이트 아구다가 조건에 맞는 여행지를 검색 중입니다!");       
+        }
+    </script>
+</head>
+<body>
+   
+    <div class="container">  
+        <!-- body 안에 container 그 안에 html을 작성해야 한다. (밖으로 벗어나지 않기) -->
+        
+             <!-- 빨노초보파 -->
+        <div class="book-form">
+            <h2>놀러와 펜션에 오신걸 환영합니다  &#x1F3E8; </h2>
+         <label for="destination" placeholder="여행지" > </label>
+         <input id="destination" type="text" list="destination-list" placeholder="객실을 선택해주세요"/>
+                <datalist id = "chooseRoom">
+                <option value="101호"></option>
+                <option value="201호"></option>
+                <option value="202호"></option>
+                <option value="301호"></option>
+                <option value="401호"></option>
+                <option value="501호"></option>
+                </datalist>
+                
+            
+            <p id="date" class="dating">입실날짜 퇴실날짜</p>
+            <input class="depart" type="date" required="">
+
+            <input class="arrival" type="date" placeholder="도착지" required=""> 
+           
+
+            <input class="d" type="text" placeholder="성명"  required="">
+            <select id="txtMobile">
+                
+                <option value="010">010</option>
+                <option value="011">011</option>
+                <option value="016">016</option>
+                <option value="017">017</option>
+                <option value="019">019</option>
+            </select>
+            <input type="text" id="txtMobile" size="4" onkeypress="onlyNumber();" />
+            <input type="text" id="txtMobile" size="4" />
+            <input class="count" type="number"  placeholder="인원수를 선택하세요" min="1" max="20" required="">
+
+          
+            <input class="hotel" type="button" value="관광지 둘러보기&#x2708;&#xFE0F;" onClick="window.open('https://www.koreanair.com/kr/ko')">
+            <input class="plane" type="button" value="이벤트 참여하기&#x1F3E8;" onClick="window.open('https://hotel.naver.com/hotels/main')">
+            
+            <p id="bill" class="search" type="button">120,000원 x 1박 <br>총 금액 : 120,000</p> 
+            
+            <input class="search" type="button" value="예약하기" onclick="search();" required="" />
+             
+             </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+<!-- 질문 -->
+
+
+<!-- 버튼 안 폰트 색상 통일 -->
+<!-- container p, p1 태그 확인 -->

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .contact-form {
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+        margin: 50px auto;
+        width: 400px;
+        text-align: center;
+      }
+      .contact-form h2 {
+        background-color: #abc9c6;
+        margin-top: 0;
+        padding: 10px;
+        color: rgb(4, 90, 4);
+      }
+      .contact-form input {
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+      }
+      .contact-form input[type=checkbox]  {
+        width: 10%;
+        margin: 10px auto;
+        padding: 10px;
+      }
+      .contact-form textarea {
+        width: 90%;
+        margin: 5px auto;
+        padding: 10px;
+        height: 80px;
+      }
+      .submit-btn {
+        cursor: pointer;
+        width: 150px;
+        margin-left: 18px;  
+        }
+
+    .memberSex{
+        height: auto;
+        width: 500px;
+        color: blue;
+    }
+
+    #txtMobile{
+        width: 100px;
+        height: 30px
+    }
+
+    #memberSex{
+        width: 300px;
+        text-align: center;
+        font-size: 12pt;
+    }
+    #email{
+        width: auto;
+        height: 30px;
+    }
+    </style>
+</head>
+
+  <body>
+    <div class="contact-form">
+      <h2>SIGN UP</h2>
+        
+          <select name="" 메뉴="">
+            <option value="">--회원 가입할 사이트를 선택하세요--</option>
+            <option value="아메리카노">네이버</option>
+            <option value="라떼">카카오</option>
+            <option value="라떼">통합회원</option>
+
+          </select>
+
+          <!-- <input type="number" 수량 placeholder="수량..." required/> -->
+          <input type="id" 회원이름 placeholder="ID를 입력하세요" maxlength="50">
+           <!-- disabled 회원이름 데이터는 서버에 전송이 안됨! -->
+          <input type="password" 회원비밀번호 placeholder= "PASSWORD를 입력하세요" maxlength="50">
+          <input type="password" 회원비밀번호 placeholder= "PASSWORD 재확인" maxlength="50">
+          <input type="id" 회원이름 placeholder="성명" maxlength="10">
+    
+
+
+        <select id="memberSex" name="">
+            <option value="choice">성별 선택</option>
+            <option value="남">남</option>
+            <option value="여">여</option>
+        </select>
+        <select id="txtMobile">
+            <option value="">::선택::</option>
+            <option value="011">011</option>
+            <option value="016">016</option>
+            <option value="017">017</option>
+            <option value="019">019</option>
+            <option value="010">010</option>
+        </select>
+        <input type="text" id="txtMobile" size="4" onkeypress="onlyNumber();" />
+        <input type="text" id="txtMobile" size="4" />
+        
+        
+        <input id="email" type="text" 이메일 placeholder="이메일 입력란..."> 
+        <select id="email">
+            <option value="">::선택::</option>
+            <option value="naver">@naver.com</option>
+            <option value="daum">@daum.net</option>
+            <option value="nate">@nate.com</option>
+            <option value="google">@google.com</option>
+        </select>
+
+              
+              <input class="submit-btn" type="submit" value="회원가입" >
+         
+
+                <input type="checkbox" checked id="개인정보동의" />
+                <label for="개인정보">개인정보 동의</label>
+                <input type="checkbox" checked id="광고수신" />
+                <label for="개인정보">이메일 수신 동의</label>
+        
+      </form>
+    </div>
+  </body>
+</html>
+
+
+
+<!-- HTML(안드로이드)하고 데이터베이스 연동 불가능
+그래서 웹서버에 전송을 해야 함 -->
