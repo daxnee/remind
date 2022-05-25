@@ -63,8 +63,6 @@ where d.sal > 9000
 * 테이블간 join 하더라도 select절은 무시됨
 ```
 
-
-
 - ### 참조를 하지 않아도 (join 조건이 없어도) join이 가능하다. 
 
 만약, sangwon 컬럼을 insert했고 참조를 안했다고 가정
