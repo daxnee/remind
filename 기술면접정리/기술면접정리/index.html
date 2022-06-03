@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="friday" type="text" value="오늘은 금요일">
+</body>
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js" 
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"
+></script>
+<script>
+    var value = $('#friday').val();
+    console.log(value);
+
+        $.ajax({
+            url: 'http://localhost:8080/api/v1/board?pageNum=1&pageSize=10', //  console test하려면 서버 켜야됨 
+            type : 'GET',
+            dataType: 'json',
+            success: function (response) {//then (node.js)
+              var html = '<input id="monday" type="text" value="오늘은 월요일">';
+              $('body').append(html);
+            }
+        });
+
+    var value2 = $('#monday').val(); // 원래 알고 있는 대로 라면 value2의 value가 console에 찍혀야 되지만 결과는 undefined로 나온다.
+    console.log(value2); // why? ajax는 비동기이기 때문에 제일 나중에 실행이 되기 때문! 따라서 value2가 존재하는지 모른다. 
+    //console에 결과를 출력하고 싶다면 success안에 구현해야 결과값을 볼 수 있다.
+    
+</script>
+</html>
