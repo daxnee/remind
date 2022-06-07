@@ -142,6 +142,13 @@
     5. COLUMN 속성 변경
     ALTER TABLE '테이블명' ALTER COLUMN '컬럼명' 데이터타입(길이) 제약조건
 
+### FK 삭제 
+```sql
+ALTER TABLE 해당테이블 DROP FOREIGN KEY FK컬럼명;
+
+ex)
+ALTER TABLE board DROP FOREIGN KEY board_students_id_fk;
+```
 
 ### ALTER로 FK 설정하기
 ---
