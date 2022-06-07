@@ -143,4 +143,12 @@
     ALTER TABLE '테이블명' ALTER COLUMN '컬럼명' 데이터타입(길이) 제약조건
 
 
-    
+### ALTER로 FK 설정하기
+---
+```sql
+
+ALTER TABLE 자식테이블 ADD foreign KEY (FK 컬럼명) REFERENCES 부모테이블 (FK컬럼명) ON DELETE CASCADE;
+
+ex)
+ALTER TABLE board ADD foreign KEY (students_id) REFERENCES students (students_id) ON DELETE CASCADE;
+```
