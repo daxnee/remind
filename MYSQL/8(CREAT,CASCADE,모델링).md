@@ -159,3 +159,20 @@ ALTER TABLE 자식테이블 ADD foreign KEY (FK 컬럼명) REFERENCES 부모테�
 ex)
 ALTER TABLE board ADD foreign KEY (students_id) REFERENCES students (students_id) ON DELETE CASCADE;
 ```
+
+### Alter fk설정시 오류 해결
+```
+error 뜨면서 cascade delete 어쩌고 하면서 alter할 수 없다는 오류문이 뜰 것임
+
+  
+상위 테이블(부모)에 존재하지 않는 행을 참조하는 하위 테이블(자식)에 하나 이상의 행이 있을 경우라고 한다;;
+
+데이터 무결성 문제가 있어도 괜찮다고 확신하는 경우 ALTER TABLE 명령으로 fk 추가를 실행하기 전에 
+
+외래 키 검사를 비활성화하여 외래 키를 추가 할 수 있음
+
+```
+```sql
+SET FOREIGN_KEY_CHECKS = 0;
+```
+
