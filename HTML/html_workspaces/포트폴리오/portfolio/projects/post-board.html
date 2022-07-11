@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projects Board</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+        <link rel="shortcut icon" href="../images/logo.ico" />
+        <style type="text/css">
+            .img-container {
+                max-width: 600px;
+            }
+            img {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav-wrapper">
+            <a href="../index.html">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+            </a>
+            <ul id="navigation">
+                <li><a href="../index.html">HOME</a></li>
+            </ul>
+        </div>
+
+        <div class="main-container">
+            <br />
+            <div class="img-container">
+                <img src="../images/DW_board/board.PNG"/>
+            </div>
+            <h3>학원 게시판 사이트 제작</h3>
+            <p>
+                수업시간에 진행했던, CRUD를 기초로 간단한 학원 게시판을 개발했습니다.
+                개발기간은 약 2주 소요되었고 처음으로 클라우드에 배포까지 했습니다.
+                <br />
+                <br />
+                RestController와 Controller를 따로 만들어 백엔드와 프론트가 통신하는 그림을 공부했고,
+                AJAX를 이용해 비동기 처리하는 방식을 알게됐습니다.
+                MVC 패턴을 베이스로 하여 Controller, Service, Mapper의 구조를 공부하는 것에 중점을 두었습니다.
+                Update, delete, insert는 VO 객체로 매핑하고, select는 HashMap을 매핑하는 규칙도 정해봤습니다.
+                (...)
+                WAR 와 JAR의 차이점을 알고 AWS EC2에 WAR파일을 최종 deploy했습니다.
+                해당 게시판은 (public ip - EC2에 있음 / login) 여기서 확인이 가능합니다.
+                아이디는 초밥 , 비밀번호는 123입니다.
+                <br />
+                해당 게시판 소스는 (깃허브 경로) 에서 확인하실 수 있습니다.
+                (...)
+                <!-- ... ~이런점을 더 배울 수 있었다, ~은 아쉽고 보완점이 필요하다  -->
+                <br />
+                <br />
+               
+                <br />
+                <br />
+                
+            </p>
+
+            <h5>Technologies:</h5>
+            <ul>
+                <li>- HTML5&CSS5</li>
+                <li>- JavaScript</li>
+                <li>- jQuery</li>
+                <li>- AJAX</li>
+                <li>- Git</li>
+                <li>- Restful API</li>
+                <li>- Spring Boot(2.6.7v)</li>
+                <li>- Spring Security</li>
+                <li>- Spring poi</li>
+                <li>- JAVA(12.0.2v)</li>
+                <li>- MySQL</li>
+                <li>- Mybatis</li>
+                <li>- Gradle</li>
+                <li>- JSP&JSTL</li>
+                <li>- Eclipse</li>
+                <li>- VSCode</li>
+                <li>- AWS EC2(CentOS)</li>
+                <li>- AWS RDS(MySQL)</li>
+
+                <!-- 서브 사진 -->
+            </ul>
+            <h5>Entity Relationship Diagram</h5>
+            <div class="img-container">
+                <img src="../images/DW_board/table.PNG" style="border: 3px solid navy; height: 700px;"/>
+            </div>
+
+            <!-- 반디캠으로 페이지 영상 녹화해서 유튜브 업로드하고 링크걸어주는 방법도 있음 -->
+            <h5>Logs UI</h5>
+            <div class="img-container">
+                <img src="#" style="width: 400px; border: 1px solid"/>
+            </div>
+
+            <h5>BLE Gateway test</h5>
+            <div class="img-container">
+                <img src="../images/SMARTFACTORY/ble_gateway.jpg" style="width: 400px; border: 1px solid"/>
+            </div>
+
+            <h5>BLE Gateway test</h5>
+            <div class="img-container">
+                <img src="../images/SMARTFACTORY/ble_gateway.jpg" style="width: 400px; border: 1px solid"/>
+            </div>
+        </div>
+    </body>
+</html>
