@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projects 스마트 팩토리</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+        <link rel="shortcut icon" href="../images/logo.ico" />
+        <style type="text/css">
+            .img-container {
+                max-width: 600px;
+            }
+            img {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav-wrapper">
+            <a href="../index.html">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+            </a>
+            <ul id="navigation">
+                <li><a href="../index.html">HOME</a></li>
+            </ul>
+        </div>
+
+        <div class="main-container">
+            <br />
+            <div class="img-container">
+                <img src="../images/SMARTFACTORY/smart-factory-main.PNG"/>
+            </div>
+            <h3>IoT 스마트 팩토리 데모</h3>
+            <p>
+                IoT 스마트 팩토리는 2021년 5월부터 8월까지 약 2개월간 진행했고, 사업형 국가과제 프로젝트입니다. 
+                총 2명(펌웨어 개발자) 개발을 진행했고 PL를 맡아 1차 데모 개발을 진행했습니다.
+                <br />
+                <br />
+                팩토리 특성상 네트워크 대역폭이 제한되는 곳에 있기 때문에 사내에서 처음으로 RAW 패킷이 아닌 MQTT 프로토콜을 선택했고,
+                디바이스 전력을 절약하기 위해 BLE 통신을 선택했습니다.
+                <br />
+                <br />
+                BLE Gateway는 Raspberry를 사용했고, Python에 bleak 라이브러리를 사용하여 BLE를 구현 했습니다. N개의 디바이스를 송수신
+                해야했기에 Multiprocessing을 이용했습니다. 수신된 데이터는 파싱 후 MQTT 프토토콜로 변환하여 AWS IoTCore에 전송했습니다. AWS
+                IoTCore Query 1차 필터링 후 Lambda에서 2차 필터링 후 DynamoDB에 저장되는 아키텍쳐를 구성했습니다.
+                <br />
+                <br />
+                IoT 스마트 팩토리는 프론트까지 맡은 첫 프로젝트입니다. 대부분 레이아웃은 flex를 이용했고, 공장 MAP과 마커 표현은
+                KAKAO Maps API의 커스텀 타일셋 기능을 커스텀했습니다.
+            </p>
+
+            <h5>Technologies:</h5>
+            <ul>
+                <li>- TypeScript</li>
+                <li>- Nest.js</li>
+                <li>- Python</li>
+                <li>- BLE Gateway(Raspberry pi 4)</li>
+                <li>- MQTT</li>
+                <li>- MySQL</li>
+                <li>- TypeORM</li>
+                <li>- AWS (Lambda & DynamoDB)</li>
+                <li>- AWS (IoTCore)</li>
+                <li>- AWS (EC2)</li>
+                <li>- KAKAO Maps API</li>
+                <li>- OS(Ubuntu)</li>
+            </ul>
+            <h5>MQTT Architecture</h5>
+            <div class="img-container">
+                <img src="../images/SMARTFACTORY/smart-factory-connection.PNG" style="border: 1px solid"/>
+            </div>
+            <h5>BLE Gateway test</h5>
+            <div class="img-container">
+                <img src="../images/SMARTFACTORY/ble_gateway.jpg" style="width: 400px; border: 1px solid"/>
+            </div>
+        </div>
+    </body>
+</html>

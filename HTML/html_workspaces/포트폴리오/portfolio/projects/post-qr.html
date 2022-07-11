@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projects QR 재고관리</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+        <link rel="shortcut icon" href="../images/logo.ico" />
+        <style type="text/css">
+            .img-container {
+                max-width: 600px;
+            }
+            img {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav-wrapper">
+            <a href="../index.html">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+            </a>
+            <ul id="navigation">
+                <li><a href="../index.html">HOME</a></li>
+            </ul>
+        </div>
+
+        <div class="main-container">
+            <br />
+            <div class="img-container">
+                <img src="../images/QR/qr.PNG" />
+            </div>
+
+            <h3>QR 재고관리 시스템</h3>
+            <p>
+                QR 재고 프로젝트는 삼성 프린터 납품 업체를 대상으로한 사업형 국가과제 프로젝트 입니다.
+                개발기간은 2019년 12월부터 2020년 7월까지 8개월간 진행했고, 개발 인원은 총 4명(UI기획, 프론트, 앱, 웹), API서버와 AWS를 맡아 진행 했습니다.
+                <br />
+                <br />
+                프로젝트 특징은 저가나 이동성이 낮은 자산, 원재료·반제품·완제품 등 재고자산에 값이 저렴한 QR스티커를 붙여 주기적으로 관리하는 플랫폼입니다.
+                QR 코드에 최대 2953 바이트를 인코드할 수 있었기 때문에 자산 출처를 상세히 입력하는데 제한이 있어 시리얼 번호와 제품번호만 인코드 하여
+                QR스티커를 생성했습니다.
+                <br />
+                <br />
+                프로젝트 주요 기능은 QR 스티커를 자산에 붙이고 앱을 이용하여 주기적으로 QR 스캔과 제품 모델명을 촬영하여 검수합니다. 
+                앱에서 GPS 정보를 API 서버에 전송하여 자산 위치가 변동되었는지 1차 확인 후 촬영했던 모델명을 OCR로 번역하여 2차 확인하는 게 주 기능입니다.
+                <br />
+                <br />
+                최종적으로 자산을 관리하는 사용자는 자산 수량, 위치, 종류를 WEB에서 모니터링 가능합니다.
+                <br />
+                <br />
+                처음으로 과제형 프로젝트였고, 정량적 목표와 정성적 목표의 차이점과 과제형 프로젝트의 전반적인 프로세스를 알게 되었습니다.
+                Serverless Architecture를 도입해 운영에서 드는 시간을 줄여 개발에 집중할 수 있었던 게 좋은 경험이었습니다.
+                고객사에서 잉크 잔량 모니터링까지 하는 프로세스를 원해 사업은 더 이상 진행하지 못한 게 아쉬웠습니다.
+            </p>
+            <h5>Technologies:</h5>
+            <ul>
+                <li>- JAVA</li>
+                <li>- Spring Boot Framework</li>
+                <li>- Android with Kotlin</li>
+                <li>- Thymeleaf</li>
+                <li>- MySQL</li>
+                <li>- MyBatis</li>
+                <li>- AWS (Lambda & DynamoDB & Rekognition OCR)</li>
+                <li>- AWS (S3 & RDS)</li>
+                <li>- AWS (EC2 & API Gateway)</li>
+                <li>- KAKAO Maps API</li>
+                <li>- OS(CentOS7)</li>
+            </ul>
+
+            <h5>사용자 구조</h5>
+            <div class="img-container">
+                <img src="../images/QR/QR-user-tree.PNG" />
+            </div>
+
+            <h5>QR OCR Architecture</h5>
+            <div class="img-container">
+                <img src="../images/QR/AWS_OCR_Architecture.PNG" />
+            </div>
+
+            <h5>재고 등록 (앱)</h5>
+            <div class="img-container">
+                <img src="../images/QR/QR-app-02.PNG" />
+            </div>
+
+            <h5>재고 확인 (앱)</h5>
+            <div class="img-container">
+                <img src="../images/QR/QR-app.PNG" />
+            </div>
+
+            <h5>전체 재고현황</h5>
+            <div class="img-container">
+                <img src="../images/QR/QR-all.PNG" />
+            </div>
+
+            <h5>전체 재고현황</h5>
+            <div class="img-container">
+                <img src="../images/QR/qr-all-02.PNG" />
+            </div>
+        </div>
+    </body>
+</html>
