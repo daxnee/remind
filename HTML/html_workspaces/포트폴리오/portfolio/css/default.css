@@ -179,8 +179,8 @@ h6 {
 #profile_pic {
     display: block;
     margin: 0 auto;
-
-    height: 200px;
+    /* border: 2px solid #0c0f10; */
+    height:250px;
     width: 200px;
     object-fit: cover;
     border: 2px solid var(--borderColor);
@@ -422,4 +422,25 @@ h6 {
     #preview {
         width: 280px;
     }
+}
+
+span{
+    display: inline-block;
+    /* span 태그는 inline-block 명시해줘야 애니메이션 실행이 된다 */
+    animation: waviy 1.5s infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes waviy{
+    0%,
+    40%,
+    100%{
+        transform: translateY(0);
+    }
+    20%{
+        /* transform: translateY(-20px); */
+        /* 위로 점프 */
+        transform: rotate(45deg);
+        /* 45도 오른쪽으로 회전 */
+    }
+
 }
