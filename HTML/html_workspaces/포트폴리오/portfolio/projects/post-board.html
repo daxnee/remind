@@ -19,6 +19,12 @@
             h3{
                 font-weight: bold;
             }
+
+            h5{
+                margin-bottom: 20px;
+            }
+
+           
         </style>
     </head>
     <body>
@@ -38,30 +44,47 @@
         <div class="main-container">
             <br />
             <div class="img-container">
-                <img src="../images/DW_board/board.PNG"/>
+                <img src="../images/DW_board/board_main.PNG"/>
             </div>
             <h3>학원 게시판 사이트 제작</h3>
             <p>
+                <h5>개요</h5>
+                <hr />
                 수업시간에 진행했던, CRUD를 기초로 간단한 학원 게시판을 개발했습니다.
-                개발기간은 약 2주 소요되었고 처음으로 클라우드에 배포까지 했습니다.
+                개발기간은 약 2주 소요되었고 처음으로 클라우드(AWS)에 배포(Deploy)까지 했습니다.
                 <br />
                 <br />
-                RestController와 Controller를 따로 만들어 백엔드와 프론트가 통신하는 그림을 공부했고,
+                
+                <h5>소개</h5>
+                <hr />
+                • RestController와 Controller를 따로 만들어 백엔드와 프론트가 통신하는 그림을 공부했고,
                 AJAX를 이용해 비동기 처리하는 방식을 알게됐습니다.
-                MVC 패턴을 베이스로 하여 Controller, Service, Mapper의 구조를 공부하는 것에 중점을 두었습니다.
-                Update, delete, insert는 VO 객체로 매핑하고, select는 HashMap을 매핑하는 규칙도 정해봤습니다.
-                (...)
-                WAR 와 JAR의 차이점을 알고 AWS EC2에 WAR파일을 최종 deploy했습니다.
-                해당 게시판은 (public ip - EC2에 있음 / login) 여기서 확인이 가능합니다.
-                아이디는 초밥 , 비밀번호는 123입니다.
                 <br />
-                해당 게시판 소스는 <a href="http://54.180.116.1:8080/login">board바로가기</a> 이름 : 초밥, 비밀번호 : 1234
+                <br />
+                • MVC 패턴을 베이스로 하여 Controller, Service, Mapper의 구조를 공부하는 것에 중점을 두었습니다.
+                <br />
+                <br />
+                • Update, delete, insert는 VO 객체로 매핑하고, select는 HashMap을 매핑하는 규칙도 정해봤습니다.
+                <br />
+                <br />
+                • WAR 와 JAR의 차이점을 알고 AWS EC2에 WAR파일을 최종 deploy했습니다.
+                <br />
+                <br />
+                ※ 해당 게시판 소스는 <a href="http://54.180.116.1:8080/login">board바로가기</a> 이름 : 초밥, 비밀번호 : 1234
                 <a href="https://github.com/daxnee/board">board 게시판 깃허브로 보기</a> 에서 확인하실 수 있습니다.
-                (...)
+                <br />
+                <br />
+
+                <h5>느낀점</h5>
+                <hr />
                 <!-- ... ~이런점을 더 배울 수 있었다, ~은 아쉽고 보완점이 필요하다  -->
+                •
                 <br />
+                •
                 <br />
-               
+                •
+                <br />
+                •
                 <br />
                 <br />
                 
@@ -91,24 +114,26 @@
                 <!-- 서브 사진 -->
             </ul>
             <h5>Entity Relationship Diagram</h5>
+            • 사이트 개발 전 DB모델링을 통해 객체간의 관계를 파악했습니다.
+            <hr />
             <div class="img-container">
-                <img src="../images/DW_board/table.PNG" style="border: 3px solid navy; height: 700px;"/>
+                <img src="../images/DW_board/table.PNG" style="border: 1px solid; height: 600px;"/>
             </div>
 
             <!-- 반디캠으로 페이지 영상 녹화해서 유튜브 업로드하고 링크걸어주는 방법도 있음 -->
             <h5>Logs UI</h5>
             <div class="img-container">
-                <img src="#" style="width: 400px; border: 1px solid"/>
+                <img src="../images/DW_board/board_singUp.png" style="border: 1px solid; height: 300px;"/>
             </div>
 
             <h5>BLE Gateway test</h5>
             <div class="img-container">
-                <img src="../images/SMARTFACTORY/ble_gateway.jpg" style="width: 400px; border: 1px solid"/>
+                <img src="../images/DW_board/board_log.png" style="border: 1px solid; height: 300px;"/>
             </div>
 
             <h5>BLE Gateway test</h5>
             <div class="img-container">
-                <img src="../images/SMARTFACTORY/ble_gateway.jpg" style="width: 400px; border: 1px solid"/>
+                <img src="../images/DW_board/board_students.png" style="border: 1px solid; height: 300px;"/>
             </div>
         </div>
     </body>
