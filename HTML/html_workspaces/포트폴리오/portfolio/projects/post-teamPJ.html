@@ -10,10 +10,19 @@
         <link rel="shortcut icon" href="../images/logo.ico" />
         <style type="text/css">
             .img-container {
-                max-width: 600px;
+                max-width: 700px;
+                margin-top: 15px;
             }
             img {
                 width: 100%;
+            }
+
+            h3{
+                font-weight: bold;
+            }
+
+            h5{
+                margin-bottom: 20px;
             }
         </style>
     </head>
@@ -34,28 +43,45 @@
         <div class="main-container">
             <br />
             <div class="img-container">
-                <img src="../images/TeamPJ/get_healthy.PNG" />
+                <img src="../images/TeamPJ/get_healthy.PNG" style="height: 500px;" />
             </div>
 
             <h3>공공체육시설 위치 안내 서비스</h3>
             <p>
+                <h5>개요</h5>
+                <hr />
+                팀프로젝트인 건강하슈는 대전시의 공공체육시설의 위치와 정보를 확인할 수 있는 프로그램입니다.  <br />
+                공공체육시설을 일일히 검색해야 하는 번거로움을 개선하고자 프로그램을 제작했습니다.
                 <br />
+                <br />
+                <br />
+
+                <h5>경험 정리</h5>
+                <hr />
                 <!-- 팀플젝은 시간, 인원, 내 업무 기재 필수-->
-                개발기간은 2022년 06월 28일부터 2022년 07월 11일까지 약 3주간 진행했고, 개발 인원은 총 n명(프론트1, 백엔드2)이고 그 중 ~를 맡아 진행했습니다.
+                • 개발기간은 2022년 06월 28일부터 2022년 07월 11일까지 약 3주간 진행했습니다.
+                <br />
+                • 개발 인원은 총 3명이고 팀원 전원이 백엔드, 프론트를 담당하여 사이트를 제작했습니다. 그 중 지도 페이지의 api 데이터 관리를 중점적으로 담당했습니다.
                 <br />
                 <br />
-                ***프로젝트 개요
-                ***느낀점
-                -> 1. git으로 프로젝트를 관리하며 개인프로젝트때 느끼지 못한 commit merge 이슈를 경험함
-                팀원 소통 중요성 느낌
-                ***보안점
-                <!-- 필수 -->
-               
+                ※ 해당 프로젝트는 <a href="http://54.180.116.1:9090/health/login">건강하슈 홈페이지</a>에서 확인할 수 있으며(계정 : 양다은, 123),
+                프로젝트 소스는 <a href="https://github.com/GetHealthy-Daejeon/health/tree/develop">건강하슈 깃허브</a>에서 확인할 수 있습니다.
+                <h5>느낀점</h5>
+                <hr />
+                • git으로 프로젝트를 관리하며 개인프로젝트때 느끼지 못한 commit merge 이슈를 경험함
+                • 팀원 소통 중요성 느낌
+                • 데이터마다 비교 가능/불가능이 있는점, 다른 데이터 형식으로 변환이 가능한 점 
+                <br />
+                •
+                <h5>보안점</h5>
+                <hr />
+                • spring 라이브러리를 이용한 데이터 가공을 못해본거  
+                • 코드를 좀 더 간결하게 짜는 법 
+                <br />
+                •
+
                 <br />
                 <br />
-                해당 프로젝트는 <a href="http://54.180.116.1:9090/health/login">건강하슈 홈페이지</a>에서 확인할 수 있으며, 계정은 양다은, 123입니다.
-                <br />
-                프로젝트 소스는 <a href="https://github.com/GetHealthy-Daejeon/health/tree/develop">건강하슈 깃허브 사이트</a>에서 확인할 수 있습니다.
                 <br />
                 <br />
 
@@ -89,9 +115,52 @@
                 <li>- NOTION </li>
 
             </ul>
-            <h5>테이블 설계도</h5>
+            <h5>건강하슈 메인페이지</h5>
+            • 메인 페이지에서 로그인을 해야만 지도 페이지로 넘어갈 수 있게 구현했습니다.
+            <div class="img-container">
+                <img src="../images/TeamPJ/get_healthy.PNG" style="border: 1px solid; height: 500px;"/>
+            </div>
+            <hr />
+            <h5>Entity Relationship Diagram</h5>
+            • 사이트 개발 전 DB모델링을 통해 객체간의 관계를 파악했습니다.
+            <div class="img-container">
+                <img src="../images/TeamPJ/지도메인페이지.PNG" style="border: 1px solid; height: 400px;"/>
+            </div>
+            <hr />
+            <h5>지도 페이지</h5>
+            • 사이트 개발 전 DB모델링을 통해 객체간의 관계를 파악했습니다.
+            <div class="img-container">
+                <img src="../images/TeamPJ/health_map.png" style="border: 1px solid; height: 400px;"/>
+            </div>
+            <hr />
+            <h5>Entity Relationship Diagram</h5>
+            • 사이트 개발 전 DB모델링을 통해 객체간의 관계를 파악했습니다.
+            <div class="img-container">
+                <img src="../images/TeamPJ/map_manage.PNG" style="border: 1px solid; height: 400px;"/>
+            </div>
+
+            <hr />
+            <h5>Entity Relationship Diagram</h5>
+            • 사이트 개발 전 DB모델링을 통해 객체간의 관계를 파악했습니다.
+            <div class="img-container">
+                <img src="../images/TeamPJ/member_manage.PNG" style="border: 1px solid; height: 400px;"/>
+            </div>
+            <hr />
             <h5>개발 일정 그래프</h5>
+            • 사이트 개발 전 DB모델링을 통해 객체간의 관계를 파악했습니다.
+            <div class="img-container">
+                <img src="../images/TeamPJ/건강하슈_기능명세서.PNG" style="border: 1px solid; height: 400px;"/>
+            </div>
+
+            <hr />
             <h5>프로젝트 협업 툴</h5>
+            • 사이트 개발 전 DB모델링을 통해 객체간의 관계를 파악했습니다.
+            <div class="img-container">
+                <img src="../images/TeamPJ/건강하슈일정그래프.PNG" style="border: 1px solid; height: 400px;"/>
+            </div>
+
+            
+            
             <h5></h5>
             <h5></h5>
         </div>

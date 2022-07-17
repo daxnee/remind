@@ -11,6 +11,7 @@
         <style type="text/css">
             .img-container {
                 max-width: 600px;
+                margin-top: 15px;
             }
             img {
                 width: 100%;
@@ -46,6 +47,7 @@
             <div class="img-container">
                 <img src="../images/DW_board/board_main.PNG"/>
             </div>
+
             <h3>학원 게시판 사이트 제작</h3>
             <p>
                 <h5>개요</h5>
@@ -55,7 +57,7 @@
                 <br />
                 <br />
                 
-                <h5>소개</h5>
+                <h5>경험 정리</h5>
                 <hr />
                 • RestController와 Controller를 따로 만들어 백엔드와 프론트가 통신하는 그림을 공부했고,
                 AJAX를 이용해 비동기 처리하는 방식을 알게됐습니다.
@@ -64,14 +66,21 @@
                 • MVC 패턴을 베이스로 하여 Controller, Service, Mapper의 구조를 공부하는 것에 중점을 두었습니다.
                 <br />
                 <br />
+                • pageHandler 라이브러리를 사용하여 페이징 처리 할 수 있는 방법을 배웠습니다.
+                <br />
+                <br />
+                • Ajax를 이용하여 비동기처리 방식에 대해 배웠고 장단점을 파악할 수 있었습니다. 
+                <br />
+                <br />
                 • Update, delete, insert는 VO 객체로 매핑하고, select는 HashMap을 매핑하는 규칙도 정해봤습니다.
                 <br />
                 <br />
+                
                 • WAR 와 JAR의 차이점을 알고 AWS EC2에 WAR파일을 최종 deploy했습니다.
                 <br />
                 <br />
-                ※ 해당 게시판 소스는 <a href="http://54.180.116.1:8080/login">board바로가기</a> 이름 : 초밥, 비밀번호 : 1234
-                <a href="https://github.com/daxnee/board">board 게시판 깃허브로 보기</a> 에서 확인하실 수 있습니다.
+                ※ 해당 게시판 소스는 <a href="http://54.180.116.1:8080/login">board 바로가기</a>와 (계정 : 초밥, 1234)
+                <a href="https://github.com/daxnee/board">board 깃허브</a> 에서 확인하실 수 있습니다.
                 <br />
                 <br />
 
@@ -115,25 +124,30 @@
             </ul>
             <h5>Entity Relationship Diagram</h5>
             • 사이트 개발 전 DB모델링을 통해 객체간의 관계를 파악했습니다.
-            <hr />
             <div class="img-container">
                 <img src="../images/DW_board/table.PNG" style="border: 1px solid; height: 600px;"/>
             </div>
 
             <!-- 반디캠으로 페이지 영상 녹화해서 유튜브 업로드하고 링크걸어주는 방법도 있음 -->
-            <h5>Logs UI</h5>
+            <hr />
+            <h5>회원가입 페이지</h5>
+            • 회원가입 입력시에 필요한 주소 검색 기능을 구현했습니다.
             <div class="img-container">
-                <img src="../images/DW_board/board_singUp.png" style="border: 1px solid; height: 300px;"/>
+                <img src="../images/DW_board/board_singUp.png" style="border: 1px solid; height: 500px; width: 700px;"/>
             </div>
 
-            <h5>BLE Gateway test</h5>
+            <hr />
+            <h5>Log 기록 페이지</h5>
+            • 접속한 위치를 KAKAO Map api로 나타내 로그를 기록하는 페이지를 구현했습니다. 
             <div class="img-container">
-                <img src="../images/DW_board/board_log.png" style="border: 1px solid; height: 300px;"/>
+                <img src="../images/DW_board/board_log.png" style="border: 1px solid; height: 500px; width: 700px;"/>
             </div>
 
-            <h5>BLE Gateway test</h5>
+            <hr />
+            <h5>학생 목록 확인 페이지</h5>
+            • DB에 등록된 학생 목록을 확인, 수정, 삭제 할 수 있는 페이지입니다.
             <div class="img-container">
-                <img src="../images/DW_board/board_students.png" style="border: 1px solid; height: 300px;"/>
+                <img src="../images/DW_board/board_students.png" style="border: 1px solid; height: 500px; width: 700px;"/>
             </div>
         </div>
     </body>
