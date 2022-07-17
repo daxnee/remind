@@ -35,7 +35,7 @@ h6,
 strong {
     color: var(--mainText);
     font-family: "Russo One", sans-serif;
-    font-weight: 500;
+ 
 }
 
 p,
@@ -46,6 +46,7 @@ input,
 textarea {
     color: var(--secondaryText);
     font-family: "Roboto Mono", monospace;
+    /* font-weight: 500; */
 }
 
 a {
